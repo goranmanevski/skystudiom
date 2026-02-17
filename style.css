@@ -190,6 +190,25 @@ nav {
     .v-video { padding-bottom: 150% !important; }
     .hero h1 { font-size: 2.2rem; }
     .hero-badges { flex-direction: column; align-items: center; }
+
+    /* ФИКС ЗА МАТНИ ПАКЕТИ НА МОБИЛЕН */
+    .pricing-grid:hover .price-card {
+        opacity: 1 !important;
+        filter: none !important;
+        transform: none !important;
+    }
+    
+    .pricing-grid .price-card:hover {
+        transform: none !important;
+        filter: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Ова ќе го спречи заматувањето на мобилен */
+    .price-card {
+        filter: none !important;
+        opacity: 1 !important;
+    }
 }
 
 footer { padding: 40px; text-align: center; color: #555; font-size: 0.9rem; border-top: 1px solid #222; }
