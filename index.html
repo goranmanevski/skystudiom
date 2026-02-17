@@ -6,8 +6,7 @@
     <title>Sky Studio M | Снимање со дрон</title>
     
     <meta name="description" content="Професионално видео и фотографија со дрон. Недвижности, настани и кинематографски кадри со Sky Studio M.">
-    <meta name="keywords" content="снимање со дрон Скопје, аероснимање Македонија, дрон видеа за недвижности, Sky Studio M, DJI снимање, Видеа со дрон, Дронови, Дрон, DJI, 
-    DJI Air 3, DJI Mavic 3, DJI Mavic 3 Pro, DJI Mavic 3 Cine, DJI Mavic 3 Classic, DJI Mavic 3 Enterprise, DJI Mavic 3 Thermal, DJI Mavic 3 Multispectral, DJI Mavic 3 Enterprise Advanced, DJI Mavic 3 Enterprise Dual, DJI Mavic 3 Enterprise Thermal, DJI Air 2S, DJI Air 2S Fly More Combo, Neptun, Anhoch, Setec, Digit Dronovi, Dronovi za snimanje, Dronovi za fotografija, Dronovi za video, Dronovi za real estate, Dronovi za naem, Dronovi za prodazba, Dronovi za profesionalno snimanje, Dronovi za profesionalna fotografija">
+    <meta name="keywords" content="снимање со дрон Скопје, аероснимање Македонија, дрон видеа за недвижности, Sky Studio M, DJI снимање, Видеа со дрон, Дронови, Дрон, DJI, DJI Air 3, DJI Mavic 3, DJI Mavic 3 Pro, DJI Mavic 3 Cine, DJI Mavic 3 Classic, DJI Mavic 3 Enterprise, DJI Mavic 3 Thermal, DJI Mavic 3 Multispectral, DJI Mavic 3 Enterprise Advanced, DJI Mavic 3 Enterprise Dual, DJI Mavic 3 Enterprise Thermal, DJI Air 2S, DJI Air 2S Fly More Combo, Neptun, Anhoch, Setec, Digit Dronovi, Dronovi za snimanje, Dronovi za fotografija, Dronovi za video, Dronovi za real estate, Dronovi za naem, Dronovi za prodazba, Dronovi za profesionalno snimanje, Dronovi za profesionalna fotografija">
     <meta name="author" content="Sky Studio M">
     
     <meta property="og:title" content="Sky Studio M | Професионално снимање со дрон">
@@ -50,7 +49,7 @@
         </div>
     </header>
 
-<section class="features" data-aos="fade-up">
+    <section class="features" data-aos="fade-up">
         <div class="features-grid">
             <div class="feature-box">
                 <img src="images/dji.jpg" alt="DJI Опрема" class="feature-img">
@@ -60,11 +59,12 @@
             <div class="feature-box">
                 <div class="feature-double-img">
                     <img src="images/easa.png" alt="EASA Сертификат">
+                    <img src="images/agencija_za_vozduhoplovstvo.png" alt="АЦВ Лиценца">
                 </div>
                 <h3>Европски Стандард</h3>
                 <p>Целосно лиценцирани летови под регулативите на АЦВ и EASA. Максимална сигурност и легалност при секое полетување.</p>
             </div>
-<div class="feature-box">
+            <div class="feature-box">
                 <i class="fas fa-film"></i>
                 <h3>Кинематографска Обработка</h3>
                 <p>Секој кадар детално се монтира и професионално се колорира, претворајќи го во филмски приказ.</p>
@@ -81,7 +81,7 @@
             </div>
             <div class="v-video">
                 <div class="desktop-video">
-                     <video autoplay muted loop playsinline preload="auto">
+                     <video autoplay muted loop playsinline preload="auto" onended="this.play()">
                         <source src="videos/skystudiom-dron-snimanje-matka-before-after.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -100,7 +100,7 @@
             </div>
             <div class="v-video">
                 <div class="desktop-video">
-                    <video autoplay muted loop playsinline preload="auto">
+                    <video autoplay muted loop playsinline preload="auto" onended="this.play()">
                         <source src="videos/skystudiom-dron-snimanje-matka-before-after.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -119,7 +119,7 @@
             </div>
             <div class="v-video">
                 <div class="desktop-video">
-                    <video autoplay muted loop playsinline preload="auto">
+                    <video autoplay muted loop playsinline preload="auto" onended="this.play()">
                         <source src="videos/skystudiom-dron-snimanje-matka-before-after.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -207,7 +207,6 @@
     <script>
         AOS.init({ duration: 800, once: true, offset: 100 });
 
-        // Скрипта за отворање и затворање на "Повеќе информации"
         function toggleInfo(btn) {
             const extraInfo = btn.nextElementSibling;
             const icon = btn.querySelector('i');
