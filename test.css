@@ -5,7 +5,7 @@ html { scroll-behavior: smooth; }
 body { 
     color: #ffffff; 
     overflow-x: hidden; 
-    /* Основна темна позадина врз која лежат стаклените секции */
+    /* Основна темна позадина */
     background-color: #050505;
 }
 
@@ -31,9 +31,11 @@ nav {
     height: 35px; width: auto; margin-right: 12px;
     filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
 }
-.nav-btn { background: #fff; color: #000; padding: 8px 18px; text-decoration: none; border-radius: 5px; font-weight: 500; }
+.nav-btn { background: #fff; color: #000; padding: 8px 18px; text-decoration: none; border-radius: 5px; font-weight: 500; transition: 0.3s; }
+.nav-btn:hover { box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); transform: scale(1.05); } /* Glow ефект и тука */
 .lang-switcher { display: flex; gap: 10px; }
-.lang-btn { color: #fff; opacity: 0.6; text-decoration: none; }
+.lang-btn { color: #fff; opacity: 0.6; text-decoration: none; transition: 0.3s; }
+.lang-btn:hover { opacity: 1; text-shadow: 0 0 8px rgba(255,255,255,0.8); }
 .lang-btn.active { opacity: 1; font-weight: bold; }
 
 
@@ -41,100 +43,142 @@ nav {
    ИНТЕРАКТИВНИ СЕКЦИИ (Dark -> Light -> Dark)
    ========================================= */
 
-/* СЕКЦИЈА 1: HERO - DARK LIVE GRADIENT (Сино кон Виолетово) */
+/* СЕКЦИЈА 1: HERO - DARK LIVE GRADIENT */
 .hero { 
     text-align: center; padding: 120px 20px; min-height: 85vh; 
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     
-    /* Жив градиент: Длабоко сино -> Виолетово -> Темно сино */
-    background: linear-gradient(-45deg, #020024, #090979, #3500d3, #020024);
+    /* Жив градиент: Длабоко сино -> Виолетово */
+    background: linear-gradient(135deg, rgba(20, 0, 20, 0.9), rgba(50, 0, 60, 0.7));
     background-size: 400% 400%;
-    animation: gradientShift 12s ease infinite;
-    
+    animation: gradientShift 8s ease infinite;
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 20px; text-shadow: 0 4px 20px rgba(0,0,0,0.5); }
 .hero p { font-size: 1.2rem; color: #ddd; max-width: 700px; }
 .hero-badges { display: flex; gap: 15px; margin-top: 40px; justify-content: center; flex-wrap: wrap; }
-.badge { display: flex; align-items: center; background: rgba(255,255,255,0.1); padding: 8px 20px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px); }
+.badge { 
+    display: flex; align-items: center; background: rgba(255,255,255,0.1); 
+    padding: 8px 20px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); 
+    backdrop-filter: blur(5px); transition: 0.3s;
+}
+.badge:hover { 
+    background: rgba(255,255,255,0.2); 
+    box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
+    border-color: #4facfe;
+}
 .badge img { height: 25px; margin-right: 10px; }
 
 
-/* СЕКЦИЈА 2: FEATURES - GLASS LIGHTER (Сино стакло) */
+/* СЕКЦИЈА 2: FEATURES - GLASS LIGHTER & GLOW */
 .features { 
     padding: 80px 20px; text-align: center;
-    
-    /* Стаклен ефект со благ син тинт */
-    background: linear-gradient(135deg, rgba(0, 10, 30, 0.8), rgba(0, 40, 70, 0.6));
+    background: linear-gradient(135deg, rgba(0, 10, 30, 0.8), rgba(2, 45, 77, 0.6));
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255,255,255,0.05);
+    animation: gradientShift 5s ease infinite;
 }
 .features-grid { display: flex; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; }
 .feature-box { 
     flex: 1; min-width: 320px; padding: 40px 30px; border-radius: 20px; 
-    background: rgba(255,255,255,0.03); /* Полупроѕирни кутии */
+    background: rgba(255,255,255,0.03); 
     border: 1px solid rgba(255,255,255,0.1); 
     transition: 0.3s;
 }
-.feature-box:hover { transform: translateY(-10px); background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.3); }
+/* НОВО: Glow ефект за карактеристиките */
+.feature-box:hover { 
+    transform: translateY(-10px); 
+    background: rgba(255,255,255,0.08); 
+    border-color: #4facfe; 
+    box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
+}
 .feature-img, .feature-double-img img { height: 45px; margin-bottom: 20px; display: block; margin: 0 auto 20px auto; }
 .feature-double-img { display: flex; justify-content: center; gap: 15px; align-items: center; }
-.feature-box i { font-size: 3rem; margin-bottom: 20px; display: block; color: #4facfe; }
+.feature-box i { font-size: 3rem; margin-bottom: 20px; display: block; color: #4facfe; transition: 0.3s; }
+.feature-box:hover i { text-shadow: 0 0 15px #4facfe; transform: scale(1.1); }
 
 
-/* СЕКЦИЈА 3: PORTFOLIO - DEEP DARK (Мат Црна) */
+/* СЕКЦИЈА 3: PORTFOLIO - DEEP DARK & VIDEO GLOW */
 .portfolio-v3 { 
     padding: 100px 20px; 
-    /* Солидна темна позадина за контраст на видеата */
     background: #000000;
 }
 .v-section { display: flex; align-items: center; gap: 60px; margin-bottom: 100px; max-width: 1200px; margin-left: auto; margin-right: auto; }
 .v-section.reverse { flex-direction: row-reverse; }
 .v-info { flex: 1; }
 .v-info h2 { font-size: 2.5rem; margin-bottom: 15px; background: -webkit-linear-gradient(#fff, #aaa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.v-video { flex: 1.5; position: relative; padding-bottom: 42%; height: 0; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(45, 10, 255, 0.15); } /* Сјај околу видеото */
+.v-video { 
+    flex: 1.5; position: relative; padding-bottom: 42%; height: 0; 
+    border-radius: 20px; overflow: hidden; 
+    box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
+    border-color: #4facfe;
+    transition: 0.4s;
+}
+/* НОВО: Glow ефект кога ќе поминеш врз видеото */
+.v-video:hover {
+    box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
+    border-color: #4facfe;
+    transform: scale(1.02);
+}
 .v-video video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
 
 
-/* СЕКЦИЈА 4: PRICING - GLASS PINKISH (Розе/Виолетово Стакло) */
+/* СЕКЦИЈА 4: PRICING - GLASS PINKISH & STRONG GLOW */
 .pricing { 
     padding: 100px 20px; text-align: center;
-    
-    /* Жив градиент со розевкаст тинт - "Surprise" елемент */
     background: linear-gradient(135deg, rgba(20, 0, 20, 0.9), rgba(50, 0, 60, 0.7));
     backdrop-filter: blur(20px);
     border-top: 1px solid rgba(255,255,255,0.05);
 }
 .pricing-grid { display: flex; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto; align-items: stretch; }
 .price-card { 
-    background: rgba(255, 255, 255, 0.05); /* Стаклени картички */
+    background: rgba(255, 255, 255, 0.05); 
     padding: 40px; border-radius: 25px; width: 340px; 
     border: 1px solid rgba(255,255,255,0.1); 
     display: flex; flex-direction: column; transition: 0.3s;
 }
-.price-card:hover { transform: translateY(-10px); border-color: #f093fb; box-shadow: 0 10px 40px rgba(240, 147, 251, 0.2); }
+/* Омилениот ефект: Силно розев Glow */
+.price-card:hover { 
+    transform: translateY(-10px); 
+        border-color: #4facfe;
+    box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
+}
 .price { font-size: 3.5rem; font-weight: 700; margin: 20px 0; color: #fff; }
 .price-card ul { list-style: none; text-align: left; margin-bottom: 30px; flex-grow: 1; color: #ccc; }
 .price-card ul li { margin-bottom: 12px; padding-left: 20px; position: relative; }
-.price-card ul li::before { content: '✓'; position: absolute; left: 0; color: #f093fb; }
+.price-card ul li::before { content: '✓'; position: absolute; left: 0; color: #f093fb; text-shadow: 0 0 5px #f093fb; }
 .extra-info { max-height: 0; overflow: hidden; transition: 0.4s ease-out; font-size: 0.9rem; color: #aaa; text-align: left;}
-.more-info-btn { cursor: pointer; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); color: #bbb; font-size: 0.9rem; }
+.more-info-btn { cursor: pointer; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); color: #bbb; font-size: 0.9rem; transition: 0.3s; }
+.more-info-btn:hover { color: #fff; text-shadow: 0 0 5px #fff; }
 
 
-/* СЕКЦИЈА 5: CONTACT - SOLID CLOSURE */
+/* СЕКЦИЈА 5: CONTACT - SOLID CLOSURE & BUTTON GLOW */
 .contact { 
     padding: 100px 20px; text-align: center; 
-    background: linear-gradient(to bottom, #000000, #111111);
+    background: linear-gradient(135deg, rgba(0, 10, 30, 0.8), rgba(2, 45, 77, 0.6));
 }
 .contact-links { display: flex; justify-content: center; gap: 20px; margin-top: 40px; }
-.contact-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; color: #fff !important; text-decoration: none; transition: 0.3s; }
-.contact-btn:hover { transform: scale(1.1); }
+.contact-btn { 
+    width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+    font-size: 1.6rem; color: #fff !important; text-decoration: none; transition: 0.3s; 
+    border: 1px solid rgba(255,255,255,0.1);
+}
+/* НОВО: Специфичен glow за секоја мрежа */
 .contact-btn.phone { background: #007aff; }
+.contact-btn.phone:hover { box-shadow: 0 0 25px #007aff; transform: scale(1.15); }
+
 .contact-btn.whatsapp { background: #25D366; }
+.contact-btn.whatsapp:hover { box-shadow: 0 0 25px #25D366; transform: scale(1.15); }
+
 .contact-btn.viber { background: #7360f2; }
+.contact-btn.viber:hover { box-shadow: 0 0 25px #7360f2; transform: scale(1.15); }
+
 .contact-btn.instagram { background: linear-gradient(45deg, #f09433, #bc1888); }
+.contact-btn.instagram:hover { box-shadow: 0 0 25px #bc1888; transform: scale(1.15); }
+
 .contact-btn.email { background: #333; }
+.contact-btn.email:hover { box-shadow: 0 0 25px #555; transform: scale(1.15); }
 
 
 /* МОБИЛНА ВЕРЗИЈА - ЗАЧУВАНИ ФИКСОVI */
