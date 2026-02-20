@@ -227,10 +227,10 @@ nav {
     /* ГЛАВНИОТ ФИКС ЗА ВИДЕАТА ТУКА */
     .v-video { 
         width: 100% !important;
-        max-width: 350px; 
+        max-width: 450px; 
         margin: 0 auto;
         position: relative; /* Неопходно за absolute децата */
-        padding-bottom: 177.77% !important; /* Вертикален сооднос 9:16 */
+        padding-bottom: 100% !important; /* Вертикален сооднос 9:16 */
         height: 0;
         overflow: hidden;
     }
