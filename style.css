@@ -9,12 +9,6 @@ body {
     background-color: #050505;
 }
 
-/* АНИМАЦИЈА ЗА ГРАДИЕНТИТЕ */
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
 
 /* 2. НАВИГАЦИЈА */
 nav {
@@ -30,8 +24,8 @@ nav {
 .logo-icon {
     height: 35px; width: auto; margin-right: 12px;
         transform: scale(1.02);
-
 }
+
 .nav-btn { background: #fff; color: #000; padding: 8px 18px; text-decoration: none; border-radius: 5px; font-weight: 500; transition: 0.3s; }
 .nav-btn:hover { box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); transform: scale(1.05); } /* Glow ефект и тука */
 .lang-switcher { display: flex; gap: 10px; }
@@ -41,10 +35,118 @@ nav {
 
 
 /* =========================================
-   ИНТЕРАКТИВНИ СЕКЦИИ (Dark -> Light -> Dark)
+   АНИМАЦИЈА
    ========================================= */
+:root {
+  --blue: #0047ff;
+  --pink: #ff007a;
+  --dark: #0a0a15;
+  --yellow: #22ff00;
+}
 
-/* СЕКЦИЈА 1: HERO - DARK LIVE GRADIENT */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark);
+}
+
+.abstract-bg {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #050510 0%, #1a0a2e 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Заеднички својства за сите форми */
+.shape {
+  position: absolute;
+  filter: blur(200px);
+  opacity: 0.5;
+}
+
+/* --- СИНАТА ФОРМА (Движење по дијагонала) --- */
+.shape-1 {
+  top: -10%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: var(--blue);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: move-blue 25s infinite linear;
+}
+
+/* --- РОЗОВАТА ФОРМА (Кружно/Елипсовидно движење) --- */
+.shape-2 {
+  bottom: -10%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: var(--pink);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: move-pink 30s infinite linear;
+}
+
+.shape-4 {
+  top: 20%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  background: var(--blue);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: float-glass 6s ease-in-out infinite;
+}
+
+.shape-5 {
+  top: 70%;
+  left: 20%;
+  width: 300px;
+  height: 300px;
+  background: var(--yellow);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: float-glass 8s ease-in-out infinite;
+}   
+
+
+
+
+/* --- ДЕФИНИЦИИ НА ДВИЖЕЊАТА --- */
+
+@keyframes move-blue {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  33% { transform: translate(30vw, 20vh) rotate(120deg) scale(1.2); }
+  66% { transform: translate(10vw, 50vh) rotate(240deg) scale(0.8); }
+  100% { transform: translate(0, 0) rotate(360deg) scale(1); }
+}
+
+@keyframes move-pink {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(-20vw, -30vh) rotate(-90deg); }
+  50% { transform: translate(-40vw, -10vh) rotate(-180deg); }
+  75% { transform: translate(-10vw, 10vh) rotate(-270deg); }
+  100% { transform: translate(0, 0) rotate(-360deg); }
+}
+
+@keyframes float-glass {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-20px, 30px) scale(1.05); }
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+
+
+
 .hero { 
     text-align: center; 
     padding: 80px 20px;      /* Намалено од 120px на 80px */
@@ -54,11 +156,6 @@ nav {
     justify-content: center; 
     align-items: center;
     
-    /* Жив градиент: Длабоко сино -> Виолетово */
-    background: linear-gradient(135deg, rgba(20, 0, 20, 0.9), rgba(50, 0, 60, 0.7));
-    background-size: 400% 400%;
-    animation: gradientShift 8s ease infinite;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 20px; text-shadow: 0 4px 20px rgba(0,0,0,0.5); }
 .hero p { font-size: 1.2rem; color: #ddd; max-width: 700px; }
@@ -188,7 +285,6 @@ nav {
 
 
 /* МОБИЛНА ВЕРЗИЈА - СИТЕ ФИКСОВИ НА ЕДНО МЕСТО */
-/* МОБИЛНА ВЕРЗИЈА - СИТЕ ФИКСОВИ НА ЕДНО МЕСТО */
 @media (max-width: 768px) {
     /* 1. Навигација и Лого */
     nav { padding: 10px 15px; }
@@ -204,9 +300,15 @@ nav {
 
     /* 3. Hero секција */
     .hero { 
-        min-height: auto; 
-        padding: 60px 20px; 
-    }
+    text-align: center; 
+    min-height: auto;
+    padding: 40px 20px;         
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    background: transparent; /* Ова го оставаме за да се гледаат честичките */
+}
     .hero h1 { font-size: 1.8rem; }
 
     /* 4. Portfolio (v3) - ФИКС ЗА ВЕРТИКАЛНИ ВИДЕА (9:16) */
