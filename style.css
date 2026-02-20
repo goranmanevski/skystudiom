@@ -230,7 +230,7 @@ nav {
         max-width: 450px; 
         margin: 0 auto;
         position: relative; /* Неопходно за absolute децата */
-        padding-bottom: 100% !important; /* Вертикален сооднос 9:16 */
+        padding-bottom: 120% !important; /* Вертикален сооднос 9:16 */
         height: 0;
         overflow: hidden;
     }
