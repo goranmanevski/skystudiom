@@ -47,9 +47,15 @@ nav {
    ========================================= */
 
 /* СЕКЦИЈА 1: HERO - DARK LIVE GRADIENT */
+/* СЕКЦИЈА 1: HERO - КОРИГИРАНА ВИСИНА */
 .hero { 
-    text-align: center; padding: 120px 20px; min-height: 85vh; 
-    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; 
+    padding: 80px 20px;      /* Намалено од 120px на 80px */
+    min-height: 60vh;        /* Намалено од 85vh на 60vh */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
     
     /* Жив градиент: Длабоко сино -> Виолетово */
     background: linear-gradient(135deg, rgba(20, 0, 20, 0.9), rgba(50, 0, 60, 0.7));
@@ -186,12 +192,21 @@ nav {
 
 /* МОБИЛНА ВЕРЗИЈА - ЗАЧУВАНИ ФИКСОVI */
 @media (max-width: 768px) {
-    nav { padding: 15px 20px; }
-    .logo { font-size: 1rem; }
-    .hero h1 { font-size: 1.5rem; }
+    nav { padding: 10px 15px; } /* Намален padding на навигацијата */
     
+    .logo { font-size: 0.8rem; letter-spacing: 1px; }
+    .logo-icon { height: 25px; } /* Помало лого на мобилен */
+
+    /* ФИКС ЗА КОПЧЕТО ЗАКАЖИ ТЕРМИН */
+    .nav-btn { 
+        padding: 6px 12px;  /* Намален од 8px 18px */
+        font-size: 0.8rem;  /* Помал фонт */
+        border-radius: 4px;
+    }
+
+    .hero h1 { font-size: 1.8rem; }
     .v-section, .v-section.reverse { flex-direction: column !important; gap: 30px; text-align: center; }
-    .v-video { padding-bottom: 130% !important; }
+    .v-video { padding-bottom: 56.25% !important; } /* Стандарден 16:9 сооднос за мобилен */
     
     /* ФИКС ЗА ПАКЕТИ НА МОБИЛЕН */
     .pricing-grid {
@@ -201,7 +216,7 @@ nav {
         overflow-x: auto !important;
         scroll-snap-type: x mandatory !important;
         gap: 12px !important;
-        padding: 20px !important;
+        padding: 15px !important;
         justify-content: flex-start !important;
         align-items: stretch !important;
     }
@@ -212,7 +227,7 @@ nav {
         min-height: 480px !important; 
         scroll-snap-align: center !important;
         flex-shrink: 0 !important;
-        padding: 25px !important;
+        padding: 20px !important;
         justify-content: space-between !important;
     }
 
