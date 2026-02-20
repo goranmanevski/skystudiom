@@ -253,27 +253,27 @@
         <h2>Закажи термин</h2>
         <p>Опишете го вашиот проект или контактирајте нè директно преку социјалните мрежи.</p>
         
-        <form action="#">
-            <div class="input-group">
-                <input type="text" name="name" placeholder="Име и презиме" required>
-            </div>
-            <div class="input-group">
-                <input type="email" name="email" placeholder="Е-маил адреса" required>
-            </div>
-            <div class="input-group">
-                <select name="service" required>
-                    <option value="" disabled selected>Изберете пакет</option>
-                    <option value="basic">BASIC RAW (100€)</option>
-                    <option value="social">SOCIAL PRO (150€)</option>
-                    <option value="cinematic">CINEMATIC PREMIUM (300€)</option>
-                    <option value="custom">Друго (Custom проект)</option>
-                </select>
-            </div>
-            <div class="input-group">
-                <textarea name="message" rows="4" placeholder="Детали за локацијата и терминот..."></textarea>
-            </div>
-            <button type="submit" class="form-submit">Испрати барање</button>
-        </form>
+        <form action="https://formspree.io/f/mxbjnkyq" method="POST">
+    <div class="input-group">
+        <input type="text" name="name" placeholder="Име и презиме" required>
+    </div>
+    <div class="input-group">
+        <input type="email" name="email" placeholder="Е-маил адреса" required>
+    </div>
+    <div class="input-group">
+        <select name="service" required>
+            <option value="" disabled selected>Изберете пакет</option>
+            <option value="basic">BASIC RAW (100€)</option>
+            <option value="social">SOCIAL PRO (150€)</option>
+            <option value="cinematic">CINEMATIC PREMIUM (300€)</option>
+            <option value="custom">Друго (Custom проект)</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <textarea name="message" rows="4" placeholder="Детали за локацијата и терминот..."></textarea>
+    </div>
+    <button type="submit" class="form-submit">Испрати барање</button>
+</form>
 
         <div class="social-contact-wrapper">
             <p class="social-label">Или пишите ни директно:</p>

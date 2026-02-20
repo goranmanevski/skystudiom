@@ -208,31 +208,31 @@
     </section>
 
     <section id="contact-form" class="contact-section" data-aos="fade-up">
-        <div class="form-container">
-            <h2>Book a Session</h2>
-            <p>Describe your project or contact us directly via social media.</p>
-            
-            <form action="#">
-                <div class="input-group">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                </div>
-                <div class="input-group">
-                    <input type="email" name="email" placeholder="Email Address" required>
-                </div>
-                <div class="input-group">
-                    <select name="service" required>
-                        <option value="" disabled selected>Select a package</option>
-                        <option value="basic">BASIC RAW (100€)</option>
-                        <option value="social">SOCIAL PRO (150€)</option>
-                        <option value="cinematic">CINEMATIC PREMIUM (300€)</option>
-                        <option value="custom">Other (Custom project)</option>
-                    </select>
-                </div>
-                <div class="input-group">
-                    <textarea name="message" rows="4" placeholder="Details about the location and time..."></textarea>
-                </div>
-                <button type="submit" class="form-submit">Send Request</button>
-            </form>
+    <div class="form-container">
+        <h2>Book a Session</h2>
+        <p>Describe your project or contact us directly via social media.</p>
+        
+        <form action="https://formspree.io/f/mxbjnkyq" method="POST">
+            <div class="input-group">
+                <input type="text" name="name" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-group">
+                <select name="service" required>
+                    <option value="" disabled selected>Select a package</option>
+                    <option value="basic">BASIC RAW (100€)</option>
+                    <option value="social">SOCIAL PRO (150€)</option>
+                    <option value="cinematic">CINEMATIC PREMIUM (300€)</option>
+                    <option value="custom">Other (Custom Project)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <textarea name="message" rows="4" placeholder="Details about the location and time..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Request</button>
+        </form>
 
             <div class="social-contact-wrapper">
                 <p class="social-label">Or message us directly:</p>
