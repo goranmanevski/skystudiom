@@ -256,32 +256,159 @@ body {
 .more-info-btn:hover { color: #fff; text-shadow: 0 0 5px #fff; }
 
 
-/* СЕКЦИЈА 5: CONTACT - SOLID CLOSURE & BUTTON GLOW */
-.contact { 
-    padding: 100px 20px; text-align: center; 
-    background: linear-gradient(135deg, rgba(0, 10, 30, 0.8), rgba(2, 45, 77, 0.6));
+/* 1. КОНТАКТ СЕКЦИЈА - GLASSMORPHISM ДИЗАЈН */
+.contact-section {
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    /* Ја користиме истата транспарентност за да се гледаат честичките зад неа */
+    background: transparent;
 }
-.contact-links { display: flex; justify-content: center; gap: 20px; margin-top: 40px; }
-.contact-btn { 
-    width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; 
-    font-size: 1.6rem; color: #fff !important; text-decoration: none; transition: 0.3s; 
-    border: 1px solid rgba(255,255,255,0.1);
+
+.form-container {
+    background: rgba(255, 255, 255, 0.03); /* Многу тенка бела за стакло ефект */
+    backdrop-filter: blur(15px); /* Заматување на позадината */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 50px 40px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
-/* НОВО: Специфичен glow за секоја мрежа */
-.contact-btn.phone { background: #007aff; }
-.contact-btn.phone:hover { box-shadow: 0 0 25px #007aff; transform: scale(1.15); }
 
-.contact-btn.whatsapp { background: #25D366; }
-.contact-btn.whatsapp:hover { box-shadow: 0 0 25px #25D366; transform: scale(1.15); }
+.form-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #fff, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-.contact-btn.viber { background: #7360f2; }
-.contact-btn.viber:hover { box-shadow: 0 0 25px #7360f2; transform: scale(1.15); }
+.form-container p {
+    color: #ccc;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
 
-.contact-btn.instagram { background: linear-gradient(45deg, #f09433, #bc1888); }
-.contact-btn.instagram:hover { box-shadow: 0 0 25px #bc1888; transform: scale(1.15); }
+/* 2. ПОДЕСУВАЊЕ НА ПОЛИЊАТА ЗА ВНЕС */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
 
-.contact-btn.email { background: #333; }
-.contact-btn.email:hover { box-shadow: 0 0 25px #555; transform: scale(1.15); }
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Ефект кога ќе кликнеш во полето */
+.input-group input:focus, 
+.input-group textarea:focus {
+    border-color: #4facfe;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(79, 172, 254, 0.3);
+}
+
+/* Стилизирање на Select опцијата за да не биде бела */
+select option {
+    background: #0a0a15;
+    color: #fff;
+}
+
+/* 3. КОПЧЕ ЗА ИСПРАЌАЊЕ */
+.form-submit {
+    width: 100%;
+    padding: 16px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-top: 10px;
+}
+
+.form-submit:hover {
+    background: #4facfe; /* Се менува во сина при hover */
+    color: #fff;
+    box-shadow: 0 0 25px rgba(79, 172, 254, 0.5);
+    transform: translateY(-3px);
+}
+
+/* ПОДЕСУВАЊЕ НА ИКОНИТЕ ПОД ФОРМАТА */
+/* ПОДЕСУВАЊЕ НА ИКОНИТЕ ПОД ФОРМАТА */
+.social-contact-wrapper {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-label {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contact-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #fff !important;
+    text-decoration: none;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ОВИЕ СЕ БОИТЕ ШТО ГИ БАРАШЕ */
+.contact-btn.phone { background: #007aff !important; }
+.contact-btn.whatsapp { background: #25D366 !important; }
+.contact-btn.viber { background: #7360f2 !important; }
+.contact-btn.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) !important; }
+.contact-btn.email { background: #333 !important; }
+
+.contact-btn:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+/* МОБИЛНА ВЕРЗИЈА ЗА ФОРМАТА */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 30px 20px;
+    }
+    .form-container h2 {
+        font-size: 1.8rem;
+    }
+}
 
 
 /* МОБИЛНА ВЕРЗИЈА - СИТЕ ФИКСОВИ НА ЕДНО МЕСТО */

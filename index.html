@@ -33,7 +33,7 @@
             <a href="index.html" class="lang-btn active" title="Македонски">MK</a>
             <a href="en.html" class="lang-btn" title="English">EN</a>
         </div>
-        <a href="#contact" class="nav-btn">Закажи термин</a>
+        <a href="#contact-form" class="nav-btn">Закажи термин</a>
     </nav>
         <section class="abstract-bg">
 <div class="shape shape-1"></div>
@@ -179,16 +179,45 @@
         </div>
     </section>
 
-    <section class="contact" id="contact" data-aos="fade-up">
-        <h2>Подготвени за лет?</h2>
-        <div class="contact-links">
-            <a href="tel:+38971254472" class="contact-btn phone"><i class="fas fa-phone-alt"></i></a>
-            <a href="https://wa.me/38971254472" class="contact-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="viber://chat?number=%2B38972239642" class="contact-btn viber" target="_blank"><i class="fab fa-viber"></i></a>
-            <a href="https://instagram.com/goranmanevski" class="contact-btn instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:info@skystudiom.com" class="contact-btn email"><i class="fas fa-envelope"></i></a>
+    <section id="contact-form" class="contact-section" data-aos="fade-up">
+    <div class="form-container">
+        <h2>Закажи термин</h2>
+        <p>Опишете го вашиот проект или контактирајте нè директно преку социјалните мрежи.</p>
+        
+        <form action="#">
+            <div class="input-group">
+                <input type="text" name="name" placeholder="Име и презиме" required>
+            </div>
+            <div class="input-group">
+                <input type="email" name="email" placeholder="Е-маил адреса" required>
+            </div>
+            <div class="input-group">
+                <select name="service" required>
+                    <option value="" disabled selected>Изберете пакет</option>
+                    <option value="basic">BASIC RAW (100€)</option>
+                    <option value="social">SOCIAL PRO (150€)</option>
+                    <option value="cinematic">CINEMATIC PREMIUM (300€)</option>
+                    <option value="custom">Друго (Custom проект)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <textarea name="message" rows="4" placeholder="Детали за локацијата и терминот..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">Испрати барање</button>
+        </form>
+
+        <div class="social-contact-wrapper">
+            <p class="social-label">Или пишите ни директно:</p>
+            <div class="contact-links">
+                <a href="tel:+38971254472" class="contact-btn phone"><i class="fas fa-phone-alt"></i></a>
+                <a href="https://wa.me/38971254472" class="contact-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="viber://chat?number=%2B38972239642" class="contact-btn viber" target="_blank"><i class="fab fa-viber"></i></a>
+                <a href="https://instagram.com/goranmanevski" class="contact-btn instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:info@skystudiom.com" class="contact-btn email"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <footer>
         <p>&copy; 2026 Sky Studio M. Сите права се задржани.</p>
