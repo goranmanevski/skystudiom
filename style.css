@@ -197,7 +197,13 @@ body {
     box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
 }
 .feature-img, .feature-double-img img { height: 45px; margin-bottom: 20px; display: block; margin: 0 auto 20px auto; }
-.feature-double-img { display: flex; justify-content: center; gap: 15px; align-items: center; }
+
+/* Овде го менуваме само gap од 0px на 8px за тој 'one space' ефект */
+.feature-double-img { display: flex; justify-content: center; gap: 8px; align-items: center; }
+
+/* ОВА Е НОВАТА ЛИНИЈА: Спречува сликите во овој блок да се оддалечуваат */
+.feature-double-img img { margin: 0; } 
+
 .feature-box i { font-size: 3rem; margin-bottom: 20px; display: block; color: #4facfe; transition: 0.3s; }
 .feature-box:hover i { text-shadow: 0 0 15px #4facfe; transform: scale(1.1); }
 
@@ -206,6 +212,8 @@ body {
 .portfolio-v3 { 
     padding: 100px 20px; 
     background: #000000;
+    position: relative; /* ОВА Е ВАЖНО ЗА ЧЕСТИЧКИТЕ */
+    overflow: hidden;
 }
 .v-section { display: flex; align-items: center; gap: 60px; margin-bottom: 100px; max-width: 1200px; margin-left: auto; margin-right: auto; }
 .v-section.reverse { flex-direction: row-reverse; }
@@ -524,3 +532,101 @@ select option {
 .desktop-video { display: block; }
 
 footer { padding: 40px; text-align: center; font-size: 0.8rem; color: #444; background: #000; border-top: 1px solid #111; }
+
+/* --- SIMPLE PARTICLES ENGINE --- */
+.particles-container {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.p-dot {
+    position: absolute;
+    width: 10px; height: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    filter: blur(1px);
+    animation: float-up 10s infinite linear;
+}
+
+/* Коригирани латинични класи и позиции */
+.p-dot:nth-child(1) { top: 20%; left: 10%; animation-delay: 4s; }
+.p-dot:nth-child(2) { top: 60%; left: 30%; animation-delay: 2s; width: 10px; height: 6px; }
+.p-dot:nth-child(3) { top: 40%; left: 70%; animation-delay: 4s; }
+.p-dot:nth-child(4) { top: 80%; left: 90%; animation-delay: 1s; width: 3px; height: 3px; }
+.p-dot:nth-child(5) { top: 10%; left: 50%; animation-delay: 6s; }
+.p-dot:nth-child(6) { top: 70%; left: 15%; animation-delay: 3s; }
+.p-dot:nth-child(7) { top: 30%; left: 80%; animation-delay: 5s; width: 15px; height: 4px; }
+.p-dot:nth-child(8) { top: 50%; left: 20%; animation-delay: 7s; }
+.p-dot:nth-child(9) { top: 90%; left: 60%; animation-delay: 4s; width: 5px; height: 5px; }
+.p-dot:nth-child(10) { top: 25%; left: 40%; animation-delay: 8s; }
+
+@keyframes float-up {
+    0% { transform: translateY(0) translateX(0); opacity: 0; }
+    20% { opacity: 0.6; }
+    80% { opacity: 0.6; }
+    100% { transform: translateY(-150px) translateX(30px); opacity: 0; }
+}
+
+
+
+
+
+
+
+/* PORTFOLIO GRID STYLE */
+.portfolio-grid-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 15px;
+    transition: 0.4s;
+    text-align: center;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #4facfe;
+    box-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
+}
+
+.video-thumb {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-thumb video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-thumb.empty i {
+    font-size: 3rem;
+    color: #333;
+}
+
+.portfolio-card h3 { margin-bottom: 5px; font-size: 1.2rem; }
+.portfolio-card p { color: #aaa; font-size: 0.9rem; }

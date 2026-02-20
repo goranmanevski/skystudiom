@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Sky Studio M</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <section class="abstract-bg" style="min-height: 40vh;">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="particles-container">
+            <div class="p-dot"></div><div class="p-dot"></div><div class="p-dot"></div><div class="p-dot"></div>
+        </div>
+        <div class="hero">
+            <h1 data-aos="fade-down">Нашите Проекти</h1>
+            <p data-aos="fade-up">Колекција на кинематографски кадри од Македонија и пошироко.</p>
+        </div>
+    </section>
+
+    <nav>
+        <a href="index.html" class="logo">SKY STUDIO M</a>
+        <div class="lang-switcher">
+            <a href="portfolio.html" class="lang-btn active">MK</a>
+            <a href="portfolio-en.html" class="lang-btn">EN</a>
+        </div>
+        <a href="index.html#contact-form" class="nav-btn">Закажи термин</a>
+    </nav>
+
+    <section class="portfolio-grid-section">
+        <div class="portfolio-grid">
+            <div class="portfolio-card" data-aos="zoom-in">
+                <div class="video-thumb">
+                    <video muted loop onmouseover="this.play()" onmouseout="this.pause(); this.currentTime=0;">
+                        <source src="videos/kratovo.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h3>Кратово од висина</h3>
+                <p>Урбана презентација</p>
+            </div>
+
+            <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="video-thumb">
+                    <video muted loop onmouseover="this.play()" onmouseout="this.pause(); this.currentTime=0;">
+                        <source src="videos/skystudiom-dron-snimanje-matka-before-after.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h3>Канјон Матка</h3>
+                <p>Природа и бои</p>
+            </div>
+
+            <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="video-thumb empty">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <h3>Наскоро</h3>
+                <p>Нов проект во подготовка</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sky Studio M. Сите права се задржани.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>
