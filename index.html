@@ -249,43 +249,46 @@
     </section>
 
     <section id="contact-form" class="contact-section" data-aos="fade-up">
-    <div class="form-container">
-        <h2>Закажи термин</h2>
-        <p>Опишете го вашиот проект или контактирајте нè директно преку социјалните мрежи.</p>
-        
-        <form action="https://formspree.io/f/mdallvqj" method="POST">
-    <div class="input-group">
-        <input type="text" name="name" placeholder="Име и презиме" required>
-    </div>
-    <div class="input-group">
-        <input type="email" name="email" placeholder="Е-маил адреса" required>
-    </div>
-    <div class="input-group">
-        <select name="service" required>
-            <option value="" disabled selected>Изберете пакет</option>
-            <option value="basic">BASIC RAW (100€)</option>
-            <option value="social">SOCIAL PRO (150€)</option>
-            <option value="cinematic">CINEMATIC PREMIUM (300€)</option>
-            <option value="custom">Друго (Custom проект)</option>
-        </select>
-    </div>
-    <div class="input-group">
-        <textarea name="message" rows="4" placeholder="Детали за локацијата и терминот..."></textarea>
-    </div>
-    <button type="submit" class="form-submit">Испрати барање</button>
-</form>
+    <div class="form-container" style="position: relative;"> <h2>Закажи термин</h2>
+    <p>Опишете го вашиот проект или контактирајте нè директно преку социјалните мрежи.</p>
+    
+    <form id="my-form" action="https://formspree.io/f/mdallvqj" method="POST">
+        <div class="input-group">
+            <input type="text" name="name" placeholder="Име и презиме" required>
+        </div>
+        <div class="input-group">
+            <input type="email" name="email" placeholder="Е-маил адреса" required>
+        </div>
+        <div class="input-group">
+            <select name="service" required>
+                <option value="" disabled selected>Изберете пакет</option>
+                <option value="basic">BASIC RAW (100€)</option>
+                <option value="social">SOCIAL PRO (150€)</option>
+                <option value="cinematic">CINEMATIC PREMIUM (300€)</option>
+                <option value="custom">Друго (Custom проект)</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <textarea name="message" rows="4" placeholder="Детали за локацијата и терминот..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Испрати барање</button>
+    </form>
 
-        <div class="social-contact-wrapper">
-            <p class="social-label">Или пишите ни директно:</p>
-            <div class="contact-links">
-                <a href="tel:+38971254472" class="contact-btn phone"><i class="fas fa-phone-alt"></i></a>
-                <a href="https://wa.me/38971254472" class="contact-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                <a href="viber://chat?number=%2B38972239642" class="contact-btn viber" target="_blank"><i class="fab fa-viber"></i></a>
-                <a href="https://instagram.com/goranmanevski" class="contact-btn instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="mailto:info@skystudiom.com" class="contact-btn email"><i class="fas fa-envelope"></i></a>
-            </div>
+    <div id="status" style="display:none; padding: 40px 20px; background: rgba(37, 211, 102, 0.1); border: 1px solid #25D366; border-radius: 12px; text-align: center; margin-bottom: 20px;">
+        <p style="color: #25D366; font-weight: bold; font-size: 1.1rem; margin: 0;">✔ Благодариме! Вашето барање е успешно испратено. Ќе ве контактираме наскоро.</p>
+    </div>
+
+    <div class="social-contact-wrapper">
+        <p class="social-label">Или пишите ни директно:</p>
+        <div class="contact-links">
+            <a href="tel:+38971254472" class="contact-btn phone"><i class="fas fa-phone-alt"></i></a>
+            <a href="https://wa.me/38971254472" class="contact-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="viber://chat?number=%2B38972239642" class="contact-btn viber" target="_blank"><i class="fab fa-viber"></i></a>
+            <a href="https://instagram.com/goranmanevski" class="contact-btn instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:info@skystudiom.com" class="contact-btn email"><i class="fas fa-envelope"></i></a>
         </div>
     </div>
+</div>
 </section>
 
     <footer>
@@ -310,6 +313,40 @@
             }
         }
     </script>
+    <script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("status");
+      var data = new FormData(event.target);
+      var btn = event.target.querySelector(".form-submit");
+      
+      btn.innerHTML = "Се испраќа...";
+      btn.disabled = true;
+
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          form.style.display = "none";    // Формата исчезнува
+          status.style.display = "block"; // Пораката се појавува
+          form.reset();
+        } else {
+          btn.innerHTML = "Испрати барање";
+          btn.disabled = false;
+          alert("Проблем со испраќањето. Проверете ги полињата.");
+        }
+      }).catch(error => {
+        btn.innerHTML = "Испрати барање";
+        btn.disabled = false;
+        alert("Грешка при конекцијата.");
+      });
+    }
+    form.addEventListener("submit", handleSubmit);
+</script>
 </body>
 </html>
 
