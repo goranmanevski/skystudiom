@@ -768,47 +768,6 @@ select option {
   .form-container {
     padding: 30px 20px !important;
   }
-  @media (max-width: 768px) {
-    /* 1. ГЛАВЕН ДРОН - Слетува од лево (дијагонално) */
-    .hero-drone-bg {
-      width: 40% !important;
-      max-width: 180px !important;
-      top: 5% !important; /* Го креваме малку повисоко на мобилен */
-      left: 2% !important;
-      bottom: auto !important; /* Го ресетираме bottom од десктоп */
-      opacity: 0 !important;
-      z-index: 4 !important;
-
-      /* АНИМАЦИЈА: Прво слетува (fly-in-landing-left), па лебди многу бавно */
-      animation:
-        fly-in-landing-left 3.5s cubic-bezier(0.22, 1, 0.36, 1) forwards,
-        slow-float-main 25s ease-in-out infinite 3.5s !important;
-    }
-
-    /* 2. ВТОР ДРОН - Влегува од десно */
-    .hero-drone-bg-secondary {
-      width: 45% !important;
-      max-width: 200px !important;
-      bottom: 8% !important; /* Го ставаме долу десно */
-      right: 2% !important;
-      opacity: 0 !important;
-      z-index: 4 !important;
-
-      /* АНИМАЦИЈА: Прво влегува од десно (fly-in-right), па лебди многу бавно */
-      animation:
-        fly-in-right 3.5s cubic-bezier(0.25, 1, 0.5, 1) forwards,
-        slow-float-secondary 25s ease-in-out infinite 4s !important;
-    }
-    .hero-drone-bg,
-    .hero-drone-bg-secondary {
-      animation-duration: 3.5s, 25s !important;
-    }
-    /* Ресетирање на останатите навигациски елементи како што беа */
-    nav {
-      height: 60px !important;
-      padding: 5px 15px !important;
-    }
-  }
 }
 
 /* Подесување на внатрешните видеа */
@@ -1173,16 +1132,16 @@ footer {
 }
 
 /* Оптимизација за лаптопи и помали десктоп екрани */
-@media (max-width: 1200px) and (min-width: 769px) {
+@media (max-width: 1200px) and (min-width: 1px) {
   .hero-drone-bg {
     width: 35vw; /* Го намалуваме главниот дрон */
     right: -5%; /* Го туркаме малку повеќе десно */
-    opacity: 0.6; /* Поголема транспарентност за полесно читање на текстот */
+    opacity: 0; /* Поголема транспарентност за полесно читање на текстот */
   }
 
   .hero-drone-bg-secondary {
     width: 35vw; /* Го намалуваме вториот дрон */
-    left: 75%; /* Го поместуваме подалеку од центарот */
-    opacity: 0.4;
+    left: 65%; /* Го поместуваме подалеку од центарот */
+    opacity: 0;
   }
 }
