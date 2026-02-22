@@ -656,12 +656,21 @@ select option {
     align-items: center !important;
     padding: 5px 10px !important; /* Минимален простор */
     gap: 5px !important;
-    height: 50px !important; /* Фиксна мала висина */
+    height: 70px !important; /* Фиксна мала висина */
   }
 
   /* Целосно криење на логото за максимален простор */
   .logo {
     display: none !important;
+  }
+
+  .lang-switcher {
+    gap: 6px !important;
+  }
+
+  .lang-btn {
+    font-size: 0.7rem !important;
+    padding: 2px !important;
   }
 
   /* Линкови (За нас, Q&A) - Прва група лево */
@@ -688,15 +697,6 @@ select option {
     gap: 8px !important;
     order: 2 !important;
     width: auto !important;
-  }
-
-  .lang-switcher {
-    gap: 6px !important;
-  }
-
-  .lang-btn {
-    font-size: 0.7rem !important;
-    padding: 2px !important;
   }
 
   /* Копчето „Закажи“ мора да биде многу мало */
