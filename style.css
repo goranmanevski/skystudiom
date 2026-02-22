@@ -586,7 +586,6 @@ select option {
 }
 
 /* ПОДЕСУВАЊЕ НА ИКОНИТЕ ПОД ФОРМАТА */
-/* ПОДЕСУВАЊЕ НА ИКОНИТЕ ПОД ФОРМАТА */
 .social-contact-wrapper {
   margin-top: 40px;
   padding-top: 30px;
@@ -743,7 +742,6 @@ select option {
   }
 
   /* 4. Pricing - Подобрен Carousel */
-  /* 4. Pricing - Подобрен Carousel (Вратен хоризонтален скрол) */
   .pricing-grid {
     display: flex !important;
     flex-direction: row !important;
@@ -769,6 +767,44 @@ select option {
   /* 5. Форма за контакт */
   .form-container {
     padding: 30px 20px !important;
+  }
+  @media (max-width: 768px) {
+    /* 1. ГЛАВЕН ДРОН - Слетува од лево (дијагонално) */
+    .hero-drone-bg {
+      width: 40% !important;
+      max-width: 180px !important;
+      top: 5% !important; /* Го креваме малку повисоко на мобилен */
+      left: 2% !important;
+      bottom: auto !important; /* Го ресетираме bottom од десктоп */
+      opacity: 0.8 !important;
+      z-index: 4 !important;
+
+      /* АНИМАЦИЈА: Прво слетува (fly-in-landing-left), па лебди многу бавно */
+      animation:
+        fly-in-landing-left 3.5s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+        slow-float-main 25s ease-in-out infinite 3.5s !important;
+    }
+
+    /* 2. ВТОР ДРОН - Влегува од десно */
+    .hero-drone-bg-secondary {
+      width: 45% !important;
+      max-width: 200px !important;
+      bottom: 8% !important; /* Го ставаме долу десно */
+      right: 2% !important;
+      opacity: 0.8 !important;
+      z-index: 4 !important;
+
+      /* АНИМАЦИЈА: Прво влегува од десно (fly-in-right), па лебди многу бавно */
+      animation:
+        fly-in-right 3.5s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s,
+        slow-float-secondary 25s ease-in-out infinite 4s !important;
+    }
+
+    /* Ресетирање на останатите навигациски елементи како што беа */
+    nav {
+      height: 60px !important;
+      padding: 5px 15px !important;
+    }
   }
 }
 
@@ -1059,6 +1095,11 @@ footer {
   max-width: 600px;
   z-index: 4;
   pointer-events: none;
+  rotate: 10deg; /* Малку завртен за да не биде толку очигледен */
+  /* Трае 20 секунди за екстремно смирен ефект */
+  animation:
+    fly-in-landing-left 3.5s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    slow-float-main 20s ease-in-out infinite 3.5s;
 }
 
 /* --- ВТОР ДРОН (ЦЕНТАР/ДЕСНО) --- */
@@ -1071,7 +1112,14 @@ footer {
   z-index: 4;
   pointer-events: none;
   opacity: 0;
+  rotate: 10deg; /* Малку завртен за да не биде толку очигледен */
+  /* Трае 15 секунди и има различно движење */
+  animation:
+    fly-in-right 3.5s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s,
+    slow-float-secondary 15s ease-in-out infinite 4s;
 }
+
+/* АНИМАЦИЈА НА ДРОНОВИТЕ */
 
 @keyframes fly-in-right {
   0% {
@@ -1085,18 +1133,39 @@ footer {
   }
 }
 
-/* Анимација за лебдење горе-долу */
-
-@keyframes fly-in-top {
+/* НОВА АНИМАЦИЈА: Слетување од лево према десно со надолна линија */
+@keyframes fly-in-landing-left {
   0% {
-    /* Започнува надвор од екранот горе (-100% висина) со благ наклон */
-    transform: translateY(-120%) rotate(-5deg);
+    /* Започнува надвор од екранот лево (-100vw) и погоре (-50%) */
+    transform: translate(-100vw, -50%) rotate(10deg);
     opacity: 0;
   }
   100% {
-    /* Завршува на својата дефинирана позиција */
-    transform: translateY(0) rotate(0deg);
+    /* Завршува точно на својата дефинирана позиција */
+    transform: translate(0, 0) rotate(0deg);
     opacity: 0.9;
+  }
+}
+/* Ултра бавно лебдење за главниот дрон */
+@keyframes slow-float-main {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    /* Многу мало движење: само 10 пиксели и минимален наклон */
+    transform: translate(-10px, -15px) rotate(1deg);
+  }
+}
+
+/* Малку поинакво движење за вториот дрон за да не изгледаат како роботи */
+@keyframes slow-float-secondary {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(15px, 10px) rotate(-1deg);
   }
 }
 
@@ -1109,7 +1178,7 @@ footer {
   }
 
   .hero-drone-bg-secondary {
-    width: 20vw; /* Го намалуваме вториот дрон */
+    width: 35vw; /* Го намалуваме вториот дрон */
     left: 75%; /* Го поместуваме подалеку од центарот */
     opacity: 0.4;
   }
