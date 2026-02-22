@@ -1,70 +1,104 @@
 /* 1. ГЛОБАЛЕН РЕСЕТ & ЖИВА ПОЗАДИНА */
-html { scroll-behavior: smooth; }
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-
-body { 
-    color: #ffffff; 
-    background-color: #050505;
-    /* ФИКС: overflow-x е избришано за да проработи Sticky Nav! */
-    -webkit-overflow-scrolling: touch; /* Го растоварува скролот на iPhone */
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
+body {
+  color: #ffffff;
+  background-color: #050505;
+  /* ФИКС: overflow-x е избришано за да проработи Sticky Nav! */
+  -webkit-overflow-scrolling: touch; /* Го растоварува скролот на iPhone */
+}
 
 /* 2. НАВИГАЦИЈА */
 nav {
-    display: flex;
-    justify-content: space-between; /* Ги распоредува трите групи */
-    align-items: center;
-    padding: 15px 50px;
-    position: sticky;
-    top: 0;
-    z-index: 2000;
-    backdrop-filter: blur(15px);
-    background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between; /* Ги распоредува трите групи */
+  align-items: center;
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* 1. Логото зазема 1 дел од просторот лево */
 .logo {
-    flex: 1;
+  flex: 1;
 }
 
 /* 2. Ова ги центрира "За нас" и "Q&A" */
 .main-nav-links {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 /* 3. Ова ги турка јазиците и копчето десно */
 .right-nav-group {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 25px;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
 }
 
 /* Едноставен стил за самите јазици во групата */
 .lang-switcher {
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 12px;
 }
-.logo { 
-    display: flex; align-items: center; font-size: 1.2rem; 
-    font-weight: 700; color: #fff; text-decoration: none; letter-spacing: 2px;
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
 }
 .logo-icon {
-    height: 35px; width: auto; margin-right: 12px;
-        transform: scale(1.02);
+  height: 35px;
+  width: auto;
+  margin-right: 12px;
+  transform: scale(1.02);
 }
 
-.nav-btn { background: #fff; color: #000; padding: 8px 18px; text-decoration: none; border-radius: 5px; font-weight: 500; transition: 0.3s; }
-.nav-btn:hover { box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); transform: scale(1.05); } /* Glow ефект и тука */
-.lang-btn { color: #fff; opacity: 0.6; text-decoration: none; transition: 0.3s; }
-.lang-btn:hover { opacity: 1; text-shadow: 0 0 8px rgba(255,255,255,0.8); }
-.lang-btn.active { opacity: 1; font-weight: bold; }
-
+.nav-btn {
+  background: #fff;
+  color: #000;
+  padding: 8px 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.nav-btn:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+} /* Glow ефект и тука */
+.lang-btn {
+  color: #fff;
+  opacity: 0.6;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.lang-btn:hover {
+  opacity: 1;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+.lang-btn.active {
+  opacity: 1;
+  font-weight: bold;
+}
 
 /* =========================================
    АНИМАЦИЈА
@@ -140,590 +174,895 @@ body {
   background: var(--yellow);
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
   animation: float-glass 8s ease-in-out infinite;
-}   
-
-
-
+}
 
 /* --- ДЕФИНИЦИИ НА ДВИЖЕЊАТА --- */
 
 @keyframes move-blue {
-  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
-  33% { transform: translate(30vw, 20vh) rotate(120deg) scale(1.2); }
-  66% { transform: translate(10vw, 50vh) rotate(240deg) scale(0.8); }
-  100% { transform: translate(0, 0) rotate(360deg) scale(1); }
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translate(30vw, 20vh) rotate(120deg) scale(1.2);
+  }
+  66% {
+    transform: translate(10vw, 50vh) rotate(240deg) scale(0.8);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg) scale(1);
+  }
 }
 
 @keyframes move-pink {
-  0% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(-20vw, -30vh) rotate(-90deg); }
-  50% { transform: translate(-40vw, -10vh) rotate(-180deg); }
-  75% { transform: translate(-10vw, 10vh) rotate(-270deg); }
-  100% { transform: translate(0, 0) rotate(-360deg); }
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-20vw, -30vh) rotate(-90deg);
+  }
+  50% {
+    transform: translate(-40vw, -10vh) rotate(-180deg);
+  }
+  75% {
+    transform: translate(-10vw, 10vh) rotate(-270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(-360deg);
+  }
 }
 
 @keyframes float-glass {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-20px, 30px) scale(1.05); }
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-20px, 30px) scale(1.05);
+  }
 }
 
 .content {
   position: relative;
   z-index: 10;
   color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-
-
-
-.hero { 
-    text-align: center; 
-    padding: 80px 20px;      /* Намалено од 120px на 80px */
-    min-height: 60vh;        /* Намалено од 85vh на 60vh */
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center;
-    
+.hero {
+  text-align: center;
+  padding: 80px 20px; /* Намалено од 120px на 80px */
+  min-height: 60vh; /* Намалено од 85vh на 60vh */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 20px; text-shadow: 0 4px 20px rgba(0,0,0,0.5); }
-.hero p { font-size: 1.2rem; color: #ddd; max-width: 700px; }
-.hero-badges { display: flex; gap: 15px; margin-top: 40px; justify-content: center; flex-wrap: wrap; }
-.badge { 
-    display: flex; align-items: center; background: rgba(255,255,255,0.1); 
-    padding: 8px 20px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); 
-    backdrop-filter: blur(5px); transition: 0.3s;
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin-bottom: 20px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
-.badge:hover { 
-    background: rgba(255,255,255,0.2); 
-    box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
-    border-color: #4facfe;
+.hero p {
+  font-size: 1.2rem;
+  color: #ddd;
+  max-width: 700px;
 }
-.badge img { height: 25px; margin-right: 10px; }
-
+.hero-badges {
+  display: flex;
+  gap: 15px;
+  margin-top: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.badge {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  transition: 0.3s;
+}
+.badge:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
+  border-color: #4facfe;
+}
+.badge img {
+  height: 25px;
+  margin-right: 10px;
+}
 
 /* СЕКЦИЈА 2: FEATURES - GLASS LIGHTER & GLOW */
-.features { 
-    padding: 80px 20px; text-align: center;
-    background: linear-gradient(135deg, rgba(0, 10, 30, 0.8), rgba(2, 45, 77, 0.6));
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    animation: gradientShift 5s ease infinite;
+.features {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 10, 30, 0.8),
+    rgba(2, 45, 77, 0.6)
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  animation: gradientShift 5s ease infinite;
 }
-.features-grid { display: flex; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; }
-.feature-box { 
-    flex: 1; min-width: 320px; padding: 40px 30px; border-radius: 20px; 
-    background: rgba(255,255,255,0.03); 
-    border: 1px solid rgba(255,255,255,0.1); 
-    transition: 0.3s;
+.features-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.feature-box {
+  flex: 1;
+  min-width: 320px;
+  padding: 40px 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
 }
 /* НОВО: Glow ефект за карактеристиките */
-.feature-box:hover { 
-    transform: translateY(-10px); 
-    background: rgba(255,255,255,0.08); 
-    border-color: #4facfe; 
-    box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
+.feature-box:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #4facfe;
+  box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
 }
-.feature-img, .feature-double-img img { height: 45px; margin-bottom: 20px; display: block; margin: 0 auto 20px auto; }
+.feature-img,
+.feature-double-img img {
+  height: 45px;
+  margin-bottom: 20px;
+  display: block;
+  margin: 0 auto 20px auto;
+}
 
 /* Овде го менуваме само gap од 0px на 8px за тој 'one space' ефект */
-.feature-double-img { 
-    display: flex; 
-    justify-content: center; 
-    gap: 8px; 
-    align-items: center; 
-    margin-bottom: 20px; /* ОВА ЈА ПРАВИ РАЗЛИКАТА */
+.feature-double-img {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 20px; /* ОВА ЈА ПРАВИ РАЗЛИКАТА */
 }
 /* Ова останува исто за да не се оддалечуваат логоата едно од друго */
-.feature-double-img img { margin: 0; }
+.feature-double-img img {
+  margin: 0;
+}
 
-.feature-box i { font-size: 3rem; margin-bottom: 20px; display: block; color: #4facfe; transition: 0.3s; }
-.feature-box:hover i { text-shadow: 0 0 15px #4facfe; transform: scale(1.1); }
-
+.feature-box i {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+  color: #4facfe;
+  transition: 0.3s;
+}
+.feature-box:hover i {
+  text-shadow: 0 0 15px #4facfe;
+  transform: scale(1.1);
+}
 
 /* СЕКЦИЈА 3: PORTFOLIO - DEEP DARK & VIDEO GLOW */
-.portfolio-v3 { 
-    padding: 100px 20px; 
-    background: #000000;
-    position: relative; /* ОВА Е ВАЖНО ЗА ЧЕСТИЧКИТЕ */
-    overflow: hidden;
+.portfolio-v3 {
+  padding: 100px 20px;
+  background: #000000;
+  position: relative; /* ОВА Е ВАЖНО ЗА ЧЕСТИЧКИТЕ */
+  overflow: hidden;
 }
-.v-section { display: flex; align-items: center; gap: 60px; margin-bottom: 100px; max-width: 1200px; margin-left: auto; margin-right: auto; }
-.v-section.reverse { flex-direction: row-reverse; }
-.v-info { flex: 1; }
-.v-info h2 { font-size: 2.5rem; margin-bottom: 15px; background: -webkit-linear-gradient(#fff, #aaa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.v-video { 
-    flex: 1.5; position: relative; padding-bottom: 42%; height: 0; 
-    border-radius: 20px; overflow: hidden; 
-    box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
-    border-color: #4facfe;
-    transition: 0.4s;
+.v-section {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 100px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.v-section.reverse {
+  flex-direction: row-reverse;
+}
+.v-info {
+  flex: 1;
+}
+.v-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  background: -webkit-linear-gradient(#fff, #aaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.v-video {
+  flex: 1.5;
+  position: relative;
+  padding-bottom: 42%;
+  height: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
+  border-color: #4facfe;
+  transition: 0.4s;
 }
 /* НОВО: Glow ефект кога ќе поминеш врз видеото */
 .v-video:hover {
-    box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
-    border-color: #4facfe;
-    transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
+  border-color: #4facfe;
+  transform: scale(1.02);
 }
-.v-video video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
-
+.v-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* СЕКЦИЈА 4: PRICING - GLASS PINKISH & STRONG GLOW */
-.pricing { 
-    padding: 100px 20px; text-align: center;
-    background: linear-gradient(135deg, rgba(20, 0, 20, 0.9), rgba(50, 0, 60, 0.7));
-    backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(255,255,255,0.05);
+.pricing {
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 0, 20, 0.9),
+    rgba(50, 0, 60, 0.7)
+  );
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
-.pricing-grid { display: flex; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto; align-items: stretch; }
-.price-card { 
-    background: rgba(255, 255, 255, 0.05); 
-    padding: 40px; border-radius: 25px; width: 340px; 
-    border: 1px solid rgba(255,255,255,0.1); 
-    display: flex; flex-direction: column; transition: 0.3s;
+.pricing-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+.price-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 25px;
+  width: 340px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
 }
 /* Омилениот ефект: Силно розев Glow */
-.price-card:hover { 
-    transform: translateY(-10px); 
-        border-color: #4facfe;
-    box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
+.price-card:hover {
+  transform: translateY(-10px);
+  border-color: #4facfe;
+  box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
 }
-.price { font-size: 3.5rem; font-weight: 700; margin: 20px 0; color: #fff; }
-.price-card ul { list-style: none; text-align: left; margin-bottom: 30px; flex-grow: 1; color: #ccc; }
-.price-card ul li { margin-bottom: 12px; padding-left: 20px; position: relative; }
-.price-card ul li::before { content: '✓'; position: absolute; left: 0; color: #f093fb; text-shadow: 0 0 5px #f093fb; }
-.extra-info { max-height: 0; overflow: hidden; transition: 0.4s ease-out; font-size: 0.9rem; color: #aaa; text-align: left;}
-.more-info-btn { cursor: pointer; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); color: #bbb; font-size: 0.9rem; transition: 0.3s; }
-.more-info-btn:hover { color: #fff; text-shadow: 0 0 5px #fff; }
-
+.price {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 20px 0;
+  color: #fff;
+}
+.price-card ul {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 30px;
+  flex-grow: 1;
+  color: #ccc;
+}
+.price-card ul li {
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
+.price-card ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #f093fb;
+  text-shadow: 0 0 5px #f093fb;
+}
+.extra-info {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s ease-out;
+  font-size: 0.9rem;
+  color: #aaa;
+  text-align: left;
+}
+.more-info-btn {
+  cursor: pointer;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #bbb;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+.more-info-btn:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #fff;
+}
 
 /* 1. КОНТАКТ СЕКЦИЈА - GLASSMORPHISM ДИЗАЈН */
 .contact-section {
-    padding: 100px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 10;
-    /* Ја користиме истата транспарентност за да се гледаат честичките зад неа */
-    background: transparent;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  /* Ја користиме истата транспарентност за да се гледаат честичките зад неа */
+  background: transparent;
 }
 
 .form-container {
-    background: rgba(255, 255, 255, 0.03); /* Многу тенка бела за стакло ефект */
-    backdrop-filter: blur(15px); /* Заматување на позадината */
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 50px 40px;
-    border-radius: 30px;
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.03); /* Многу тенка бела за стакло ефект */
+  backdrop-filter: blur(15px); /* Заматување на позадината */
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 50px 40px;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .form-container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    background: linear-gradient(to right, #fff, #4facfe);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, #fff, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .form-container p {
-    color: #ccc;
-    margin-bottom: 30px;
-    font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 30px;
+  font-size: 1rem;
 }
 
 /* 2. ПОДЕСУВАЊЕ НА ПОЛИЊАТА ЗА ВНЕС */
 .input-group {
-    margin-bottom: 20px;
-    text-align: left;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
-.input-group input, 
-.input-group select, 
+.input-group input,
+.input-group select,
 .input-group textarea {
-    width: 100%;
-    padding: 15px 20px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    color: #fff;
-    font-size: 1rem;
-    outline: none;
-    transition: 0.3s;
+  width: 100%;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
 }
 
 /* Ефект кога ќе кликнеш во полето */
-.input-group input:focus, 
+.input-group input:focus,
 .input-group textarea:focus {
-    border-color: #4facfe;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 15px rgba(79, 172, 254, 0.3);
+  border-color: #4facfe;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(79, 172, 254, 0.3);
 }
 
 /* Стилизирање на Select опцијата за да не биде бела */
 select option {
-    background: #0a0a15;
-    color: #fff;
+  background: #0a0a15;
+  color: #fff;
 }
 
 /* 3. КОПЧЕ ЗА ИСПРАЌАЊЕ */
 .form-submit {
-    width: 100%;
-    padding: 16px;
-    background: #fff;
-    color: #000;
-    border: none;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.4s;
-    margin-top: 10px;
+  width: 100%;
+  padding: 16px;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.4s;
+  margin-top: 10px;
 }
 
 .form-submit:hover {
-    background: #4facfe; /* Се менува во сина при hover */
-    color: #fff;
-    box-shadow: 0 0 25px rgba(79, 172, 254, 0.5);
-    transform: translateY(-3px);
+  background: #4facfe; /* Се менува во сина при hover */
+  color: #fff;
+  box-shadow: 0 0 25px rgba(79, 172, 254, 0.5);
+  transform: translateY(-3px);
 }
 
 /* ПОДЕСУВАЊЕ НА ИКОНИТЕ ПОД ФОРМАТА */
 /* ПОДЕСУВАЊЕ НА ИКОНИТЕ ПОД ФОРМАТА */
 .social-contact-wrapper {
-    margin-top: 40px;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .social-label {
-    font-size: 0.9rem;
-    color: #aaa;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .contact-btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    color: #fff !important;
-    text-decoration: none;
-    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #fff !important;
+  text-decoration: none;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* ОВИЕ СЕ БОИТЕ ШТО ГИ БАРАШЕ */
-.contact-btn.phone { background: #007aff !important; }
-.contact-btn.whatsapp { background: #25D366 !important; }
-.contact-btn.viber { background: #7360f2 !important; }
-.contact-btn.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) !important; }
-.contact-btn.email { background: #333 !important; }
-
-.contact-btn:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+.contact-btn.phone {
+  background: #007aff !important;
+}
+.contact-btn.whatsapp {
+  background: #25d366 !important;
+}
+.contact-btn.viber {
+  background: #7360f2 !important;
+}
+.contact-btn.instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  ) !important;
+}
+.contact-btn.email {
+  background: #333 !important;
 }
 
+.contact-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
 
 /* ============================================================
    ФИНАЛНА МОБИЛНА ОПТИМИЗАЦИЈА (Sky Studio M)
    ============================================================ */
 @media (max-width: 768px) {
-    
-    /* 1. Навигација - Редење во колона за да не се гужва */
-    nav {
-        flex-direction: column !important;
-        padding: 10px 15px !important; /* Намален хоризонтален padding */
-        width: 100% !important;
-        height: auto !important;
-        box-sizing: border-box; /* Гарантира дека padding-от е внатре во ширината */
-        gap: 15px;
-    }
+  /* 1. Навигација - Редење во колона за да не се гужва */
+  nav {
+    flex-direction: column !important;
+    padding: 10px 15px !important; /* Намален хоризонтален padding */
+    width: 100% !important;
+    height: auto !important;
+    box-sizing: border-box; /* Гарантира дека padding-от е внатре во ширината */
+    gap: 15px;
+  }
 
-    .logo {
-        flex: none;
-        width: 100%;
-        justify-content: center;
-        font-size: 1rem;
-        font-size: 0.9rem !important;
-    }
+  .logo {
+    flex: none;
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
+    font-size: 0.9rem !important;
+  }
 
-    .main-nav-links {
-        flex: none;
-        width: 100%;
-        justify-content: center;
-        gap: 15px;
-        order: 3; /* Оди под јазиците */
-        padding-top: 10px;
-        border-top: 1px solid rgba(255,255,255,0.1);
-    }
+  .main-nav-links {
+    flex: none;
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+    order: 3; /* Оди под јазиците */
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
 
-    .right-nav-group {
-        flex: none;
-        width: 100%;
-        justify-content: space-between;
-        order: 2;
-    }
+  .right-nav-group {
+    flex: none;
+    width: 100%;
+    justify-content: space-between;
+    order: 2;
+  }
 
-    /* 2. Hero Секција - Намалување на висината */
-    .abstract-bg {
-        height: 60vh !important; /* Да не го зафаќа цел екран на телефон */
-    }
+  /* 2. Hero Секција - Намалување на висината */
+  .abstract-bg {
+    height: 60vh !important; /* Да не го зафаќа цел екран на телефон */
+  }
 
-    .hero h1 {
-        font-size: 1.8rem !important;
-        line-height: 1.2;
-    }
+  .hero h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.2;
+  }
 
-    .hero p {
-        font-size: 1rem;
-        padding: 0 10px;
-    }
+  .hero p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
 
-    /* 3. Portfolio - Видеата (9:16) */
-    .v-section, .v-section.reverse {
-        flex-direction: column !important;
-        gap: 20px !important;
-        text-align: center;
-    }
+  /* 3. Portfolio - Видеата (9:16) */
+  .v-section,
+  .v-section.reverse {
+    flex-direction: column !important;
+    gap: 20px !important;
+    text-align: center;
+  }
 
-    .v-video {
-        width: 100% !important;
-        padding-bottom: 125% !important; /* Совршен сооднос за Reels/TikTok */
-        border-radius: 15px;
-    }
+  .v-video {
+    width: 100% !important;
+    padding-bottom: 125% !important; /* Совршен сооднос за Reels/TikTok */
+    border-radius: 15px;
+  }
 
-    /* 4. Pricing - Подобрен Carousel */
-/* 4. Pricing - Подобрен Carousel (Вратен хоризонтален скрол) */
-    .pricing-grid {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        overflow-y: hidden !important; 
-        scroll-snap-type: x mandatory !important;
-        justify-content: flex-start !important;
-        padding: 20px !important;
-        gap: 15px !important;
-        -webkit-overflow-scrolling: touch !important;
-        touch-action: pan-x pan-y !important; /* Дозволува скрол во двете насоки */
-    }
+  /* 4. Pricing - Подобрен Carousel */
+  /* 4. Pricing - Подобрен Carousel (Вратен хоризонтален скрол) */
+  .pricing-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
+    justify-content: flex-start !important;
+    padding: 20px !important;
+    gap: 15px !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-x pan-y !important; /* Дозволува скрол во двете насоки */
+  }
 
-    .price-card {
-        min-width: 280px !important;
-        max-width: 280px !important;
-        padding: 30px 20px !important;
-        scroll-snap-align: center !important; /* Го центрира пакетот при лизгање */
-        flex-shrink: 0 !important; /* Спречува пакетите да се згмечат */
-    }
+  .price-card {
+    min-width: 280px !important;
+    max-width: 280px !important;
+    padding: 30px 20px !important;
+    scroll-snap-align: center !important; /* Го центрира пакетот при лизгање */
+    flex-shrink: 0 !important; /* Спречува пакетите да се згмечат */
+  }
 
-    /* 5. Форма за контакт */
-    .form-container {
-        padding: 30px 20px !important;
-    }
+  /* 5. Форма за контакт */
+  .form-container {
+    padding: 30px 20px !important;
+  }
 }
 
-
-
-
-
-
 /* Подесување на внатрешните видеа */
-.v-video .desktop-video, 
+.v-video .desktop-video,
 .v-video .mobile-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .v-video video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ова го прави видеото да го исполни целиот простор */
-    border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ова го прави видеото да го исполни целиот простор */
+  border-radius: 20px;
 }
 
 /* На десктоп, криј го мобилното видео */
-.mobile-video { display: none; }
-.desktop-video { display: block; }
+.mobile-video {
+  display: none;
+}
+.desktop-video {
+  display: block;
+}
 
-footer { padding: 40px; text-align: center; font-size: 0.8rem; color: #444; background: #000; border-top: 1px solid #111; }
+footer {
+  padding: 40px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #444;
+  background: #000;
+  border-top: 1px solid #111;
+}
 
 /* --- SIMPLE PARTICLES ENGINE --- */
 .particles-container {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    pointer-events: none;
-    z-index: 1;
-    overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
 }
 
 .p-dot {
-    position: absolute;
-    width: 10px; height: 10px;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 50%;
-    filter: blur(1px);
-    animation: float-up 10s infinite linear;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: float-up 10s infinite linear;
 }
 
 /* Коригирани латинични класи и позиции */
-.p-dot:nth-child(1) { top: 20%; left: 10%; animation-delay: 4s; }
-.p-dot:nth-child(2) { top: 60%; left: 30%; animation-delay: 2s; width: 10px; height: 6px; }
-.p-dot:nth-child(3) { top: 40%; left: 70%; animation-delay: 4s; }
-.p-dot:nth-child(4) { top: 80%; left: 90%; animation-delay: 1s; width: 3px; height: 3px; }
-.p-dot:nth-child(5) { top: 10%; left: 50%; animation-delay: 6s; }
-.p-dot:nth-child(6) { top: 70%; left: 15%; animation-delay: 3s; }
-.p-dot:nth-child(7) { top: 30%; left: 80%; animation-delay: 5s; width: 15px; height: 4px; }
-.p-dot:nth-child(8) { top: 50%; left: 20%; animation-delay: 7s; }
-.p-dot:nth-child(9) { top: 90%; left: 60%; animation-delay: 4s; width: 5px; height: 5px; }
-.p-dot:nth-child(10) { top: 25%; left: 40%; animation-delay: 8s; }
-
-@keyframes float-up {
-    0% { transform: translateY(0) translateX(0); opacity: 0; }
-    20% { opacity: 0.6; }
-    80% { opacity: 0.6; }
-    100% { transform: translateY(-150px) translateX(30px); opacity: 0; }
+.p-dot:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  animation-delay: 4s;
+}
+.p-dot:nth-child(2) {
+  top: 60%;
+  left: 30%;
+  animation-delay: 2s;
+  width: 10px;
+  height: 6px;
+}
+.p-dot:nth-child(3) {
+  top: 40%;
+  left: 70%;
+  animation-delay: 4s;
+}
+.p-dot:nth-child(4) {
+  top: 80%;
+  left: 90%;
+  animation-delay: 1s;
+  width: 3px;
+  height: 3px;
+}
+.p-dot:nth-child(5) {
+  top: 10%;
+  left: 50%;
+  animation-delay: 6s;
+}
+.p-dot:nth-child(6) {
+  top: 70%;
+  left: 15%;
+  animation-delay: 3s;
+}
+.p-dot:nth-child(7) {
+  top: 30%;
+  left: 80%;
+  animation-delay: 5s;
+  width: 15px;
+  height: 4px;
+}
+.p-dot:nth-child(8) {
+  top: 50%;
+  left: 20%;
+  animation-delay: 7s;
+}
+.p-dot:nth-child(9) {
+  top: 90%;
+  left: 60%;
+  animation-delay: 4s;
+  width: 5px;
+  height: 5px;
+}
+.p-dot:nth-child(10) {
+  top: 25%;
+  left: 40%;
+  animation-delay: 8s;
 }
 
-
-
-
-
-
+@keyframes float-up {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-150px) translateX(30px);
+    opacity: 0;
+  }
+}
 
 /* PORTFOLIO GRID STYLE */
 .portfolio-grid-section {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
 }
 
 .portfolio-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 15px;
-    transition: 0.4s;
-    text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 15px;
+  transition: 0.4s;
+  text-align: center;
 }
 
 .portfolio-card:hover {
-    transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.08);
-    border-color: #4facfe;
-    box-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #4facfe;
+  box-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
 }
 
 .video-thumb {
-    width: 100%;
-    height: 200px;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 15px;
-    background: #111;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .video-thumb video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .video-thumb.empty i {
-    font-size: 3rem;
-    color: #333;
+  font-size: 3rem;
+  color: #333;
 }
 
-.portfolio-card h3 { margin-bottom: 5px; font-size: 1.2rem; }
-.portfolio-card p { color: #aaa; font-size: 0.9rem; }
+.portfolio-card h3 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+.portfolio-card p {
+  color: #aaa;
+  font-size: 0.9rem;
+}
 
 /* --- DISCOUNT BADGE STYLE --- */
 .price-card {
-    position: relative; /* Ова овозможува беџот да се врзе за картичката */
+  position: relative; /* Ова овозможува беџот да се врзе за картичката */
 }
 
 .discount-tag {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: linear-gradient(45deg, #ff007a, #ff5e00); /* Жива розево-портокалова боја */
-    color: #fff;
-    padding: 5px 12px;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    box-shadow: 0 0 10px rgba(255, 0, 122, 0.5);
-    animation: badge-pulse 2s infinite ease-in-out;
-    z-index: 10;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(
+    45deg,
+    #ff007a,
+    #ff5e00
+  ); /* Жива розево-портокалова боја */
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(255, 0, 122, 0.5);
+  animation: badge-pulse 2s infinite ease-in-out;
+  z-index: 10;
 }
 
 /* Анимација за суптилно сјаење (Glow) */
 @keyframes badge-pulse {
-    0% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 0, 122, 0.5); }
-    50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(255, 0, 122, 0.8); }
-    100% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 0, 122, 0.5); }
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 0, 122, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 0, 122, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 0, 122, 0.5);
+  }
 }
 /* --- OLD PRICE STRIKETHROUGH STYLE --- */
 .old-price {
-    text-decoration: line-through;
-    text-decoration-color: #ff007a; /* Прецртано со бојата на попустот за подобар акцент */
-    color: rgba(255, 255, 255, 0.3); /* Избледена бела боја */
-    font-size: 1.6rem; /* Помала од главната цена */
-    font-weight: 300;
-    margin-right: 12px;
-    vertical-align: middle;
+  text-decoration: line-through;
+  text-decoration-color: #ff007a; /* Прецртано со бојата на попустот за подобар акцент */
+  color: rgba(255, 255, 255, 0.3); /* Избледена бела боја */
+  font-size: 1.6rem; /* Помала од главната цена */
+  font-weight: 300;
+  margin-right: 12px;
+  vertical-align: middle;
 }
 
 /* Мала корекција за главната цена за да бидат во иста линија */
 .price {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
 }
-
 
 /* Ограничувањето го ставаме САМО на позадината, а не на сите секции */
 .abstract-bg {
-    width: 100% !important;
-    max-width: 100vw !important;
-    overflow: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow: hidden !important;
 }
 
 .shape {
-    max-width: 100vw !important;
+  max-width: 100vw !important;
+}
+
+/* --- ГЛАВЕН ДРОН (ДЕСНО) --- */
+.hero-drone-bg {
+  position: absolute;
+  top: -22%; /* Позиција во проценти од висината */
+  left: 1%; /* Секогаш ќе биде на 2% од десниот раб */
+  width: 45vw; /* Ширината зависи од ширината на екранот */
+  max-width: 600px;
+  z-index: 4;
+  pointer-events: none;
+
+  /* КОМБИНИРАНА АНИМАЦИЈА: */
+  /* 1. fly-in-top: Се спушта од горе за 3 секунди */
+  /* 2. float-drone: Почнува да лебди откако ќе се спушти (после 3с) */
+  animation:
+    fly-in-top 3s cubic-bezier(0.25, 1, 0.5, 1) forwards,
+    float-drone 6s ease-in-out infinite 5s;
+}
+
+/* --- ВТОР ДРОН (ЦЕНТАР/ДЕСНО) --- */
+.hero-drone-bg-secondary {
+  position: absolute;
+  top: 2%; /* 10% од врвот */
+  left: 75%; /* СЕГА Е ВО ПРОЦЕНТИ - секогаш ќе биде на 60% од ширината */
+  width: 25vw; /* Помал дрон во позадина */
+  max-width: 450px;
+  z-index: 4;
+  pointer-events: none;
+  opacity: 0;
+
+  /* Само влегува и застанува */
+  animation: fly-in-right 3.5s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s;
+}
+
+@keyframes fly-in-right {
+  0% {
+    /* Влегува од 100% надвор од десната страна на екранот */
+    transform: translateX(100vw) rotate(-5deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 0.9;
+  }
+}
+
+/* Анимација за лебдење горе-долу */
+
+@keyframes fly-in-top {
+  0% {
+    /* Започнува надвор од екранот горе (-100% висина) со благ наклон */
+    transform: translateY(-120%) rotate(-5deg);
+    opacity: 0;
+  }
+  100% {
+    /* Завршува на својата дефинирана позиција */
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.9;
+  }
 }
