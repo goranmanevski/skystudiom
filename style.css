@@ -776,7 +776,7 @@ select option {
       top: 5% !important; /* Го креваме малку повисоко на мобилен */
       left: 2% !important;
       bottom: auto !important; /* Го ресетираме bottom од десктоп */
-      opacity: 0.8 !important;
+      opacity: 0 !important;
       z-index: 4 !important;
 
       /* АНИМАЦИЈА: Прво слетува (fly-in-landing-left), па лебди многу бавно */
@@ -791,15 +791,18 @@ select option {
       max-width: 200px !important;
       bottom: 8% !important; /* Го ставаме долу десно */
       right: 2% !important;
-      opacity: 0.8 !important;
+      opacity: 0 !important;
       z-index: 4 !important;
 
       /* АНИМАЦИЈА: Прво влегува од десно (fly-in-right), па лебди многу бавно */
       animation:
-        fly-in-right 3.5s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s,
+        fly-in-right 3.5s cubic-bezier(0.25, 1, 0.5, 1) forwards,
         slow-float-secondary 25s ease-in-out infinite 4s !important;
     }
-
+    .hero-drone-bg,
+    .hero-drone-bg-secondary {
+      animation-duration: 3.5s, 25s !important;
+    }
     /* Ресетирање на останатите навигациски елементи како што беа */
     nav {
       height: 60px !important;
