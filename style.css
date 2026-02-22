@@ -238,11 +238,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 10; /* Текстот мора да биде повисоко од дроновите (кои се на 4 и 5) */
+  pointer-events: none; /* Да не пречи на кликање, иако е над сè */
 }
 .hero h1 {
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   margin-bottom: 20px;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  /* Силна сенка која го одвојува текстот од било каква позадина */
+  text-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.8),
+    0 0 10px rgba(0, 0, 0, 0.5);
 }
 .hero p {
   font-size: 1.2rem;
@@ -1049,7 +1055,7 @@ footer {
   position: absolute;
   top: 0%; /* Позиција во проценти од висината */
   left: -1%; /* Секогаш ќе биде на 2% од десниот раб */
-  width: 45vw; /* Ширината зависи од ширината на екранот */
+  width: clamp(300px, 40vw, 800px);
   max-width: 600px;
   z-index: 4;
   pointer-events: none;
@@ -1060,7 +1066,7 @@ footer {
   position: absolute;
   bottom: 5%; /* 10% од дното */
   right: -1%; /* СЕГА Е ВО ПРОЦЕНТИ - секогаш ќе биде на 60% од ширината */
-  width: 45vw; /* Помал дрон во позадина */
+  width: clamp(300px, 40vw, 800px);
   max-width: 700px;
   z-index: 4;
   pointer-events: none;
@@ -1091,5 +1097,20 @@ footer {
     /* Завршува на својата дефинирана позиција */
     transform: translateY(0) rotate(0deg);
     opacity: 0.9;
+  }
+}
+
+/* Оптимизација за лаптопи и помали десктоп екрани */
+@media (max-width: 1200px) and (min-width: 769px) {
+  .hero-drone-bg {
+    width: 35vw; /* Го намалуваме главниот дрон */
+    right: -5%; /* Го туркаме малку повеќе десно */
+    opacity: 0.6; /* Поголема транспарентност за полесно читање на текстот */
+  }
+
+  .hero-drone-bg-secondary {
+    width: 20vw; /* Го намалуваме вториот дрон */
+    left: 75%; /* Го поместуваме подалеку од центарот */
+    opacity: 0.4;
   }
 }
