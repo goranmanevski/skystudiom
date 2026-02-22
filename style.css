@@ -649,39 +649,62 @@ select option {
    ФИНАЛНА МОБИЛНА ОПТИМИЗАЦИЈА (Sky Studio M)
    ============================================================ */
 @media (max-width: 768px) {
-  /* 1. Навигација - Редење во колона за да не се гужва */
+  /* Навигација во еден ред */
   nav {
-    flex-direction: column !important;
-    padding: 10px 15px !important; /* Намален хоризонтален padding */
-    width: 100% !important;
-    height: auto !important;
-    box-sizing: border-box; /* Гарантира дека padding-от е внатре во ширината */
-    gap: 15px;
+    flex-direction: row !important; /* Враќање во хоризонтала */
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 5px 10px !important; /* Минимален простор */
+    gap: 5px !important;
+    height: 50px !important; /* Фиксна мала висина */
   }
 
+  /* Целосно криење на логото за максимален простор */
   .logo {
-    flex: none;
-    width: 100%;
-    justify-content: center;
-    font-size: 1rem;
-    font-size: 0.9rem !important;
+    display: none !important;
   }
 
+  /* Линкови (За нас, Q&A) - Прва група лево */
   .main-nav-links {
-    flex: none;
-    width: 100%;
-    justify-content: center;
-    gap: 15px;
-    order: 3; /* Оди под јазиците */
-    padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex !important;
+    flex: 2 !important; /* Зазема повеќе простор за текстот */
+    justify-content: flex-start !important;
+    gap: 12px !important;
+    order: 1 !important;
+    padding: 0 !important;
+    border: none !important; /* Бришење на линијата од претходно */
   }
 
+  .main-nav-links a {
+    font-size: 0.75rem !important; /* Ситни букви за да соберат */
+    white-space: nowrap !important; /* Да не се крши текстот во нов ред */
+  }
+
+  /* Јазици и Копче - Втора група десно */
   .right-nav-group {
-    flex: none;
-    width: 100%;
-    justify-content: space-between;
-    order: 2;
+    display: flex !important;
+    flex: 3 !important;
+    justify-content: flex-end !important;
+    gap: 8px !important;
+    order: 2 !important;
+    width: auto !important;
+  }
+
+  .lang-switcher {
+    gap: 6px !important;
+  }
+
+  .lang-btn {
+    font-size: 0.7rem !important;
+    padding: 2px !important;
+  }
+
+  /* Копчето „Закажи“ мора да биде многу мало */
+  .nav-btn {
+    padding: 5px 10px !important;
+    font-size: 0.75rem !important;
+    border-radius: 4px !important;
+    white-space: nowrap !important;
   }
 
   /* 2. Hero Секција - Намалување на висината */
