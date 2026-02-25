@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://skystudiom.com/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.com/en.html"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://skystudiom.com/sq.html"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://skystudiom.com/en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.com/en.html"/>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://skystudiom.com/sq.html"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://skystudiom.com/sq.html</loc>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://skystudiom.com/sq.html"/>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.com/en.html"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://skystudiom.com/portfolio.html</loc>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.com/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.com/portfolioen.html"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://skystudiom.com/portfoliosq.html"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://skystudiom.com/portfolioen.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.com/portfolioen.html"/>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.com/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://skystudiom.com/portfoliosq.html"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skystudiom.com/portfoliosq.html</loc>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://skystudiom.com/portfoliosq.html"/>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.com/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.com/portfolioen.html"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://skystudiom.com/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.com/abouten.html"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://skystudiom.com/aboutsq.html"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skystudiom.com/abouten.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.com/abouten.html"/>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://skystudiom.com/aboutsq.html"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://skystudiom.com/aboutsq.html</loc>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://skystudiom.com/aboutsq.html"/>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.com/abouten.html"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://skystudiom.com/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.com/faqen.html"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://skystudiom.com/faqsq.html"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://skystudiom.com/faqen.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.com/faqen.html"/>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://skystudiom.com/faqsq.html"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://skystudiom.com/faqsq.html</loc>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://skystudiom.com/faqsq.html"/>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.com/faqen.html"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+</urlset>
