@@ -1334,7 +1334,12 @@ footer {
   transform: translate(-50%, -50%);
   width: 70px;
   height: 70px;
-  background: rgba(79, 172, 254, 0.2); /* Твојата сина боја со транспарентност */
+  background: rgba(
+    79,
+    172,
+    254,
+    0.2
+  ); /* Твојата сина боја со транспарентност */
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
