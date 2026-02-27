@@ -1,8 +1,10 @@
 User-agent: *
 Allow: /
+
 # Ова ги спречува ботовите директно да ги индексираат видео фајловите 
-# за да не ти трошат од лимитот на хостингот
+# за да не ти трошат од лимитот на хостингот (bandwidth)
 Disallow: /videos/*.mp4
 
-# Патека до твојата мапа на сајтот
-Sitemap: https://skystudiom.com/sitemap.xml
+# Ова е многу важно: Патеката МОРА да ја содржи верзијата со www
+# за да се совпаѓа со твоите canonical тагови
+Sitemap: https://www.skystudiom.com/sitemap.xml
