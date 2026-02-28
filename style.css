@@ -1377,17 +1377,3 @@ footer {
   display: block;
   transition: transform 0.5s ease; /* За мазен ефект при hover */
 }
-
-/* Осигурува дека контејнерот има правилен сооднос */
-.video-thumb {
-  width: 100%;
-  aspect-ratio: 16 / 9; /* Ова треба да биде исто како кај видео картичките */
-  overflow: hidden;
-  position: relative;
-  background: #0f172a; /* Темна позадина додека се вчитува сликата */
-}
-
-/* Изборен ефект: Мало зумирање кога ќе поминеш со маусот */
-.portfolio-card:hover .static-image {
-  transform: scale(1.05);
-}
