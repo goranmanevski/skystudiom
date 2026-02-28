@@ -1377,3 +1377,6 @@ footer {
   display: block;
   transition: transform 0.5s ease; /* За мазен ефект при hover */
 }
+.play-overlay {
+  pointer-events: none; /* Ова овозможува кликот да помине „низ“ иконата директно до видеото */
+}

@@ -314,7 +314,7 @@
               <img
                 src="https://skystudiom.com/images/skystudiom-coming-soon-projects-dji.jpg"
                 alt="Наскоро: Нови дронски проекти во изработка"
-                class="portfolio-video static-image"
+                class="static-image"
                 loading="lazy"
               />
             </div>
@@ -389,20 +389,26 @@
 
     <script>
       function togglePlay(container) {
-        const video = container.querySelector(".portfolio-video");
-        if (video.paused) {
-          document.querySelectorAll(".portfolio-video").forEach((v) => {
-            v.pause();
-            const containerElement = v.closest(".video-container");
-            if (containerElement) containerElement.classList.remove("playing");
-          });
-          video.play();
-          container.classList.add("playing");
-        } else {
-          video.pause();
-          container.classList.remove("playing");
-        }
+  const video = container.querySelector("video");
+  if (!video) return; // Ако е слика, не прави ништо
+
+  if (video.paused) {
+    // Селектирај ги само видео елементите, за да не ја чепка сликата "Наскоро"
+    document.querySelectorAll("video.portfolio-video").forEach((v) => {
+      v.pause();
+      const containerElement = v.closest(".video-container");
+      if (containerElement) {
+        containerElement.classList.remove("playing");
       }
+    });
+
+    video.play().catch(err => console.log("Video play error:", err));
+    container.classList.add("playing");
+  } else {
+    video.pause();
+    container.classList.remove("playing");
+  }
+}
     </script>
   </body>
 </html>
