@@ -5,6 +5,6 @@ Allow: /
 # за да не ти трошат од лимитот на хостингот (bandwidth)
 Disallow: /videos/*.mp4
 
-# Ова е многу важно: Патеката МОРА да ја содржи верзијата со www
-# за да се совпаѓа со твоите canonical тагови
-Sitemap: https://www.skystudiom.com/sitemap.xml
+# МНОГУ ВАЖНО: Патеката МОРА да биде БЕЗ www за да се совпаѓа 
+# со твоите нови canonical тагови и веќе индексираните страници
+Sitemap: https://skystudiom.com/sitemap.xml
