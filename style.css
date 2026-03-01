@@ -318,6 +318,7 @@ body {
 }
 
 /* СЕКЦИЈА 2: FEATURES - GLASS LIGHTER & GLOW */
+
 .features {
   padding: 80px 20px;
   text-align: center;
@@ -332,12 +333,31 @@ body {
   animation: gradientShift 5s ease infinite;
 }
 .features-grid {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  /* Го менуваме од 3 на 2 колони за совршен баланс со 4 картички */
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  flex-wrap: wrap;
+}
+
+/* Ова осигурува дека сите картички ќе имаат иста висина */
+.feature-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05); /* или твојата боја */
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* Мобилна верзија - ги реди една под друга */
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
 }
 .feature-box {
   flex: 1;
