@@ -47,8 +47,37 @@
         style="display: none"
         src="https://www.facebook.com/tr?id=1218040267174989&ev=PageView&noscript=1"
     /></noscript>
+    <link rel="canonical" href="https://skystudiom.com/abouten.html" />
+    <link
+      rel="alternate"
+      hreflang="mk"
+      href="https://skystudiom.com/about.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://skystudiom.com/abouten.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="sq"
+      href="https://skystudiom.com/aboutsq.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://skystudiom.com/abouten.html"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="About Sky Studio M - Professional aerial cinematography and video production in Macedonia. 14+ years of business experience, EASA certified drone pilot, and high-end 4K video editing."
+    />
+    <meta
+      name="keywords"
+      content="about Sky Studio M, drone pilot Macedonia, professional aerial filming, EASA drone certified, 4K video production Skopje"
+    />
     <title>About Sky Studio M | Your vision from a new perspective</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -246,6 +275,19 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({ duration: 800, once: true });
+
+      // Помошна функција за следење на кликови на социјалните мрежи
+      function trackSocialClick(platform) {
+        gtag("event", "social_contact_click", {
+          platform: platform,
+          event_category: "Engagement",
+          event_label: platform,
+        });
+        // ОВА Е ЗА FACEBOOK (ДОДАДЕНО)
+        if (typeof fbq !== "undefined") {
+          fbq("track", "Contact", { content_name: platform });
+        }
+      }
     </script>
   </body>
 </html>
