@@ -1,7 +1,7 @@
 import qrcode
 
 # Твојот линк со UTM параметри
-url = "https://www.skystudiom.com/?utm_source=qr_code&utm_medium=business_card&utm_campaign=general_promo_2026&utm_id=Sky%20Studio%20M"
+url = "https://www.skystudiom.mk/?utm_source=qr_code&utm_medium=business_card&utm_campaign=general_promo_2026&utm_id=Sky%20Studio%20M"
 
 # Креирање на QR кодот
 qr = qrcode.QRCode(
