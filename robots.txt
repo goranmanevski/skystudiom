@@ -7,4 +7,4 @@ Disallow: /videos/*.mp4
 
 # МНОГУ ВАЖНО: Патеката МОРА да биде БЕЗ www за да се совпаѓа 
 # со твоите нови canonical тагови и веќе индексираните страници
-Sitemap: https://skystudiom.com/sitemap.xml
+Sitemap: https://skystudiom.mk/sitemap.xml
