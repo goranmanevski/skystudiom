@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
@@ -19,8 +20,63 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/portfolioen.html"/>
     <xhtml:link rel="alternate" hreflang="sq" href="https://skystudiom.mk/portfoliosq.html"/>
     <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/social-preview.png</video:thumbnail_loc>
+      <video:title>Кањон Матка - Sky Studio M Cinematic</video:title>
+      <video:description>Природа и професионален Color Grading на кањонот Матка.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/matkaskopje.mp4</video:content_loc>
+      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
+    </video:video>
+
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/social-preview.png</video:thumbnail_loc>
+      <video:title>Охридско Езеро - Бисерот на Македонија</video:title>
+      <video:description>Кинематографски аероснимки од Охридското Езеро во 4K.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/ohrid-dron-cinematic-macedonia.mp4</video:content_loc>
+      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
+    </video:video>
+
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/social-preview.png</video:thumbnail_loc>
+      <video:title>Струга - Град на поезијата</video:title>
+      <video:description>Културно наследство и аероснимки од Струга.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/struga-kratko.mp4</video:content_loc>
+      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
+    </video:video>
+
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/social-preview.png</video:thumbnail_loc>
+      <video:title>Маврово - Потопената црква Св. Никола</video:title>
+      <video:description>Уникатни кадри од аероснимање на потопената црква.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/st-nicholas-church-mavrovo-aerial-view.mp4</video:content_loc>
+      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
+    </video:video>
+
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/social-preview.png</video:thumbnail_loc>
+      <video:title>Маврово - Црква Св. Никола</video:title>
+      <video:description>Воздушна перспектива на Мавровското езеро и околината.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/church-mavrovo-aerial-view.mp4</video:content_loc>
+      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
+    </video:video>
+
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/social-preview.png</video:thumbnail_loc>
+      <video:title>Бигорски Манастир - Духовност и архитектура</video:title>
+      <video:description>Професионално снимање со дрон на Бигорскиот манастир.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/bigorski-monastery-drone-video-macedonia.mp4</video:content_loc>
+      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
+    </video:video>
+
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/social-preview.png</video:thumbnail_loc>
+      <video:title>Скопје - Парк Сарај</video:title>
+      <video:description>Зеленило и рекреација во Скопје снимено од воздух.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/skopje-footage-saraj-park.mp4</video:content_loc>
+      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
+    </video:video>
   </url>
 
   <url>
@@ -29,7 +85,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/abouten.html"/>
     <xhtml:link rel="alternate" hreflang="sq" href="https://skystudiom.mk/aboutsq.html"/>
     <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
@@ -39,7 +94,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/faqen.html"/>
     <xhtml:link rel="alternate" hreflang="sq" href="https://skystudiom.mk/faqsq.html"/>
     <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
