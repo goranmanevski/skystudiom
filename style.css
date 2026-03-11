@@ -1400,3 +1400,55 @@ footer {
 .play-overlay {
   pointer-events: none; /* Ова овозможува кликот да помине „низ“ иконата директно до видеото */
 }
+
+/* Дефинирање на анимацијата */
+@keyframes customFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Класа која ќе ја примениме на Hero елементите */
+.hero-animate {
+  animation: customFadeDown 1s ease-out forwards;
+}
+
+/* Анимација за влез од горе */
+@keyframes skyFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Анимација за влез од долу */
+@keyframes skyFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Класи за брза примена */
+.sky-animate-down {
+  animation: skyFadeDown 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.sky-animate-up {
+  animation: skyFadeUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.3s; /* Мало доцнење за параграфот */
+  opacity: 0; /* Почетна состојба додека не почне анимацијата */
+}
