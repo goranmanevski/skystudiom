@@ -244,45 +244,7 @@
     </section>
 
     <section class="portfolio-v3">
-      <div class="particles-container">
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-        <div class="p-dot"></div>
-      </div>
-      <div class="v-section" data-aos="fade-up">
+            <div class="v-section" data-aos="fade-up">
         <div class="v-info">
           <h2>The Color Transformation</h2>
           <p>
@@ -295,14 +257,15 @@
           <div class="desktop-video">
             <video
               autoplay
-              muted
-              loop
-              playsinline
-              disablePictureInPicture
-              controlsList="nodownload"
-              oncontextmenu="return false;"
-              poster="img/matka-poster.jpg"
-              class="protected-video"
+  muted
+  loop
+  playsinline
+  disablePictureInPicture
+  controlsList="nodownload"
+  oncontextmenu="return false;"
+  class="protected-video"
+  preload="metadata" 
+  fetchpriority="low"
             >
               <source
                 src="https://cdn.skystudiom.mk/thecolortransformation.mp4"
@@ -313,15 +276,15 @@
           <div class="mobile-video">
             <video
               autoplay
-              muted
-              loop
-              playsinline
-              disablePictureInPicture
-              controlsList="nodownload"
-              oncontextmenu="return false;"
-              poster="img/matka-poster.jpg"
-              class="protected-video"
-              preload="auto"
+  muted
+  loop
+  playsinline
+  disablePictureInPicture
+  controlsList="nodownload"
+  oncontextmenu="return false;"
+  class="protected-video"
+  preload="metadata" 
+  fetchpriority="low"
             >
               <source
                 src="https://cdn.skystudiom.mk/thecolortransformation.mp4"
@@ -345,16 +308,15 @@
           <div class="desktop-video">
             <video
               autoplay
-              muted
-              loop
-              playsinline
-              laysinline
-              disablePictureInPicture
-              controlsList="nodownload"
-              oncontextmenu="return false;"
-              poster="img/matka-poster.jpg"
-              class="protected-video"
-              preload="auto"
+  muted
+  loop
+  playsinline
+  disablePictureInPicture
+  controlsList="nodownload"
+  oncontextmenu="return false;"
+  class="protected-video"
+  preload="metadata" 
+  fetchpriority="low"
             >
               <source
                 src="https://cdn.skystudiom.mk/kratovo-timelapse.mp4"
@@ -365,15 +327,15 @@
           <div class="mobile-video">
             <video
               autoplay
-              muted
-              loop
-              playsinline
-              laysinline
-              disablePictureInPicture
-              controlsList="nodownload"
-              oncontextmenu="return false;"
-              poster="img/matka-poster.jpg"
-              class="protected-video"
+  muted
+  loop
+  playsinline
+  disablePictureInPicture
+  controlsList="nodownload"
+  oncontextmenu="return false;"
+  class="protected-video"
+  preload="metadata" 
+  fetchpriority="low"
             >
               <source
                 src="https://cdn.skystudiom.mk/kratovo-timelapse.mp4"
@@ -397,16 +359,15 @@
           <div class="desktop-video">
             <video
               autoplay
-              muted
-              loop
-              playsinline
-              laysinline
-              disablePictureInPicture
-              controlsList="nodownload"
-              oncontextmenu="return false;"
-              poster="img/matka-poster.jpg"
-              class="protected-video"
-              preload="auto"
+  muted
+  loop
+  playsinline
+  disablePictureInPicture
+  controlsList="nodownload"
+  oncontextmenu="return false;"
+  class="protected-video"
+  preload="metadata" 
+  fetchpriority="low"
             >
               <source
                 src="https://cdn.skystudiom.mk/skopje-timelapse.mp4"
@@ -417,16 +378,15 @@
           <div class="mobile-video">
             <video
               autoplay
-              muted
-              loop
-              playsinline
-              laysinline
-              disablePictureInPicture
-              controlsList="nodownload"
-              oncontextmenu="return false;"
-              poster="img/matka-poster.jpg"
-              class="protected-video"
-              preload="auto"
+  muted
+  loop
+  playsinline
+  disablePictureInPicture
+  controlsList="nodownload"
+  oncontextmenu="return false;"
+  class="protected-video"
+  preload="metadata" 
+  fetchpriority="low"
             >
               <source
                 src="https://cdn.skystudiom.mk/skopje-timelapse.mp4"
@@ -653,8 +613,13 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 800, once: true, offset: 100 });
+      <script>
+  AOS.init({ 
+    duration: 800, 
+    once: true, 
+    offset: 50, // Намалено од 100 за побрза реакција на мобилен
+    disableMutationObserver: false // Помага при динамични содржини
+  });
 
       function toggleInfo(btn) {
         const extraInfo = btn.nextElementSibling;
