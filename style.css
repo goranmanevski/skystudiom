@@ -141,8 +141,7 @@ nav {
 :root {
   --blue: #0047ff;
   --pink: #ff007a;
-  --dark: #0a0a15;
-  --yellow: #22ff00;
+  --dark: #000000;
 }
 
 body {
@@ -368,6 +367,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: 0.3s;
 }
+
 /* НОВО: Glow ефект за карактеристиките */
 .feature-box:hover {
   transform: translateY(-10px);
@@ -809,7 +809,7 @@ select option {
   justify-content: center;
   align-items: stretch;
   gap: 25px;
-  max-width: 1450px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 40px 20px;
   flex-wrap: nowrap; /* Ги држи во еден ред */
@@ -908,105 +908,6 @@ footer {
   color: #444;
   background: #000;
   border-top: 1px solid #111;
-}
-
-/* --- SIMPLE PARTICLES ENGINE --- */
-.particles-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.p-dot {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  filter: blur(1px);
-  animation: float-up 10s infinite linear;
-}
-
-/* Коригирани латинични класи и позиции */
-.p-dot:nth-child(1) {
-  top: 20%;
-  left: 10%;
-  animation-delay: 4s;
-}
-.p-dot:nth-child(2) {
-  top: 60%;
-  left: 30%;
-  animation-delay: 2s;
-  width: 10px;
-  height: 6px;
-}
-.p-dot:nth-child(3) {
-  top: 40%;
-  left: 70%;
-  animation-delay: 4s;
-}
-.p-dot:nth-child(4) {
-  top: 80%;
-  left: 90%;
-  animation-delay: 1s;
-  width: 3px;
-  height: 3px;
-}
-.p-dot:nth-child(5) {
-  top: 10%;
-  left: 50%;
-  animation-delay: 6s;
-}
-.p-dot:nth-child(6) {
-  top: 70%;
-  left: 15%;
-  animation-delay: 3s;
-}
-.p-dot:nth-child(7) {
-  top: 30%;
-  left: 80%;
-  animation-delay: 5s;
-  width: 15px;
-  height: 4px;
-}
-.p-dot:nth-child(8) {
-  top: 50%;
-  left: 20%;
-  animation-delay: 7s;
-}
-.p-dot:nth-child(9) {
-  top: 90%;
-  left: 60%;
-  animation-delay: 4s;
-  width: 5px;
-  height: 5px;
-}
-.p-dot:nth-child(10) {
-  top: 25%;
-  left: 40%;
-  animation-delay: 8s;
-}
-
-@keyframes float-up {
-  0% {
-    transform: translateY(0) translateX(0);
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.6;
-  }
-  80% {
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateY(-150px) translateX(30px);
-    opacity: 0;
-  }
 }
 
 /* PORTFOLIO GRID STYLE */
@@ -1138,118 +1039,6 @@ footer {
 
 .shape {
   max-width: 100vw !important;
-}
-
-:root {
-  --drone-anim-speed: 3s;
-}
-
-/* --- АНИМАЦИЈА НА ДРОНОВИ --- */
-.hero-drone-bg {
-  animation: fly-in-top var(--drone-anim-speed) cubic-bezier(0.25, 1, 0.5, 1)
-    forwards;
-}
-
-.hero-drone-bg-secondary {
-  animation: fly-in-right var(--drone-anim-speed) cubic-bezier(0.25, 1, 0.5, 1)
-    forwards;
-}
-/* --- ГЛАВЕН ДРОН (ДЕСНО) --- */
-.hero-drone-bg {
-  position: absolute;
-  top: 0%; /* Позиција во проценти од висината */
-  left: -1%; /* Секогаш ќе биде на 2% од десниот раб */
-  width: clamp(300px, 40vw, 800px);
-  max-width: 600px;
-  z-index: 4;
-  pointer-events: none;
-  rotate: 10deg; /* Малку завртен за да не биде толку очигледен */
-  /* Трае 20 секунди за екстремно смирен ефект */
-  animation:
-    fly-in-landing-left 3.5s cubic-bezier(0.22, 1, 0.36, 1) forwards,
-    slow-float-main 20s ease-in-out infinite 3.5s;
-}
-
-/* --- ВТОР ДРОН (ЦЕНТАР/ДЕСНО) --- */
-.hero-drone-bg-secondary {
-  position: absolute;
-  bottom: 5%; /* 10% од дното */
-  right: -1%; /* СЕГА Е ВО ПРОЦЕНТИ - секогаш ќе биде на 60% од ширината */
-  width: clamp(300px, 40vw, 800px);
-  max-width: 700px;
-  z-index: 4;
-  pointer-events: none;
-  opacity: 0;
-  rotate: 10deg; /* Малку завртен за да не биде толку очигледен */
-  /* Трае 15 секунди и има различно движење */
-  animation:
-    fly-in-right 3.5s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s,
-    slow-float-secondary 15s ease-in-out infinite 4s;
-}
-
-/* АНИМАЦИЈА НА ДРОНОВИТЕ */
-
-@keyframes fly-in-right {
-  0% {
-    /* Влегува од 100% надвор од десната страна на екранот */
-    transform: translateX(100vw) rotate(-5deg);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0) rotate(0deg);
-    opacity: 0.9;
-  }
-}
-
-/* НОВА АНИМАЦИЈА: Слетување од лево према десно со надолна линија */
-@keyframes fly-in-landing-left {
-  0% {
-    /* Започнува надвор од екранот лево (-100vw) и погоре (-50%) */
-    transform: translate(-100vw, -50%) rotate(10deg);
-    opacity: 0;
-  }
-  100% {
-    /* Завршува точно на својата дефинирана позиција */
-    transform: translate(0, 0) rotate(0deg);
-    opacity: 0.9;
-  }
-}
-/* Ултра бавно лебдење за главниот дрон */
-@keyframes slow-float-main {
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  50% {
-    /* Многу мало движење: само 10 пиксели и минимален наклон */
-    transform: translate(-10px, -15px) rotate(1deg);
-  }
-}
-
-/* Малку поинакво движење за вториот дрон за да не изгледаат како роботи */
-@keyframes slow-float-secondary {
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  50% {
-    transform: translate(15px, 10px) rotate(-1deg);
-  }
-}
-
-/* Оптимизација за лаптопи и помали десктоп екрани */
-@media (max-width: 1200px) and (min-width: 1px) {
-  .hero-drone-bg {
-    width: 55vw; /* Го намалуваме главниот дрон */
-    right: -5%; /* Го туркаме малку повеќе десно */
-    opacity: 0; /* Поголема транспарентност за полесно читање на текстот */
-  }
-
-  .hero-drone-bg-secondary {
-    width: 60vw; /* Го намалуваме вториот дрон */
-    left: 65%; /* Го поместуваме подалеку од центарот */
-    opacity: 0;
-  }
 }
 
 /* --- СТИЛ ЗА ЈАЗИЧНО МЕНИ (DROPDOWN) --- */
@@ -1399,56 +1188,4 @@ footer {
 }
 .play-overlay {
   pointer-events: none; /* Ова овозможува кликот да помине „низ“ иконата директно до видеото */
-}
-
-/* Дефинирање на анимацијата */
-@keyframes customFadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Класа која ќе ја примениме на Hero елементите */
-.hero-animate {
-  animation: customFadeDown 1s ease-out forwards;
-}
-
-/* Анимација за влез од горе */
-@keyframes skyFadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Анимација за влез од долу */
-@keyframes skyFadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Класи за брза примена */
-.sky-animate-down {
-  animation: skyFadeDown 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.sky-animate-up {
-  animation: skyFadeUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  animation-delay: 0.3s; /* Мало доцнење за параграфот */
-  opacity: 0; /* Почетна состојба додека не почне анимацијата */
 }
