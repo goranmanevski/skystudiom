@@ -15,13 +15,10 @@
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://skystudiom.mk/portfolio.html" />
-    <meta
-      property="og:title"
-      content="Sky Studio M | Портфолио и Видео Продукција"
-    />
+    <meta property="og:title" content="Sky Studio M | Портфолио" />
     <meta
       property="og:description"
-      content="Професионални кадри со дрон и монтажа во DaVinci Resolve. ЕАСА сертифициран пилот за вашите проекти."
+      content="Професионални кадри со дрон и монтажа во DaVinci Resolve."
     />
     <meta
       property="og:image"
@@ -100,6 +97,22 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+
+    <style>
+      /* КРИТИЧЕН CSS: Ова гарантира дека картичките се видливи веднаш */
+      .portfolio-card {
+        opacity: 1 !important;
+        transform: none !important;
+        background: rgba(255, 255, 255, 0.03);
+        transition: transform 0.3s ease;
+      }
+      /* Скелетон ефект додека чекаме видео */
+      .video-thumb {
+        background: #111;
+        position: relative;
+        overflow: hidden;
+      }
+    </style>
   </head>
 
   <body class="portfolio-page">
@@ -134,15 +147,14 @@
         <h1 class="sky-animate-down">Светот од поинаква перспектива</h1>
         <p class="sky-animate-up">
           Кинематографски аероснимки и професионална постпродукција.
-          <br />Од комерцијални проекти до неверојатни природни пејзажи, секој
-          кадар е обработен со врвен Color Grading за совршена приказна.
+          <br />Од комерцијални проекти до неверојатни природни пејзажи.
         </p>
       </div>
     </section>
 
     <section class="portfolio-section">
       <div class="portfolio-grid">
-        <div class="portfolio-card" data-aos="fade-up">
+        <div class="portfolio-card">
           <div class="video-container" onclick="togglePlay(this)">
             <div class="video-thumb">
               <video
@@ -165,7 +177,7 @@
           <p>Природа и Color Grading</p>
         </div>
 
-        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="50">
+        <div class="portfolio-card">
           <div class="video-container" onclick="togglePlay(this)">
             <div class="video-thumb">
               <video
@@ -188,7 +200,7 @@
           <p>Бисерот на Македонија</p>
         </div>
 
-        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="50">
+        <div class="portfolio-card" data-aos="fade-up">
           <div class="video-container" onclick="togglePlay(this)">
             <div class="video-thumb">
               <video
@@ -211,7 +223,7 @@
           <p>Културно наследство</p>
         </div>
 
-        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="50">
+        <div class="portfolio-card" data-aos="fade-up">
           <div class="video-container" onclick="togglePlay(this)">
             <div class="video-thumb">
               <video
@@ -234,7 +246,7 @@
           <p>Потопената црква Св. Никола</p>
         </div>
 
-        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="50">
+        <div class="portfolio-card" data-aos="fade-up">
           <div class="video-container" onclick="togglePlay(this)">
             <div class="video-thumb">
               <video
@@ -257,7 +269,7 @@
           <p>Црква Св. Никола</p>
         </div>
 
-        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="50">
+        <div class="portfolio-card" data-aos="fade-up">
           <div class="video-container" onclick="togglePlay(this)">
             <div class="video-thumb">
               <video
@@ -280,7 +292,7 @@
           <p>Духовност и архитектура</p>
         </div>
 
-        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="50">
+        <div class="portfolio-card" data-aos="fade-up">
           <div class="video-container" onclick="togglePlay(this)">
             <div class="video-thumb">
               <video
@@ -303,7 +315,7 @@
           <p>Зеленило и рекреација</p>
         </div>
 
-        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="50">
+        <div class="portfolio-card" data-aos="fade-up">
           <div class="video-container static-thumb">
             <div class="video-thumb">
               <img
@@ -322,8 +334,7 @@
       <div
         class="contact-links"
         style="
-          margin-bottom: 60px;
-          padding-bottom: 20px;
+          margin: 60px 0;
           display: flex;
           justify-content: center;
           gap: 15px;
@@ -374,12 +385,14 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+      // Иницијализација на AOS веднаш на DOMContentLoaded, не чекај "load"
       document.addEventListener("DOMContentLoaded", function () {
         AOS.init({
-          duration: 600,
+          duration: 400, // Побрзо појавување
           once: true,
-          offset: 50,
-          easing: "ease-out-quad",
+          offset: 20,
+          easing: "ease-out",
+          startEvent: "DOMContentLoaded", // Ова е КЛУЧНОТО за брзина
         });
       });
 
@@ -388,7 +401,6 @@
         if (!video) return;
 
         if (video.paused) {
-          // Паузирај ги сите други пред да го пуштиш ова за да не кочи
           document.querySelectorAll("video").forEach((v) => {
             if (v !== video) {
               v.pause();
