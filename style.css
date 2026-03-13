@@ -1189,3 +1189,11 @@ footer {
 .play-overlay {
   pointer-events: none; /* Ова овозможува кликот да помине „низ“ иконата директно до видеото */
 }
+
+/* Ако сакаш анимацијата сепак да работи откако ќе се вчита скриптата */
+.aos-init[data-aos] {
+  opacity: 0;
+}
+.aos-animate[data-aos] {
+  opacity: 1;
+}
