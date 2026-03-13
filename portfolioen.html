@@ -144,7 +144,7 @@
     </section>
 <section class="portfolio-section">
       <div class="portfolio-grid">
-        <div class="portfolio-card">
+        <div class="portfolio-card" data-aos="fade-up">
           <div class="video-container" onclick="togglePlay(this)">
             <div class="video-thumb">
               <video
@@ -170,7 +170,7 @@
           <p>Nature and Color Grading</p>
         </div>
 
-        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="10">
           <div class="video-container" onclick="togglePlay(this)">
             <div class="video-thumb">
               <video
@@ -195,7 +195,7 @@
           <h3>Lake Ohrid</h3>
           <p>The Pearl of Macedonia</p>
         </div>
-        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="10">
           <div class="video-container" onclick="togglePlay(this)">
             <div class="video-thumb">
               <video
@@ -220,7 +220,7 @@
           <h3>Struga - The City of Poetry</h3>
           <p>Cultural Heritage</p>
         </div>
-        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="10">
           <div class="video-container" onclick="togglePlay(this)">
             <div class="video-thumb">
               <video
@@ -246,7 +246,7 @@
           <p>The Submerged St. Nicholas Church</p>
         </div>
 
-        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="10">
           <div class="video-container" onclick="togglePlay(this)">
             <div class="video-thumb">
               <video
@@ -272,7 +272,7 @@
           <p>St. Nicholas Church</p>
         </div>
 
-        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="10">
           <div class="video-container" onclick="togglePlay(this)">
             <div class="video-thumb">
               <video
@@ -298,7 +298,7 @@
           <p>Spirituality and Architecture</p>
         </div>
 
-        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="10">
           <div class="video-container" onclick="togglePlay(this)">
             <div class="video-thumb">
               <video
@@ -324,7 +324,7 @@
           <p>Greenery and Recreation</p>
         </div>
 
-        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="500">
+        <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="10">
           <div class="video-container static-thumb">
             <div class="video-thumb">
               <img
@@ -399,6 +399,20 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 800, once: true });
-    </script>
+<script>
+  // Чекаме само DOM да биде подготвен, не и сите видеа
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+      duration: 600,     // Побрза анимација (од 800 на 600)
+      once: true,        // Анимирај само еднаш
+      offset: 50,        // Почни со анимација 50px пред да влезе во екран (подобро за мобилен)
+      easing: 'ease-out-quad',
+      startEvent: 'DOMContentLoaded', // КЛУЧНО: Почни веднаш, не чекај "load"
+    });
+  });
+
+  // Функција за рачно освежување ако има накнадно вчитување
+  window.addEventListener('load', function() {
+    AOS.refresh();
+  });
+</script>
