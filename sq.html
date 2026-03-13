@@ -66,6 +66,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* Кога AOS ќе се вчита, тој ќе ги преземе анимациите назад */
+      .aos-init[data-aos] {
+        opacity: 0;
+      }
+      .aos-animate[data-aos] {
+        opacity: 1;
+      }
+    </style>
   </head>
 
   <body>
