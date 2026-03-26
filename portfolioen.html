@@ -133,7 +133,7 @@
                 class="portfolio-video"
               >
                 <source
-                  src="https://cdn.skystudiom.mk/Panigale_v4_Lamborghini_Edition.mp4#t=0.01"
+                  src="https://cdn.skystudiom.mk/Panigale_v4_Lamborghini_Edition.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -154,7 +154,7 @@
                 class="portfolio-video"
               >
                 <source
-                  src="https://cdn.skystudiom.mk/389_Fight_Wear_Kickboxing_Macedonia.mp4#t=0.01"
+                  src="https://cdn.skystudiom.mk/389_Fight_Wear_Kickboxing_Macedonia_Liscence.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -195,7 +195,7 @@
                 class="portfolio-video"
               >
                 <source
-                  src="https://cdn.skystudiom.mk/ohrid-dron-cinematic-macedonia.mp4#t=0.01"
+                  src="https://cdn.skystudiom.mk/ohrid-dron-cinematic-macedonia.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -216,7 +216,7 @@
                 class="portfolio-video"
               >
                 <source
-                  src="https://cdn.skystudiom.mk/struga-kratko.mp4#t=0.01"
+                  src="https://cdn.skystudiom.mk/struga-kratko.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -237,7 +237,7 @@
                 class="portfolio-video"
               >
                 <source
-                  src="https://cdn.skystudiom.mk/st-nicholas-church-mavrovo-aerial-view.mp4#t=0.01"
+                  src="https://cdn.skystudiom.mk/st-nicholas-church-mavrovo-aerial-view.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -258,7 +258,7 @@
                 class="portfolio-video"
               >
                 <source
-                  src="https://cdn.skystudiom.mk/bigorski-monastery-drone-video-macedonia.mp4#t=0.01"
+                  src="https://cdn.skystudiom.mk/bigorski-monastery-drone-video-macedonia.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -279,7 +279,7 @@
                 class="portfolio-video"
               >
                 <source
-                  src="https://cdn.skystudiom.mk/skopje-footage-saraj-park.mp4#t=0.01"
+                  src="https://cdn.skystudiom.mk/skopje-footage-saraj-park.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -356,7 +356,12 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        AOS.init({ duration: 400, once: true, offset: 20 });
+        AOS.init({
+          startEvent: "DOMContentLoaded",
+          duration: 400,
+          once: true,
+          offset: 20,
+        });
       });
       function togglePlay(container) {
         const video = container.querySelector("video");
