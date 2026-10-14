@@ -803,16 +803,16 @@ select option {
   }
 }
 
-/* --- ЦЕНТРИРАЊЕ НА ДЕСКТОП (Над 1380px) --- */
+/* Центрирани pricing картички на компјутер. */
 .pricing-grid {
   display: flex;
   justify-content: center;
   align-items: stretch;
   gap: 25px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 40px 20px;
-  flex-wrap: nowrap; /* Ги држи во еден ред */
+  flex-wrap: wrap;
 }
 
 .price-card {
@@ -828,46 +828,18 @@ select option {
   position: relative;
 }
 
-/* --- АВТОМАТСКИ СКРОЛ ШТОМ ЌЕ СЕ НАМАЛИ ЕКРАНОТ (Под 1380px) --- */
-@media (max-width: 1380px) {
+/* На мобилен картичките се редат една под друга. */
+@media (max-width: 768px) {
   .pricing-grid {
-    justify-content: flex-start !important; /* Порамнување од лево за скрол */
-    overflow-x: auto !important; /* Овозможува хоризонтален скрол */
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 30px !important;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
+    padding: 20px 0;
   }
 
   .price-card {
-    scroll-snap-align: center;
-    width: 290px !important; /* Малку потесни картички за таблет/мобилен */
-    margin-bottom: 10px;
-  }
-
-  /* Суптилен индикатор за скролање (scrollbar) */
-  .pricing-grid::-webkit-scrollbar {
-    height: 4px;
-  }
-  .pricing-grid::-webkit-scrollbar-thumb {
-    background: rgba(79, 172, 254, 0.3);
-    border-radius: 10px;
-  }
-}
-
-/* --- ОПТИМИЗАЦИЈА САМО ЗА МОБИЛЕН --- */
-@media (max-width: 1024px) {
-  .pricing-grid {
-    justify-content: flex-start !important; /* Почнува од лево за скрол */
-    overflow-x: auto !important; /* Овозможува скролање лево-десно */
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 30px !important;
-  }
-
-  .price-card {
-    scroll-snap-align: center;
-    width: 300px !important; /* Малку помали на мобилен */
+    width: 100%;
+    max-width: 400px;
   }
 }
 
@@ -1196,4 +1168,222 @@ footer {
 }
 .aos-animate[data-aos] {
   opacity: 1;
+}
+
+/* Светла палета за сите страници. */
+:root {
+  color-scheme: light;
+  --page-bg: #f7f9fc;
+  --surface: #ffffff;
+  --text: #172b45;
+  --muted: #52647a;
+  --accent: #185abd;
+  --border: #dce5f0;
+  --blue: #a8d5ff;
+  --pink: #e5c9ef;
+  --dark: var(--page-bg);
+  --yellow: #ffe6af;
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--text);
+}
+
+nav {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 24px rgba(23, 43, 69, 0.05);
+}
+
+.logo,
+.lang-btn,
+.lang-dropbtn,
+.lang-dropdown-content a {
+  color: var(--text);
+}
+
+.lang-btn {
+  opacity: 1;
+  color: var(--muted);
+}
+
+.lang-btn.active,
+.lang-btn:hover,
+.lang-dropdown-content a.active {
+  color: var(--accent);
+  text-shadow: none;
+}
+
+.lang-dropbtn {
+  background: #f0f5fc;
+  border-color: var(--border);
+}
+
+.lang-dropdown-content {
+  background: var(--surface);
+  border-color: var(--border);
+  box-shadow: 0 10px 30px rgba(23, 43, 69, 0.12);
+}
+
+.lang-dropdown-content a:hover {
+  background: #eaf2ff;
+}
+
+.nav-btn,
+.form-submit {
+  background: var(--accent);
+  color: #fff;
+}
+
+.nav-btn:hover,
+.form-submit:hover {
+  background: #124895;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(24, 90, 189, 0.2);
+}
+
+.abstract-bg {
+  background: linear-gradient(135deg, #edf6ff 0%, #f8f2fb 100%);
+}
+
+.shape {
+  opacity: 0.4;
+}
+
+.content,
+.hero h1 {
+  color: var(--text);
+  text-shadow: none;
+}
+
+.hero p,
+.v-info p,
+.feature-box p,
+.price-card ul,
+.extra-info,
+.form-container p,
+.social-label,
+.portfolio-card p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.features {
+  background: #eef5fc;
+  border-bottom-color: var(--border);
+}
+
+.portfolio-v3 {
+  background: var(--surface);
+}
+
+.pricing {
+  background: linear-gradient(135deg, #eef4fd, #f6f0fa);
+  border-top-color: var(--border);
+}
+
+.contact-section {
+  background: var(--page-bg);
+}
+
+.feature-box,
+.price-card,
+.form-container,
+.portfolio-grid-section .portfolio-card,
+.badge {
+  background: var(--surface);
+  border-color: var(--border);
+  box-shadow: 0 8px 30px rgba(23, 43, 69, 0.06);
+}
+
+.feature-box:hover,
+.price-card:hover,
+.portfolio-grid-section .portfolio-card:hover,
+.badge:hover {
+  background: var(--surface);
+  border-color: #9abbe9;
+  box-shadow: 0 16px 36px rgba(24, 90, 189, 0.12);
+}
+
+.feature-box i,
+.feature-box:hover i,
+.price-card ul li::before {
+  color: var(--accent);
+  text-shadow: none;
+}
+
+.v-info h2,
+.form-container h2 {
+  background: none;
+  color: var(--text);
+  -webkit-text-fill-color: currentColor;
+}
+
+.v-video,
+.v-video:hover {
+  box-shadow: 0 12px 32px rgba(23, 43, 69, 0.14);
+}
+
+.price {
+  color: var(--text);
+}
+
+.old-price,
+.more-info-btn {
+  color: var(--muted);
+}
+
+.more-info-btn,
+.social-contact-wrapper {
+  border-top-color: var(--border);
+}
+
+.more-info-btn:hover {
+  color: var(--accent);
+  text-shadow: none;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea,
+select option {
+  background: #f7f9fc;
+  color: var(--text);
+  border-color: #bbcadd;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  background: var(--surface);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(24, 90, 189, 0.12);
+}
+
+a:focus-visible,
+button:focus-visible,
+.more-info-btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.portfolio-grid-section .video-thumb {
+  background: #e9eff7;
+}
+
+.video-thumb.empty i {
+  color: var(--muted);
+}
+
+footer {
+  background: #edf2f8;
+  color: var(--muted);
+  border-top-color: var(--border);
 }
