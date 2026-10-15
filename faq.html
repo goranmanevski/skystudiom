@@ -1,17 +1,18 @@
 <!doctype html>
 <html lang="mk">
   <head>
+    <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://skystudiom.mk/" />
+    <meta property="og:url" content="https://skystudiom.mk/faq.html" />
     <meta
       property="og:title"
-      content="Sky Studio M - Светот од поинаква перспектива"
+      content="Прашања и Одговори | Sky Studio M"
     />
     <meta
       property="og:description"
-      content="Професионална видео продукција и фотографија со дрон и Sony A7 V."
+      content="Најчесто поставувани прашања за снимање со дрон во Скопје и Македонија. Дознајте повеќе за легалноста, цените и процесот на видео монтажа со Sky Studio M."
     />
     <meta
       property="og:image"
@@ -65,13 +66,7 @@
       fbq("init", "1218040267174989");
       fbq("track", "PageView");
     </script>
-    <noscript
-      ><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=1218040267174989&ev=PageView&noscript=1"
-    /></noscript>
+
     <link rel="canonical" href="https://skystudiom.mk/faq.html" />
     <link rel="alternate" hreflang="mk" href="https://skystudiom.mk/faq.html" />
     <link
@@ -86,7 +81,6 @@
       href="https://skystudiom.mk/faqen.html"
     />
     <!-- End Meta Pixel Code -->
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
@@ -97,7 +91,7 @@
       content="прашања и одговори дрон, снимање со дрон цена, легални летови со дрон Македонија, Sky Studio M FAQ, DJI Mini 5 Pro снимање"
     />
     <title>Прашања и Одговори | Sky Studio M</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=20261015-cleanup" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
@@ -109,6 +103,13 @@
     />
   </head>
   <body>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        src="https://www.facebook.com/tr?id=1218040267174989&ev=PageView&noscript=1"
+     class="tracking-pixel" /></noscript>
+    <a class="skip-link" href="#main-content">Прескокни до содржината</a>
     <nav>
       <a href="index.html" class="logo">SKY STUDIO M</a>
 
@@ -116,15 +117,15 @@
         <a href="index.html" class="lang-btn">Почетна</a>
         <a href="about.html" class="lang-btn">За нас</a>
         <a href="portfolio.html" class="lang-btn">Видео</a>
-        <a href="faq.html" class="lang-btn active">Q&A</a>
+        <a href="faq.html" class="lang-btn active" aria-current="page">Q&A</a>
       </div>
       <div class="right-nav-group">
         <div class="lang-switcher">
           <div class="lang-dropdown">
-            <button class="lang-dropbtn">
-              MK <i class="fas fa-chevron-down"></i>
+            <button type="button" class="lang-dropbtn" aria-expanded="false" aria-controls="language-options" aria-label="Избери јазик">
+              MK <i class="fas fa-chevron-down" aria-hidden="true"></i>
             </button>
-            <div class="lang-dropdown-content">
+            <div class="lang-dropdown-content" id="language-options">
               <a href="faq.html" class="active">MK</a>
               <a href="faqen.html">EN</a>
             </div>
@@ -133,17 +134,14 @@
         <a
           href="index.html#contact-form"
           class="nav-btn"
-          onclick="
-            gtag('event', 'header_booking_click');
-            fbq('track', 'Contact');
-          "
           >Контакт</a
         >
       </div>
     </nav>
 
-    <section class="abstract-bg" style="height: 40vh">
-      <div class="shape shape-1"></div>
+    <main id="main-content">
+    <section class="intro-section abstract-bg">
+      <div class="shape shape-1" aria-hidden="true"></div>
       <div class="hero">
         <h1 data-aos="fade-down">Прашања и Одговори</h1>
         <p data-aos="fade-up">
@@ -153,10 +151,10 @@
     </section>
 
     <section class="features" data-aos="fade-up">
-      <div class="features-grid" style="max-width: 900px">
-        <div class="feature-box" style="text-align: left">
-          <h3 style="color: var(--accent)">
-            <i class="fas fa-file-signature"></i> Дали снимањето е легално?
+      <div class="faq-grid features-grid">
+        <div class="text-left feature-box">
+          <h3 class="accent-heading">
+            <i class="fas fa-file-signature" aria-hidden="true"></i> Дали снимањето е легално?
           </h3>
           <p>
             Да. Секој лет на <strong>Sky Studio M</strong> е целосно лиценциран
@@ -166,13 +164,12 @@
         </div>
 
         <div
-          class="feature-box"
+          class="text-left feature-box"
           data-aos="fade-up"
           data-aos-delay="100"
-          style="text-align: left"
         >
-          <h3 style="color: var(--accent)">
-            <i class="fas fa-clock"></i> Колку време трае монтажата?
+          <h3 class="accent-heading">
+            <i class="fas fa-clock" aria-hidden="true"></i> Колку време трае монтажата?
           </h3>
           <p>
             Зависи од пакетот. но потребни се околу 3-5 работни дена поради
@@ -180,9 +177,9 @@
           </p>
         </div>
 
-        <div class="feature-box" data-aos="fade-up" style="text-align: left">
-          <h3 style="color: var(--accent)">
-            <i class="fas fa-cloud-sun"></i> Што ако времето е лошо?
+        <div class="text-left feature-box" data-aos="fade-up">
+          <h3 class="accent-heading">
+            <i class="fas fa-cloud-sun" aria-hidden="true"></i> Што ако времето е лошо?
           </h3>
           <p>
             Безбедноста е на прво место. Во случај на силен ветар или дожд,
@@ -192,13 +189,12 @@
         </div>
 
         <div
-          class="feature-box"
+          class="text-left feature-box"
           data-aos="fade-up"
           data-aos-delay="100"
-          style="text-align: left"
         >
-          <h3 style="color: var(--accent)">
-            <i class="fas fa-hard-drive"></i> Дали ги предавате суровите
+          <h3 class="accent-heading">
+            <i class="fas fa-hard-drive" aria-hidden="true"></i> Дали ги предавате суровите
             материјали?
           </h3>
           <p>
@@ -209,81 +205,55 @@
       </div>
 
       <div
-        class="contact-links"
-        style="
-          margin-top: 50px;
-          display: flex;
-          justify-content: center;
-          gap: 15px;
-          flex-wrap: wrap;
-        "
+        class="about-contact-links contact-links"
       >
         <a
           href="tel:+38971254472"
-          class="contact-btn phone"
-          style="background: #007aff !important"
-          onclick="trackSocialClick('Phone')"
-        >
-          <i class="fas fa-phone-alt"></i>
+          class="phone-color contact-btn phone"
+         aria-label="Јавете ни се">
+          <i class="fas fa-phone-alt" aria-hidden="true"></i>
         </a>
 
         <a
           href="https://wa.me/38971254472"
           class="contact-btn whatsapp"
           target="_blank"
-          onclick="trackSocialClick('WhatsApp')"
-        >
-          <i class="fab fa-whatsapp"></i>
+         aria-label="WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
         </a>
 
         <a
           href="viber://chat?number=38972239642"
           class="contact-btn viber"
           target="_blank"
-          onclick="trackSocialClick('Viber')"
-        >
-          <i class="fab fa-viber"></i>
+         aria-label="Viber">
+          <i class="fab fa-viber" aria-hidden="true"></i>
         </a>
 
         <a
           href="https://instagram.com/goranmanevski"
           class="contact-btn instagram"
           target="_blank"
-          onclick="trackSocialClick('Instagram')"
-        >
-          <i class="fab fa-instagram"></i>
+         aria-label="Instagram">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
         </a>
 
         <a
           href="mailto:info@skystudiom.mk"
-          class="contact-btn email"
-          style="background: #333 !important"
-          onclick="trackSocialClick('Email')"
-        >
-          <i class="fas fa-envelope"></i>
+          class="email-color contact-btn email"
+         aria-label="Испратете е-маил">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
         </a>
       </div>
     </section>
 
+    </main>
     <footer>
       <p>&copy; 2026 Sky Studio M. Сите права се задржани.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 800, once: true });
 
-      function trackSocialClick(platform) {
-        gtag("event", "social_contact_click", {
-          platform: platform,
-          event_category: "Engagement",
-          event_label: platform,
-        });
-        // Ако сакаш да следиш и преку Meta Pixel кога некој ќе кликне контакт
-        if (typeof fbq !== "undefined") {
-          fbq("track", "Contact", { content_name: platform });
-        }
-      }
-    </script>
+    <script src="site.js?v=20261015-cleanup" defer></script>
   </body>
 </html>

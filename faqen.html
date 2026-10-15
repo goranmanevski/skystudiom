@@ -1,17 +1,18 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://skystudiom.mk/" />
+    <meta property="og:url" content="https://skystudiom.mk/faqen.html" />
     <meta
       property="og:title"
-      content="Sky Studio M - Светот од поинаква перспектива"
+      content="Q&A | Sky Studio M"
     />
     <meta
       property="og:description"
-      content="Професионална видео продукција и фотографија со дрон и Sony A7 V."
+      content="Frequently asked questions about drone filming in Skopje and Macedonia. Learn more about legality, pricing, and the video editing process with Sky Studio M."
     />
     <meta
       property="og:image"
@@ -64,13 +65,7 @@
       fbq("init", "1218040267174989");
       fbq("track", "PageView");
     </script>
-    <noscript
-      ><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=1218040267174989&ev=PageView&noscript=1"
-    /></noscript>
+
     <link rel="canonical" href="https://skystudiom.mk/faqen.html" />
     <link rel="alternate" hreflang="mk" href="https://skystudiom.mk/faq.html" />
     <link
@@ -83,7 +78,6 @@
       hreflang="x-default"
       href="https://skystudiom.mk/faqen.html"
     />
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
@@ -94,7 +88,7 @@
       content="drone FAQ, drone filming price Macedonia, legal drone flights, Sky Studio M questions, DJI Mini 5 Pro filming"
     />
     <title>Q&A | Sky Studio M</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=20261015-cleanup" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
@@ -106,6 +100,13 @@
     />
   </head>
   <body>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        src="https://www.facebook.com/tr?id=1218040267174989&ev=PageView&noscript=1"
+     class="tracking-pixel" /></noscript>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <nav>
       <a href="en.html" class="logo">SKY STUDIO M</a>
 
@@ -113,15 +114,15 @@
         <a href="en.html" class="lang-btn">Home</a>
         <a href="abouten.html" class="lang-btn">About Us</a>
         <a href="portfolioen.html" class="lang-btn">Video</a>
-        <a href="faqen.html" class="lang-btn active">Q&A</a>
+        <a href="faqen.html" class="lang-btn active" aria-current="page">Q&A</a>
       </div>
       <div class="right-nav-group">
         <div class="lang-switcher">
           <div class="lang-dropdown">
-            <button class="lang-dropbtn">
-              EN <i class="fas fa-chevron-down"></i>
+            <button type="button" class="lang-dropbtn" aria-expanded="false" aria-controls="language-options" aria-label="Choose language">
+              EN <i class="fas fa-chevron-down" aria-hidden="true"></i>
             </button>
-            <div class="lang-dropdown-content">
+            <div class="lang-dropdown-content" id="language-options">
               <a href="faq.html">MK</a>
               <a href="faqen.html" class="active">EN</a>
             </div>
@@ -130,17 +131,14 @@
         <a
           href="en.html#contact-form"
           class="nav-btn"
-          onclick="
-            gtag('event', 'header_booking_click');
-            fbq('track', 'Contact');
-          "
           >Contact</a
         >
       </div>
     </nav>
 
-    <section class="abstract-bg" style="height: 40vh">
-      <div class="shape shape-1"></div>
+    <main id="main-content">
+    <section class="intro-section abstract-bg">
+      <div class="shape shape-1" aria-hidden="true"></div>
       <div class="hero">
         <h1 data-aos="fade-down">Questions & Answers</h1>
         <p data-aos="fade-up">
@@ -150,10 +148,10 @@
     </section>
 
     <section class="features" data-aos="fade-up">
-      <div class="features-grid" style="max-width: 900px">
-        <div class="feature-box" style="text-align: left">
-          <h3 style="color: var(--accent)">
-            <i class="fas fa-file-signature"></i> Is the filming legal?
+      <div class="faq-grid features-grid">
+        <div class="text-left feature-box">
+          <h3 class="accent-heading">
+            <i class="fas fa-file-signature" aria-hidden="true"></i> Is the filming legal?
           </h3>
           <p>
             Yes. Every flight by <strong>Sky Studio M</strong> is fully licensed
@@ -163,13 +161,12 @@
         </div>
 
         <div
-          class="feature-box"
+          class="text-left feature-box"
           data-aos="fade-up"
           data-aos-delay="100"
-          style="text-align: left"
         >
-          <h3 style="color: var(--accent)">
-            <i class="fas fa-clock"></i> How long does editing take?
+          <h3 class="accent-heading">
+            <i class="fas fa-clock" aria-hidden="true"></i> How long does editing take?
           </h3>
           <p>
             It depends on the package. CINEMATIC PACKAGE takes 3-5 business days
@@ -177,9 +174,9 @@
           </p>
         </div>
 
-        <div class="feature-box" data-aos="fade-up" style="text-align: left">
-          <h3 style="color: var(--accent)">
-            <i class="fas fa-cloud-sun"></i> What if the weather is bad?
+        <div class="text-left feature-box" data-aos="fade-up">
+          <h3 class="accent-heading">
+            <i class="fas fa-cloud-sun" aria-hidden="true"></i> What if the weather is bad?
           </h3>
           <p>
             Safety is our priority. In case of high winds or rain, the session
@@ -189,13 +186,12 @@
         </div>
 
         <div
-          class="feature-box"
+          class="text-left feature-box"
           data-aos="fade-up"
           data-aos-delay="100"
-          style="text-align: left"
         >
-          <h3 style="color: var(--accent)">
-            <i class="fas fa-hard-drive"></i> Do you provide raw footage?
+          <h3 class="accent-heading">
+            <i class="fas fa-hard-drive" aria-hidden="true"></i> Do you provide raw footage?
           </h3>
           <p>
             Yes, if you choose the BASIC RAW package, you receive all unedited
@@ -205,76 +201,51 @@
       </div>
 
       <div
-        class="contact-links"
-        style="
-          margin-top: 50px;
-          display: flex;
-          justify-content: center;
-          gap: 15px;
-          flex-wrap: wrap;
-        "
+        class="about-contact-links contact-links"
       >
         <a
           href="tel:+38971254472"
-          class="contact-btn phone"
-          style="background: #007aff !important"
-          onclick="trackSocialClick('Phone')"
-        >
-          <i class="fas fa-phone-alt"></i>
+          class="phone-color contact-btn phone"
+         aria-label="Call us">
+          <i class="fas fa-phone-alt" aria-hidden="true"></i>
         </a>
         <a
           href="https://wa.me/38971254472"
           class="contact-btn whatsapp"
           target="_blank"
-          onclick="trackSocialClick('WhatsApp')"
-        >
-          <i class="fab fa-whatsapp"></i>
+         aria-label="WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
         </a>
         <a
           href="viber://chat?number=38972239642"
           class="contact-btn viber"
           target="_blank"
-          onclick="trackSocialClick('Viber')"
-        >
-          <i class="fab fa-viber"></i>
+         aria-label="Viber">
+          <i class="fab fa-viber" aria-hidden="true"></i>
         </a>
         <a
           href="https://instagram.com/goranmanevski"
           class="contact-btn instagram"
           target="_blank"
-          onclick="trackSocialClick('Instagram')"
-        >
-          <i class="fab fa-instagram"></i>
+         aria-label="Instagram">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
         </a>
         <a
           href="mailto:info@skystudiom.mk"
-          class="contact-btn email"
-          style="background: #333 !important"
-          onclick="trackSocialClick('Email')"
-        >
-          <i class="fas fa-envelope"></i>
+          class="email-color contact-btn email"
+         aria-label="Email us">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
         </a>
       </div>
     </section>
 
+    </main>
     <footer>
       <p>&copy; 2026 Sky Studio M. All rights reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 800, once: true });
 
-      function trackSocialClick(platform) {
-        gtag("event", "social_contact_click", {
-          platform: platform,
-          event_category: "Engagement",
-          event_label: platform,
-        });
-        if (typeof fbq !== "undefined") {
-          fbq("track", "Contact", { content_name: platform });
-        }
-      }
-    </script>
+    <script src="site.js?v=20261015-cleanup" defer></script>
   </body>
 </html>

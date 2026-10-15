@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+      content="width=device-width, initial-scale=1.0"
     />
     <title>Sky Studio M | Фото и видео продукција | Снимање со дрон</title>
 
@@ -37,17 +37,17 @@
 
     <meta
       property="og:title"
-      content="Sky Studio M | Професионална фото и видео продукција"
+      content="Sky Studio M | Фото и видео продукција | Снимање со дрон"
     />
     <meta
       property="og:description"
-      content="Премиум 4K кадри со дрон. EASA сертифициран пилот за недвижности и настани."
+      content="Професионална фото и видео продукција, Професионално снимање со дрон во Скопје и Македонија. Sony A7 V снимање, кадри за недвижности и B2B соработка."
     />
     <meta
       property="og:image"
       content="https://skystudiom.mk/images/social-preview.png"
     />
-    <meta property="og:url" content="https://skystudiom.mk/" />
+    <meta property="og:url" content="https://skystudiom.mk/index.html" />
     <meta property="og:type" content="website" />
 
     <link
@@ -64,24 +64,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=20261015-cleanup" />
 
-    <style>
-      /* Кога AOS ќе се вчита, тој ќе ги преземе анимациите назад */
-      .aos-init[data-aos] {
-        opacity: 0;
-      }
-      .aos-animate[data-aos] {
-        opacity: 1;
-      }
-    </style>
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content">Прескокни до содржината</a>
     <nav>
       <a href="index.html" class="logo">SKY STUDIO M</a>
       <div class="main-nav-links">
-        <a href="index.html" class="lang-btn active">Почетна</a>
+        <a href="index.html" class="lang-btn active" aria-current="page">Почетна</a>
         <a href="about.html" class="lang-btn">За нас</a>
         <a href="portfolio.html" class="lang-btn">Видео</a>
         <a href="faq.html" class="lang-btn">Q&A</a>
@@ -89,10 +81,10 @@
       <div class="right-nav-group">
         <div class="lang-switcher">
           <div class="lang-dropdown">
-            <button class="lang-dropbtn">
-              MK <i class="fas fa-chevron-down"></i>
+            <button type="button" class="lang-dropbtn" aria-expanded="false" aria-controls="language-options" aria-label="Избери јазик">
+              MK <i class="fas fa-chevron-down" aria-hidden="true"></i>
             </button>
-            <div class="lang-dropdown-content">
+            <div class="lang-dropdown-content" id="language-options">
               <a href="index.html" class="active">MK</a>
               <a href="en.html">EN</a>
             </div>
@@ -102,10 +94,11 @@
       </div>
     </nav>
 
-    <section class="abstract-bg" style="height: 40vh">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
+    <main id="main-content">
+    <section class="intro-section abstract-bg">
+      <div class="shape shape-1" aria-hidden="true"></div>
+      <div class="shape shape-2" aria-hidden="true"></div>
+      <div class="shape shape-3" aria-hidden="true"></div>
       <div class="hero">
         <h1 data-aos="fade-down">SKY STUDIO MEDIA</h1>
         <p data-aos="fade-up">
@@ -116,11 +109,11 @@
     </section>
 
     <section class="features">
-      <div class="features-grid">
+      <div class="features-grid equipment-grid">
         <div class="feature-box" data-aos="fade-up">
           <div class="feature-double-img">
-            <i class="fas fa-camera"></i>
-            <i class="fas fa-video"></i>
+            <i class="fas fa-camera" aria-hidden="true"></i>
+            <i class="fas fa-video" aria-hidden="true"></i>
           </div>
           <h3>Професионална Опрема</h3>
           <br />
@@ -202,7 +195,7 @@
           data-aos="fade-up"
         />
         <div class="feature-box" data-aos="fade-up">
-          <i class="fas fa-film"></i>
+          <i class="fas fa-film" aria-hidden="true"></i>
           <h3>Кинематографска Обработка</h3>
           <br />
           <p>
@@ -224,13 +217,12 @@
           </p>
         </div>
         <div class="v-video">
-          <video
-            autoplay
+          <video controls
             muted
             loop
             playsinline
             class="protected-video"
-            preload="metadata"
+            preload="none"
             fetchpriority="low"
           >
             <source
@@ -251,13 +243,12 @@
           </p>
         </div>
         <div class="v-video">
-          <video
-            autoplay
+          <video controls poster="images/posters/leon-web.jpg"
             muted
             loop
             playsinline
             class="protected-video"
-            preload="metadata"
+            preload="none"
           >
             <source
               src="https://cdn.skystudiom.mk/leon-web.mp4"
@@ -277,13 +268,12 @@
           </p>
         </div>
         <div class="v-video">
-          <video
-            autoplay
+          <video controls
             muted
             loop
             playsinline
             class="protected-video"
-            preload="metadata"
+            preload="none"
           >
             <source
               src="https://cdn.skystudiom.mk/skopje-timelapse.mp4"
@@ -301,13 +291,12 @@
           </p>
         </div>
         <div class="v-video">
-          <video
-            autoplay
+          <video controls poster="images/posters/ecommerce-park-web.jpg"
             muted
             loop
             playsinline
             class="protected-video"
-            preload="metadata"
+            preload="none"
           >
             <source
               src="https://cdn.skystudiom.mk/ecommerce-park-web.mp4"
@@ -325,13 +314,12 @@
           </p>
         </div>
         <div class="v-video">
-          <video
-            autoplay
+          <video controls poster="images/posters/Events_Recap-web.jpg"
             muted
             loop
             playsinline
             class="protected-video"
-            preload="metadata"
+            preload="none"
           >
             <source
               src="https://cdn.skystudiom.mk/Events_Recap-web.mp4"
@@ -352,9 +340,9 @@
             <li>Вклучена музика и <br />Напреден Color Grading</li>
             <li>Професионални фотографии</li>
           </ul>
-          <div class="more-info-btn" onclick="toggleInfo(this)">
-            Повеќе информации <i class="fas fa-chevron-down"></i>
-          </div>
+          <button type="button" class="more-info-btn" aria-expanded="false">
+            Повеќе информации <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
           <div class="extra-info">
             <p>
               <br />Хотели, Агенции за недвижности, Airbnb објекти, Ресторани,
@@ -374,10 +362,9 @@
 
         <div class="price-card" data-aos="fade-up">
           <h3>B2B / ЦЕЛОСНА ПРОДУКЦИЈА</h3>
-          <div class="price" style="font-size: 1rem"></div>
+
           <p
-            style="font-size: 0.85rem; color: var(--muted); margin-bottom: 20px"
-          >
+           class="partnership-summary">
             Техничко партнерство за маркетинг агенции, видео продукции и фото
             студија.
           </p>
@@ -388,9 +375,9 @@
             <li>Subcontractor: Доверлив партнер за вашиот следен проект</li>
             <li>Compliance: Целосна легалност (EASA / CAA)</li>
           </ul>
-          <div class="more-info-btn" onclick="toggleInfo(this)">
-            Инфо за соработка <i class="fas fa-chevron-down"></i>
-          </div>
+          <button type="button" class="more-info-btn" aria-expanded="false">
+            Инфо за соработка <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
           <div class="extra-info">
             <p>
               <br />Нудиме комплетно визуелно решение – од
@@ -420,31 +407,35 @@
           method="POST"
         >
           <div class="input-group">
+            <label for="contact-name">Име и презиме</label>
             <input
               type="text"
-              name="name"
+              id="contact-name" autocomplete="name" name="name"
               placeholder="Име и презиме"
               required
             />
           </div>
           <div class="input-group">
+            <label for="contact-phone">Телефонски број</label>
             <input
               type="tel"
-              name="phone"
+              id="contact-phone" autocomplete="tel" name="phone"
               placeholder="Телефонски број (пр. 07X XXX XXX)"
               required
             />
           </div>
           <div class="input-group">
+            <label for="contact-email">Е-маил адреса</label>
             <input
               type="email"
-              name="email"
+              id="contact-email" autocomplete="email" name="email"
               placeholder="Е-маил адреса"
               required
             />
           </div>
           <div class="input-group">
-            <select name="service" required>
+            <label for="contact-service">Услуга</label>
+            <select id="contact-service" name="service" required>
               <option value="" disabled selected>Изберете пакет</option>
               <option value="social">CINEMATIC PACKAGE</option>
               <option value="cinematic">B2B/Целосна Продукција</option>
@@ -452,8 +443,9 @@
             </select>
           </div>
           <div class="input-group">
+            <label for="contact-message">Детали за проектот</label>
             <textarea
-              name="message"
+              id="contact-message" name="message"
               rows="4"
               placeholder="Детали за локацијата и терминот..."
             ></textarea>
@@ -462,17 +454,8 @@
         </form>
 
         <div
-          id="status"
-          style="
-            display: none;
-            padding: 20px;
-            color: #25d366;
-            text-align: center;
-            border: 1px solid #25d366;
-            border-radius: 12px;
-            margin-top: 20px;
-          "
-        >
+          id="status" hidden role="status" aria-live="polite" tabindex="-1"
+         class="form-feedback">
           ✔ Благодариме! Вашето барање е успешно испратено. Ќе ве контактираме
           наскоро.
         </div>
@@ -480,101 +463,45 @@
         <div class="social-contact-wrapper">
           <p class="social-label">Контакт</p>
           <div class="contact-links">
-            <a href="tel:+38971254472" class="contact-btn phone">
-              <i class="fas fa-phone-alt"></i>
+            <a href="tel:+38971254472" class="contact-btn phone" aria-label="Јавете ни се">
+              <i class="fas fa-phone-alt" aria-hidden="true"></i>
             </a>
             <a
               href="https://wa.me/38971254472"
               class="contact-btn whatsapp"
               target="_blank"
-            >
-              <i class="fab fa-whatsapp"></i>
+             aria-label="WhatsApp">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
             </a>
             <a
               href="viber://chat?number=38972239642"
               class="contact-btn viber"
               target="_blank"
-            >
-              <i class="fab fa-viber"></i>
+             aria-label="Viber">
+              <i class="fab fa-viber" aria-hidden="true"></i>
             </a>
             <a
               href="https://instagram.com/goranmanevski"
               class="contact-btn instagram"
               target="_blank"
-            >
-              <i class="fab fa-instagram"></i>
+             aria-label="Instagram">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
             </a>
-            <a href="mailto:info@skystudiom.mk" class="contact-btn email">
-              <i class="fas fa-envelope"></i>
+            <a href="mailto:info@skystudiom.mk" class="contact-btn email" aria-label="Испратете е-маил">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
             </a>
           </div>
         </div>
       </div>
     </section>
 
+    </main>
     <footer>
       <p>&copy; 2026 Sky Studio M. Сите права се задржани.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script>
-      // Иницијализација на анимациите - намалив duration на 400 за сајтот да биде "поодзивен"
-      document.addEventListener("DOMContentLoaded", () => {
-        AOS.init({
-          duration: 400,
-          once: true,
-          offset: 50,
-        });
-      });
-
-      // Функција за отварање на инфо во цените ( Pricing)
-      function toggleInfo(btn) {
-        const info = btn.nextElementSibling;
-        const icon = btn.querySelector("i");
-        info.style.maxHeight = info.style.maxHeight
-          ? null
-          : info.scrollHeight + "px";
-        icon.classList.toggle("fa-chevron-up");
-        icon.classList.toggle("fa-chevron-down");
-      }
-
-      // Обработка на контакт формата - СЕГА Е ЧИСТА
-      const form = document.getElementById("my-form");
-      if (form) {
-        form.addEventListener("submit", async (e) => {
-          e.preventDefault();
-          const status = document.getElementById("status");
-          const btn = e.target.querySelector(".form-submit");
-
-          btn.innerHTML = "Се испраќа...";
-          btn.disabled = true;
-
-          try {
-            const res = await fetch(e.target.action, {
-              method: "POST",
-              body: new FormData(e.target),
-              headers: { Accept: "application/json" },
-            });
-
-            if (res.ok) {
-              // ИЗБРИШАНИ: gtag и fbq наредбите кои беа тука
-              form.style.display = "none";
-              status.style.display = "block";
-            } else {
-              throw new Error("Грешка при испраќање");
-            }
-          } catch (err) {
-            btn.innerHTML = "Испрати барање";
-            btn.disabled = false;
-            alert(
-              "Имаше проблем со испраќањето. Ве молиме обидете се повторно.",
-            );
-          }
-        });
-      }
-
-      // ИЗБРИШАНА: Целата функција trackSocialClick која го следеше секој клик на социјалните мрежи
-    </script>
+    <script src="site.js?v=20261015-cleanup" defer></script>
   </body>
 </html>

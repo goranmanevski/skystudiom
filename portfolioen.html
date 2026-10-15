@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      content="width=device-width, initial-scale=1.0"
     />
     <title>Portfolio | Sky Studio M</title>
+    <meta name="description" content="Selected video projects by Sky Studio M: automotive, events, real estate and aerial cinematography." />
 
     <link rel="dns-prefetch" href="https://cdn.skystudiom.mk" />
     <link rel="preconnect" href="https://cdn.skystudiom.mk" crossorigin />
@@ -14,10 +15,10 @@
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://skystudiom.mk/portfolioen.html" />
-    <meta property="og:title" content="Sky Studio M | Portfolio" />
+    <meta property="og:title" content="Portfolio | Sky Studio M" />
     <meta
       property="og:description"
-      content="Professional drone footage and editing in DaVinci Resolve."
+      content="Selected video projects by Sky Studio M: automotive, events, real estate and aerial cinematography."
     />
     <meta
       property="og:image"
@@ -36,7 +37,7 @@
       href="https://skystudiom.mk/portfolioen.html"
     />
 
-    <link rel="stylesheet" href="style.css?v=20261015-portfolio" />
+    <link rel="stylesheet" href="style.css?v=20261015-cleanup" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
@@ -47,55 +48,25 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
 
-    <style>
-      .portfolio-card {
-        opacity: 1 !important;
-        transform: none !important;
-        background: rgba(255, 255, 255, 0.03);
-        transition: transform 0.3s ease;
-      }
-      .video-thumb {
-        background: #111;
-        position: relative;
-        overflow: hidden;
-      }
-      .play-overlay {
-        pointer-events: none !important;
-        z-index: 10;
-        transition: opacity 0.3s ease;
-      }
-      .portfolio-video {
-        pointer-events: none !important;
-        width: 100%;
-        display: block;
-      }
-      .video-container {
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent;
-        position: relative;
-      }
-      .video-container.playing .play-overlay {
-        opacity: 0;
-      }
-    </style>
   </head>
 
   <body class="portfolio-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <nav>
       <a href="en.html" class="logo">SKY STUDIO M</a>
       <div class="main-nav-links">
         <a href="en.html" class="lang-btn">Home</a>
         <a href="abouten.html" class="lang-btn">About Us</a>
-        <a href="portfolioen.html" class="lang-btn active">Video</a>
+        <a href="portfolioen.html" class="lang-btn active" aria-current="page">Video</a>
         <a href="faqen.html" class="lang-btn">Q&A</a>
       </div>
       <div class="right-nav-group">
         <div class="lang-switcher">
           <div class="lang-dropdown">
-            <button class="lang-dropbtn">
-              EN <i class="fas fa-chevron-down"></i>
+            <button type="button" class="lang-dropbtn" aria-expanded="false" aria-controls="language-options" aria-label="Choose language">
+              EN <i class="fas fa-chevron-down" aria-hidden="true"></i>
             </button>
-            <div class="lang-dropdown-content">
+            <div class="lang-dropdown-content" id="language-options">
               <a href="portfolio.html">MK</a>
               <a href="portfolioen.html" class="active">EN</a>
             </div>
@@ -105,8 +76,9 @@
       </div>
     </nav>
 
-    <section class="abstract-bg" style="height: 40vh">
-      <div class="shape shape-1"></div>
+    <main id="main-content">
+    <section class="intro-section abstract-bg">
+      <div class="shape shape-1" aria-hidden="true"></div>
       <div class="hero">
         <h1 data-aos="fade-down">The World from a Different Perspective</h1>
         <p data-aos="fade-up">
@@ -117,10 +89,11 @@
     <section class="portfolio-section" data-aos="fade-up">
       <div class="portfolio-grid">
         <div class="portfolio-group">
+          <h2>Ducati</h2>
           <div class="portfolio-card">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video
+                <video controls
                   loop
                   playsinline
                   preload="none"
@@ -132,37 +105,37 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Ducati Panigale V4 Lamborghini" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Ducati Panigale V4 Lamborghini</h3>
             <p>Ducati Macedonia — a closer look at the design and details.</p>
           </div>
           <div class="portfolio-card">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/Ducati_We_ride_as_one-web.jpg" loop playsinline preload="none" class="portfolio-video">
+                <video controls poster="images/posters/Ducati_We_ride_as_one-web.jpg" loop playsinline preload="none" class="portfolio-video">
                   <source
                     src="https://cdn.skystudiom.mk/Ducati_We_ride_as_one-web.mp4"
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: We Ride As One" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>We Ride As One</h3>
             <p>Ducati Macedonia — a shared ride and a passion for motorcycles.</p>
           </div>
           <div class="portfolio-card">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/WDW2026-web.jpg" loop playsinline preload="none" class="portfolio-video">
+                <video controls poster="images/posters/WDW2026-web.jpg" loop playsinline preload="none" class="portfolio-video">
                   <source
                     src="https://cdn.skystudiom.mk/WDW2026-web.mp4"
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: World Ducati Week 2026" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>World Ducati Week 2026</h3>
@@ -170,10 +143,11 @@
           </div>
         </div>
         <div class="portfolio-group">
+          <h2>Real Estate</h2>
           <div class="portfolio-card">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/leon-web.jpg"
+                <video controls poster="images/posters/leon-web.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -184,7 +158,7 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Real Estate | Apartment" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Real Estate | Apartment</h3>
@@ -192,10 +166,11 @@
           </div>
         </div>
         <div class="portfolio-group">
+          <h2>Lifetime Reformer</h2>
           <div class="portfolio-card">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/Lifetime-event-web.jpg"
+                <video controls poster="images/posters/Lifetime-event-web.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -206,16 +181,16 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Lifetime Reformer | Event" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Lifetime Reformer | Event</h3>
             <p>The atmosphere and highlights of a studio event.</p>
           </div>
           <div class="portfolio-card" data-aos="fade-up">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/Lifetime_Dona-web.jpg"
+                <video controls poster="images/posters/Lifetime_Dona-web.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -226,16 +201,16 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Lifetime Reformer | With Dona" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Lifetime Reformer | With Dona</h3>
             <p>Movement, focus and a day at the reformer studio.</p>
           </div>
           <div class="portfolio-card" data-aos="fade-up">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/Lifetime-showroom-web.jpg"
+                <video controls poster="images/posters/Lifetime-showroom-web.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -246,7 +221,7 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Lifetime Reformer | Studio" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Lifetime Reformer | Studio</h3>
@@ -254,10 +229,11 @@
           </div>
         </div>
         <div class="portfolio-group">
+          <h2>Car Connect</h2>
           <div class="portfolio-card" data-aos="fade-up">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/CarConnect_Ferrari-web.jpg"
+                <video controls poster="images/posters/CarConnect_Ferrari-web.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -268,16 +244,16 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Ferrari | Car Connect" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Ferrari | Car Connect</h3>
             <p>Automotive design and details captured in dynamic shots.</p>
           </div>
           <div class="portfolio-card" data-aos="fade-up">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/CarConnect_Porsche-web.jpg"
+                <video controls poster="images/posters/CarConnect_Porsche-web.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -288,7 +264,7 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Porsche | Car Connect" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Porsche | Car Connect</h3>
@@ -296,10 +272,11 @@
           </div>
         </div>
         <div class="portfolio-group">
+          <h2>389 Fight Gear</h2>
           <div class="portfolio-card">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video
+                <video controls
                   loop
                   playsinline
                   preload="none"
@@ -311,16 +288,16 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Kalin Boboski | 389 Fight Gear" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Kalin Boboski | 389 Fight Gear</h3>
             <p>A promotional film featuring the young Kickboxing World Cup winner in Italy.</p>
           </div>
           <div class="portfolio-card">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/389_Sparing-web.jpg"
+                <video controls poster="images/posters/389_Sparing-web.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -331,7 +308,7 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: 389 Fight Gear | Sparring" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>389 Fight Gear | Sparring</h3>
@@ -339,10 +316,11 @@
           </div>
         </div>
         <div class="portfolio-group">
+          <h2>Brands & Services</h2>
           <div class="portfolio-card">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video
+                <video controls
                   loop
                   playsinline
                   preload="none"
@@ -354,16 +332,16 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: IR Creations" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>IR Creations</h3>
             <p>A visual introduction to the brand in Skopje.</p>
           </div>
           <div class="portfolio-card">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/ecommerce-park-web.jpg"
+                <video controls poster="images/posters/ecommerce-park-web.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -374,16 +352,16 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: E-Commerce Park" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>E-Commerce Park</h3>
             <p>A short promotional video for social media.</p>
           </div>
           <div class="portfolio-card">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/Smart_Service_iphone-web.jpg"
+                <video controls poster="images/posters/Smart_Service_iphone-web.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -394,7 +372,7 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Smart Service | Screen Replacement" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Smart Service | Screen Replacement</h3>
@@ -402,10 +380,11 @@
           </div>
         </div>
         <div class="portfolio-group">
+          <h2>Celebrations & Events</h2>
           <div class="portfolio-card" data-aos="fade-up">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/Panthea-web.jpg"
+                <video controls poster="images/posters/Panthea-web.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -416,15 +395,15 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Panthea Center" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Panthea Center</h3>
             <p>An event recap capturing the atmosphere and key moments.</p>
           </div>          <div class="portfolio-card">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/Storia-web.jpg"
+                <video controls poster="images/posters/Storia-web.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -435,16 +414,16 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Storia Caffe" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Storia Caffe</h3>
             <p>The setting and highlights of an event at Storia Caffe.</p>
           </div>
           <div class="portfolio-card" data-aos="fade-up">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/Events_Recap-web.jpg"
+                <video controls poster="images/posters/Events_Recap-web.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -455,7 +434,7 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Celebrations &amp; Events" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Celebrations &amp; Events</h3>
@@ -463,10 +442,11 @@
           </div>
         </div>
         <div class="portfolio-group">
+          <h2>Davidoff · BikerFest</h2>
           <div class="portfolio-card" data-aos="fade-up">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/Davidoff-web.jpg"
+                <video controls poster="images/posters/Davidoff-web.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -477,7 +457,7 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Davidoff at BikerFest" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Davidoff at BikerFest</h3>
@@ -486,10 +466,11 @@
 
         </div>
         <div class="portfolio-group">
+          <h2>Lakes & Landscapes</h2>
           <div class="portfolio-card">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/matkaskopje.jpg"
+                <video controls poster="images/posters/matkaskopje.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -500,16 +481,16 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Matka Canyon" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Matka Canyon</h3>
             <p>Cliffs, water and nature from an aerial perspective.</p>
           </div>
           <div class="portfolio-card">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/ohrid-dron-cinematic-macedonia.jpg"
+                <video controls poster="images/posters/ohrid-dron-cinematic-macedonia.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -520,16 +501,16 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Lake Ohrid" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Lake Ohrid</h3>
             <p>Cinematic drone views of the lake and its shoreline.</p>
           </div>
           <div class="portfolio-card" data-aos="fade-up">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/Lake_Bled-web.jpg"
+                <video controls poster="images/posters/Lake_Bled-web.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -540,7 +521,7 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Lake Bled | Slovenia" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Lake Bled | Slovenia</h3>
@@ -548,10 +529,11 @@
           </div>
         </div>
         <div class="portfolio-group">
+          <h2>Macedonia from Above</h2>
           <div class="portfolio-card" data-aos="fade-up">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/st-nicholas-church-mavrovo-aerial-view.jpg"
+                <video controls poster="images/posters/st-nicholas-church-mavrovo-aerial-view.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -562,16 +544,16 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Mavrovo | St. Nicholas Church" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Mavrovo | St. Nicholas Church</h3>
             <p>Drone views of the submerged church and the Mavrovo landscape.</p>
           </div>
           <div class="portfolio-card" data-aos="fade-up">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/bigorski-monastery-drone-video-macedonia.jpg"
+                <video controls poster="images/posters/bigorski-monastery-drone-video-macedonia.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -582,16 +564,16 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Bigorski Monastery" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Bigorski Monastery</h3>
             <p>The monastery’s architecture and its natural surroundings.</p>
           </div>
           <div class="portfolio-card" data-aos="fade-up">
-            <div class="video-container" onclick="togglePlay(this)">
+            <div class="video-container">
               <div class="video-thumb">
-                <video poster="images/posters/skopje-footage-saraj-park.jpg"
+                <video controls poster="images/posters/skopje-footage-saraj-park.jpg"
                   loop
                   playsinline
                   preload="none"
@@ -602,7 +584,7 @@
                     type="video/mp4"
                   />
                 </video>
-                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                <button type="button" class="play-overlay" aria-label="Play: Saraj Park" aria-pressed="false"><i class="fas fa-play" aria-hidden="true"></i></button>
               </div>
             </div>
             <h3>Saraj Park</h3>
@@ -610,14 +592,14 @@
           </div>
         </div>
         <div class="portfolio-group">
+          <h2>More Projects</h2>
           <div class="portfolio-card" data-aos="fade-up">
             <a
               href="https://drive.google.com/drive/folders/1JiHvWICKQT9KfTV-4UCReWV08gANtVHl?usp=sharing"
-              class="video-container static-thumb"
+              class="block-link video-container static-thumb"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View the complete portfolio on Google Drive — new tab"
-              style="display: block"
             >
               <div class="video-thumb">
                 <img
@@ -635,87 +617,46 @@
       </div>
 
       <div
-        class="contact-links"
-        style="
-          margin: 80px 0 40px 0;
-          display: flex;
-          justify-content: center;
-          gap: 15px;
-          flex-wrap: wrap;
-        "
+        class="portfolio-contact-links contact-links"
       >
         <a
           href="tel:+38971254472"
-          class="contact-btn phone"
-          style="background: #007aff !important"
-          ><i class="fas fa-phone-alt"></i
+          class="phone-color contact-btn phone"
+           aria-label="Call us"><i class="fas fa-phone-alt" aria-hidden="true"></i
         ></a>
         <a
           href="https://wa.me/38971254472"
           class="contact-btn whatsapp"
           target="_blank"
-          ><i class="fab fa-whatsapp"></i
+           aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i
         ></a>
         <a
           href="viber://chat?number=38972239642"
           class="contact-btn viber"
           target="_blank"
-          ><i class="fab fa-viber"></i
+           aria-label="Viber"><i class="fab fa-viber" aria-hidden="true"></i
         ></a>
         <a
           href="https://instagram.com/goranmanevski"
           class="contact-btn instagram"
           target="_blank"
-          ><i class="fab fa-instagram"></i
+           aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i
         ></a>
         <a
           href="mailto:info@skystudiom.mk"
-          class="contact-btn email"
-          style="background: #333 !important"
-          ><i class="fas fa-envelope"></i
+          class="email-color contact-btn email"
+           aria-label="Email us"><i class="fas fa-envelope" aria-hidden="true"></i
         ></a>
       </div>
     </section>
 
+    </main>
     <footer>
       <p>&copy; 2026 Sky Studio M. All rights reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        AOS.init({
-          startEvent: "DOMContentLoaded",
-          duration: 400,
-          once: true,
-          offset: 20,
-        });
-      });
-      function togglePlay(container) {
-        const video = container.querySelector("video");
-        if (!video) return;
-        if (video.paused) {
-          document.querySelectorAll("video").forEach((v) => {
-            if (v !== video) {
-              v.pause();
-              v.closest(".video-container").classList.remove("playing");
-            }
-          });
-          video
-            .play()
-            .then(() => {
-              container.classList.add("playing");
-            })
-            .catch(() => {
-              video.muted = true;
-              video.play();
-              container.classList.add("playing");
-            });
-        } else {
-          video.pause();
-          container.classList.remove("playing");
-        }
-      }
-    </script>
+
+    <script src="site.js?v=20261015-cleanup" defer></script>
   </body>
 </html>

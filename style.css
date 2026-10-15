@@ -1,1438 +1,771 @@
-/* 1. ГЛОБАЛЕН РЕСЕТ & ЖИВА ПОЗАДИНА */
-html {
-  scroll-behavior: smooth;
+/* Shared palette and foundation. */
+:root {
+  color-scheme: light;
+  --page-bg: #f7f9fc;
+  --surface: #fff;
+  --text: #172b45;
+  --muted: #52647a;
+  --accent: #185abd;
+  --border: #dce5f0;
+  --shadow: 0 8px 30px rgba(23, 43, 69, .06);
 }
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
 }
-
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
 body {
-  color: #ffffff;
-  background-color: #050505;
-  /* ФИКС: overflow-x е избришано за да проработи Sticky Nav! */
-  -webkit-overflow-scrolling: touch; /* Го растоварува скролот на iPhone */
+  font-family: Inter, sans-serif;
+  color: var(--text);
+  background: var(--page-bg);
 }
-
-/* 2. НАВИГАЦИЈА */
+button, input, select, textarea {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+img, video {
+  max-width: 100%;
+}
+[hidden] {
+  display: none !important;
+}
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+.skip-link {
+  position: fixed;
+  left: 12px;
+  top: -100px;
+  padding: 12px;
+  background: var(--surface);
+  color: var(--accent);
+  z-index: 3000;
+}
+.skip-link:focus {
+  top: 12px;
+}
+/* Navigation. */
 nav {
   display: flex;
-  justify-content: space-between; /* Ги распоредува трите групи */
+  justify-content: space-between;
   align-items: center;
+  gap: 20px;
   padding: 15px 50px;
   position: sticky;
   top: 0;
   z-index: 2000;
-  backdrop-filter: blur(15px);
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(255,255,255,.95);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 24px rgba(23,43,69,.05);
 }
-
-/* 1. Логото зазема 1 дел од просторот лево */
 .logo {
   flex: 1;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text);
+  text-decoration: none;
 }
-
-/* 2. Ова ги центрира "За нас" и "Q&A" */
 .main-nav-links {
   flex: 1;
   display: flex;
   justify-content: center;
   gap: 30px;
 }
-
-/* 3. Ова ги турка јазиците и копчето десно */
 .right-nav-group {
   flex: 1;
-  display: flex !important;
-  flex-direction: row !important; /* ГАРАНТИРА дека ќе бидат едно до друго */
-  flex-wrap: nowrap !important; /* СПРЕЧУВА паѓање во нов ред */
-  justify-content: flex-end !important;
-  align-items: center !important;
-  gap: 12px !important; /* Ова е тоа „едно празно место“ што го бараше */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
 }
-
-/* Осигуруваме дека јазичниот дел не зазема вишок висина */
+.lang-btn {
+  color: var(--muted);
+  text-decoration: none;
+}
+.lang-btn.active, .lang-btn:hover, .lang-dropdown-content a.active {
+  color: var(--accent);
+  font-weight: 700;
+}
 .lang-switcher {
-  display: flex !important;
-  align-items: center !important;
-  margin: 0 !important;
+  display: flex;
+  align-items: center;
 }
-
-/* Родителот мора да биде само колку "MK" копчето */
 .lang-dropdown {
   position: relative;
-  display: inline-block;
 }
-
-/* Содржината сега ќе се лепи за десниот раб на "MK" */
+.lang-dropbtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #f0f5fc;
+  color: var(--text);
+  padding: 6px 12px;
+  font-size: .8rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  min-height: 36px;
+}
 .lang-dropdown-content {
   display: none;
   position: absolute;
   top: 100%;
-  right: 0; /* Сега 0 е десниот раб на MK, не на закажи термин! */
-  width: 70px; /* Фиксна тесна ширина колку што ти треба */
-  background-color: #0a0a15;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.8);
-  z-index: 2100;
+  right: 0;
+  min-width: 70px;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 0px;
+  box-shadow: var(--shadow);
 }
-
-/* Ова ги реди јазиците еден под друг */
+.lang-dropdown.is-open .lang-dropdown-content {
+  display: block;
+}
 .lang-dropdown-content a {
   display: block;
-  padding: 10px;
+  color: var(--text);
+  padding: 12px 15px;
+  font-size: .8rem;
   text-align: center;
-  font-size: 0.8rem;
-  color: #fff;
   text-decoration: none;
 }
-
-.logo {
-  display: flex;
-  align-items: center;
-  font-size: 1.2rem;
-  font-weight: 700;
+.lang-dropdown-content a:hover {
+  background: #eaf2ff;
+}
+.nav-btn, .form-submit {
+  background: var(--accent);
   color: #fff;
-  text-decoration: none;
-  letter-spacing: 2px;
-}
-.logo-icon {
-  height: 35px;
-  width: auto;
-  margin-right: 12px;
-  transform: scale(1.02);
-}
-
-.nav-btn {
-  background: #fff;
-  color: #000;
+  border: 0;
+  border-radius: 5px;
   padding: 8px 18px;
   text-decoration: none;
-  border-radius: 5px;
   font-weight: 500;
-  transition: 0.3s;
 }
-.nav-btn:hover {
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-  transform: scale(1.05);
-} /* Glow ефект и тука */
-.lang-btn {
-  color: #fff;
-  opacity: 0.6;
-  text-decoration: none;
-  transition: 0.3s;
+.nav-btn:hover, .form-submit:hover {
+  background: #124895;
 }
-.lang-btn:hover {
-  opacity: 1;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
-}
-.lang-btn.active {
-  opacity: 1;
-  font-weight: bold;
-}
-
-/* =========================================
-   АНИМАЦИЈА
-   ========================================= */
-:root {
-  --blue: #0047ff;
-  --pink: #ff007a;
-  --dark: #000000;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--dark);
-}
-
+/* Intro. Content defines the height, including when text is enlarged. */
 .abstract-bg {
   position: relative;
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(135deg, #050510 0%, #1a0a2e 100%);
   overflow: hidden;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg,#edf6ff,#f8f2fb);
 }
-
-/* Заеднички својства за сите форми */
-.shape {
-  position: absolute;
-  filter: blur(200px);
-  opacity: 0.5;
-}
-
-/* --- СИНАТА ФОРМА (Движење по дијагонала) --- */
-.shape-1 {
-  top: -10%;
-  left: -10%;
-  width: 500px;
-  height: 500px;
-  background: var(--blue);
-  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-  animation: move-blue 25s infinite linear;
-}
-
-/* --- РОЗОВАТА ФОРМА (Кружно/Елипсовидно движење) --- */
-.shape-2 {
-  bottom: -10%;
-  right: -10%;
-  width: 600px;
-  height: 600px;
-  background: var(--pink);
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  animation: move-pink 30s infinite linear;
-}
-
-.shape-4 {
-  top: 20%;
-  left: 50%;
-  width: 400px;
-  height: 400px;
-  background: var(--blue);
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  animation: float-glass 6s ease-in-out infinite;
-}
-
-.shape-5 {
-  top: 70%;
-  left: 20%;
-  width: 300px;
-  height: 300px;
-  background: var(--yellow);
-  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-  animation: float-glass 8s ease-in-out infinite;
-}
-
-/* --- ДЕФИНИЦИИ НА ДВИЖЕЊАТА --- */
-
-@keyframes move-blue {
-  0% {
-    transform: translate(0, 0) rotate(0deg) scale(1);
-  }
-  33% {
-    transform: translate(30vw, 20vh) rotate(120deg) scale(1.2);
-  }
-  66% {
-    transform: translate(10vw, 50vh) rotate(240deg) scale(0.8);
-  }
-  100% {
-    transform: translate(0, 0) rotate(360deg) scale(1);
-  }
-}
-
-@keyframes move-pink {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  25% {
-    transform: translate(-20vw, -30vh) rotate(-90deg);
-  }
-  50% {
-    transform: translate(-40vw, -10vh) rotate(-180deg);
-  }
-  75% {
-    transform: translate(-10vw, 10vh) rotate(-270deg);
-  }
-  100% {
-    transform: translate(0, 0) rotate(-360deg);
-  }
-}
-
-@keyframes float-glass {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(-20px, 30px) scale(1.05);
-  }
-}
-
-.content {
-  position: relative;
-  z-index: 10;
-  color: white;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
 .hero {
-  text-align: center;
-  padding: 80px 20px; /* Намалено од 120px на 80px */
-  min-height: 60vh; /* Намалено од 85vh на 60vh */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: relative;
-  z-index: 10; /* Текстот мора да биде повисоко од дроновите (кои се на 4 и 5) */
-  pointer-events: none; /* Да не пречи на кликање, иако е над сè */
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  padding: 64px 20px;
 }
 .hero h1 {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2rem,5vw,4.5rem);
   margin-bottom: 20px;
-  /* Силна сенка која го одвојува текстот од било каква позадина */
-  text-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.8),
-    0 0 10px rgba(0, 0, 0, 0.5);
 }
 .hero p {
   font-size: 1.2rem;
-  color: #ddd;
+  color: var(--muted);
   max-width: 700px;
+  margin: auto;
+  line-height: 1.7;
 }
-.hero-badges {
-  display: flex;
-  gap: 15px;
-  margin-top: 40px;
-  justify-content: center;
-  flex-wrap: wrap;
+.shape {
+  position: absolute;
+  width: min(500px,90vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: .3;
+  pointer-events: none;
 }
-.badge {
-  display: flex;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 8px 20px;
-  border-radius: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
-  transition: 0.3s;
+.shape-1 {
+  left: -10%;
+  top: -40%;
+  background: #a8d5ff;
 }
-.badge:hover {
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
-  border-color: #4facfe;
+.shape-2 {
+  right: -10%;
+  bottom: -40%;
+  background: #e5c9ef;
 }
-.badge img {
-  height: 25px;
-  margin-right: 10px;
-}
-
-/* СЕКЦИЈА 2: FEATURES - GLASS LIGHTER & GLOW */
-
+/* Service and equipment cards. */
 .features {
   padding: 80px 20px;
   text-align: center;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 10, 30, 0.8),
-    rgba(2, 45, 77, 0.6)
-  );
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  animation: gradientShift 5s ease infinite;
+  background: #eef5fc;
+  border-bottom: 1px solid var(--border);
 }
 .features-grid {
   display: grid;
-  /* Го менуваме од 3 на 2 колони за совршен баланс со 4 картички */
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2,minmax(0,1fr));
   gap: 30px;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: auto;
 }
-
-/* Ова осигурува дека сите картички ќе имаат иста висина */
+.feature-box, .price-card, .form-container, .portfolio-card, .badge {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
 .feature-box {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  justify-content: flex-start;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.05); /* или твојата боја */
-  border-radius: 15px;
-  text-align: center;
-}
-
-/* Мобилна верзија - ги реди една под друга */
-@media (max-width: 768px) {
-  .features-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  /* Keep each description before its matching photo on mobile. */
-  .features-grid > .feature-box:nth-child(4) {
-    grid-row: 3;
-  }
-
-  .features-grid > .feature-box:nth-child(8) {
-    grid-row: 7;
-  }
-}
-.feature-box {
-  flex: 1;
   min-width: 0;
+  height: 100%;
   padding: 40px 30px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: 0.3s;
 }
-
-/* НОВО: Glow ефект за карактеристиките */
-.feature-box:hover {
-  transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: #4facfe;
-  box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
+.feature-box p, .v-info p, .price-card ul, .extra-info, .portfolio-card p, .form-container p {
+  color: var(--muted);
+  line-height: 1.7;
 }
-.feature-img,
-.feature-double-img img {
+.feature-img, .feature-double-img img {
   height: 45px;
-  margin-bottom: 20px;
-  display: block;
-  margin: 0 auto 20px auto;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto 20px;
 }
-
+.feature-double-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.feature-double-img img {
+  margin: 0;
+  max-width: 45%;
+}
+.feature-box > i {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
 .equipment-photo {
   display: block;
-  min-width: 0;
-  max-width: 100%;
   width: 100%;
   height: 100%;
   min-height: 260px;
   max-height: 360px;
   object-fit: cover;
   border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(23, 43, 69, 0.12);
+  box-shadow: var(--shadow);
 }
-
-@media (max-width: 768px) {
-  .equipment-photo {
-    height: auto;
-    min-height: 0;
-    aspect-ratio: 3 / 2;
-  }
-}
-
-/* Овде го менуваме само gap од 0px на 8px за тој 'one space' ефект */
-.feature-double-img {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  align-items: center;
-  margin-bottom: 20px; /* ОВА ЈА ПРАВИ РАЗЛИКАТА */
-}
-/* Ова останува исто за да не се оддалечуваат логоата едно од друго */
-.feature-double-img img {
-  margin: 0;
-}
-
-.feature-box i {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  display: block;
-  color: #4facfe;
-  transition: 0.3s;
-}
-.feature-box:hover i {
-  text-shadow: 0 0 15px #4facfe;
-  transform: scale(1.1);
-}
-
-/* СЕКЦИЈА 3: PORTFOLIO - DEEP DARK & VIDEO GLOW */
+/* Homepage video previews. */
 .portfolio-v3 {
   padding: 100px 20px;
-  background: #000000;
-  position: relative; /* ОВА Е ВАЖНО ЗА ЧЕСТИЧКИТЕ */
-  overflow: hidden;
+  background: var(--surface);
 }
 .v-section {
   display: flex;
   align-items: center;
   gap: 60px;
-  margin-bottom: 100px;
+  margin: 0 auto 100px;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+}
+.v-section:last-child {
+  margin-bottom: 0;
 }
 .v-section.reverse {
   flex-direction: row-reverse;
 }
 .v-info {
   flex: 1;
+  min-width: 0;
 }
 .v-info h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.7rem,3vw,2.5rem);
   margin-bottom: 15px;
-  background: -webkit-linear-gradient(#fff, #aaa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .v-video {
   flex: 1.5;
   position: relative;
-  padding-bottom: 42%;
-  height: 0;
+  aspect-ratio: 16 / 9;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
-  border-color: #4facfe;
-  transition: 0.4s;
-}
-/* НОВО: Glow ефект кога ќе поминеш врз видеото */
-.v-video:hover {
-  box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
-  border-color: #4facfe;
-  transform: scale(1.02);
+  background: #e9eff7;
+  box-shadow: 0 12px 32px rgba(23,43,69,.14);
 }
 .v-video video {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-/* СЕКЦИЈА 4: PRICING - GLASS PINKISH & STRONG GLOW */
+.preview-toggle {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  padding: 8px 12px;
+  color: #fff;
+  background: rgba(0,0,0,.75);
+  border: 1px solid #fff;
+  border-radius: 6px;
+}
+/* Pricing and disclosures. */
 .pricing {
   padding: 100px 20px;
   text-align: center;
-  background: linear-gradient(
-    135deg,
-    rgba(20, 0, 20, 0.9),
-    rgba(50, 0, 60, 0.7)
-  );
-  backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: linear-gradient(135deg,#eef4fd,#f6f0fa);
+  border-top: 1px solid var(--border);
 }
 .pricing-grid {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
   align-items: stretch;
+  flex-wrap: wrap;
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
 }
 .price-card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 40px;
-  border-radius: 25px;
-  width: 340px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
-  transition: 0.3s;
-}
-/* Омилениот ефект: Силно розев Glow */
-.price-card:hover {
-  transform: translateY(-10px);
-  border-color: #4facfe;
-  box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Синкаст glow */
-}
-.price {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin: 20px 0;
-  color: #fff;
+  width: 310px;
+  max-width: 100%;
+  padding: 40px 25px;
+  border-radius: 25px;
 }
 .price-card ul {
   list-style: none;
   text-align: left;
-  margin-bottom: 30px;
+  margin: 24px 0 30px;
   flex-grow: 1;
-  color: #ccc;
 }
-.price-card ul li {
+.price-card li {
+  position: relative;
   margin-bottom: 12px;
   padding-left: 20px;
-  position: relative;
 }
-.price-card ul li::before {
-  content: "✓";
+.price-card li::before {
+  content: '✓';
   position: absolute;
   left: 0;
-  color: #f093fb;
-  text-shadow: 0 0 5px #f093fb;
-}
-.extra-info {
-  max-height: 0;
-  overflow: hidden;
-  transition: 0.4s ease-out;
-  font-size: 0.9rem;
-  color: #aaa;
-  text-align: left;
+  color: var(--accent);
 }
 .more-info-btn {
-  cursor: pointer;
-  padding-top: 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: #bbb;
-  font-size: 0.9rem;
-  transition: 0.3s;
+  width: 100%;
+  border: 0;
+  border-top: 1px solid var(--border);
+  padding: 15px 0 0;
+  background: transparent;
+  color: var(--muted);
+  text-align: left;
+  font-size: .9rem;
+  min-height: 44px;
 }
 .more-info-btn:hover {
-  color: #fff;
-  text-shadow: 0 0 5px #fff;
+  color: var(--accent);
 }
-
-/* 1. КОНТАКТ СЕКЦИЈА - GLASSMORPHISM ДИЗАЈН */
+.extra-info {
+  font-size: .9rem;
+  text-align: left;
+}
+/* Contact. */
 .contact-section {
   padding: 100px 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 10;
-  /* Ја користиме истата транспарентност за да се гледаат честичките зад неа */
-  background: transparent;
 }
-
 .form-container {
-  background: rgba(255, 255, 255, 0.03); /* Многу тенка бела за стакло ефект */
-  backdrop-filter: blur(15px); /* Заматување на позадината */
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 50px 40px;
-  border-radius: 30px;
   width: 100%;
   max-width: 600px;
+  padding: 30px 20px;
   text-align: center;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
 }
-
 .form-container h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  background: linear-gradient(to right, #fff, #4facfe);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
-
 .form-container p {
-  color: #ccc;
   margin-bottom: 30px;
-  font-size: 1rem;
 }
-
-/* 2. ПОДЕСУВАЊЕ НА ПОЛИЊАТА ЗА ВНЕС */
 .input-group {
   margin-bottom: 20px;
   text-align: left;
 }
-
-.input-group input,
-.input-group select,
-.input-group textarea {
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: .9rem;
+  font-weight: 500;
+}
+.input-group input, .input-group select, .input-group textarea {
   width: 100%;
   padding: 15px 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--page-bg);
+  border: 1px solid #bbcadd;
   border-radius: 12px;
-  color: #fff;
-  font-size: 1rem;
-  outline: none;
-  transition: 0.3s;
+  color: var(--text);
 }
-
-/* Ефект кога ќе кликнеш во полето */
-.input-group input:focus,
-.input-group textarea:focus {
-  border-color: #4facfe;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 15px rgba(79, 172, 254, 0.3);
+.input-group textarea {
+  resize: vertical;
 }
-
-/* Стилизирање на Select опцијата за да не биде бела */
-select option {
-  background: #0a0a15;
-  color: #fff;
+.input-group input::placeholder, .input-group textarea::placeholder {
+  color: var(--muted);
+  opacity: 1;
 }
-
-/* 3. КОПЧЕ ЗА ИСПРАЌАЊЕ */
 .form-submit {
   width: 100%;
   padding: 16px;
-  background: #fff;
-  color: #000;
-  border: none;
   border-radius: 12px;
   font-size: 1.1rem;
   font-weight: 700;
-  cursor: pointer;
-  transition: 0.4s;
-  margin-top: 10px;
 }
-
-.form-submit:hover {
-  background: #4facfe; /* Се менува во сина при hover */
-  color: #fff;
-  box-shadow: 0 0 25px rgba(79, 172, 254, 0.5);
-  transform: translateY(-3px);
+.form-submit:disabled {
+  opacity: .65;
+  cursor: wait;
 }
-
-/* ПОДЕСУВАЊЕ НА ИКОНИТЕ ПОД ФОРМАТА */
+.form-feedback {
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
 .social-contact-wrapper {
   margin-top: 40px;
   padding-top: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--border);
 }
-
 .social-label {
-  font-size: 0.9rem;
-  color: #aaa;
-  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: .9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 .contact-links {
   display: flex;
   justify-content: center;
-  gap: 15px;
   flex-wrap: wrap;
+  gap: 15px;
   margin-top: 30px;
 }
-
 .contact-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  color: #fff !important;
+  color: #fff;
   text-decoration: none;
-  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-size: 1.3rem;
 }
-
-/* ОВИЕ СЕ БОИТЕ ШТО ГИ БАРАШЕ */
-.contact-btn.phone {
-  background: #007aff !important;
+.phone {
+  background: #007aff;
 }
-.contact-btn.whatsapp {
-  background: #25d366 !important;
+.whatsapp {
+  background: #128c45;
 }
-.contact-btn.viber {
-  background: #7360f2 !important;
+.viber {
+  background: #7360f2;
 }
-.contact-btn.instagram {
-  background: linear-gradient(
-    45deg,
-    #f09433,
-    #e6683c,
-    #dc2743,
-    #cc2366,
-    #bc1888
-  ) !important;
+.email {
+  background: #333;
 }
-.contact-btn.email {
-  background: #333 !important;
+.instagram {
+  background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
 }
-
-.contact-btn:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+/* Portfolio. Groups start on a fresh row and have visible headings. */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 32px;
+  max-width: 1400px;
+  padding: 32px 20px;
+  margin: auto;
 }
-
-/* ============================================================
-   ФИНАЛНА МОБИЛНА ОПТИМИЗАЦИЈА (Sky Studio M)
-   ============================================================ */
-@media (max-width: 768px) {
-  /* Навигација во еден ред */
-  nav {
-    flex-direction: row !important; /* Враќање во хоризонтала */
-    justify-content: space-between !important;
-    align-items: center !important;
-    padding: 5px 10px !important; /* Минимален простор */
-    gap: 5px !important;
-    height: 70px !important; /* Фиксна мала висина */
-  }
-
-  /* Целосно криење на логото за максимален простор */
-  .logo {
-    display: none !important;
-  }
-
-  .lang-switcher {
-    gap: 6px !important;
-  }
-
-  .lang-btn {
-    font-size: 0.7rem !important;
-    padding: 2px !important;
-  }
-
-  /* Линкови (За нас, Q&A) - Прва група лево */
-  .main-nav-links {
-    display: flex !important;
-    flex: 2 !important; /* Зазема повеќе простор за текстот */
-    justify-content: flex-start !important;
-    gap: 12px !important;
-    order: 1 !important;
-    padding: 0 !important;
-    border: none !important; /* Бришење на линијата од претходно */
-  }
-
-  .main-nav-links a {
-    font-size: 0.75rem !important; /* Ситни букви за да соберат */
-    white-space: nowrap !important; /* Да не се крши текстот во нов ред */
-  }
-
-  /* Јазици и Копче - Втора група десно */
-  .right-nav-group {
-    display: flex !important;
-    flex: 3 !important;
-    justify-content: flex-end !important;
-    gap: 8px !important;
-    order: 2 !important;
-    width: auto !important;
-  }
-
-  /* Копчето „Закажи“ мора да биде многу мало */
-  .nav-btn {
-    padding: 5px 10px !important;
-    font-size: 0.75rem !important;
-    border-radius: 4px !important;
-    white-space: nowrap !important;
-  }
-
-  /* 2. Hero Секција - Намалување на висината */
-  .abstract-bg {
-    height: 60vh !important; /* Да не го зафаќа цел екран на телефон */
-  }
-
-  .hero h1 {
-    font-size: 1.8rem !important;
-    line-height: 1.2;
-  }
-
-  .hero p {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-
-  /* 3. Portfolio - Видеата (9:16) */
-  .v-section,
-  .v-section.reverse {
-    flex-direction: column !important;
-    gap: 20px !important;
-    text-align: center;
-  }
-
-  .v-video {
-    width: 100% !important;
-    padding-bottom: 125% !important; /* Совршен сооднос за Reels/TikTok */
-    border-radius: 15px;
-  }
-  .mobile-video {
-    display: block !important;
-  }
-  .desktop-video {
-    display: none !important;
-  }
+.portfolio-group {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: inherit;
+  gap: 30px;
+  min-width: 0;
 }
-
-/* Центрирани pricing картички на компјутер. */
-.pricing-grid {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 25px;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  flex-wrap: wrap;
+.portfolio-group h2 {
+  grid-column: 1 / -1;
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
 }
-
-.price-card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 40px 25px;
-  border-radius: 25px;
-  width: 310px; /* Малку намалена ширина за подобар баланс */
-  flex-shrink: 0; /* Спречува згмечување */
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: column;
-  transition: 0.3s;
+.portfolio-card {
+  min-width: 0;
+  padding: 15px;
+  border-radius: 20px;
+  text-align: center;
+}
+.video-container {
   position: relative;
+  display: block;
 }
-
-/* На мобилен картичките се редат една под друга. */
-@media (max-width: 768px) {
-  .pricing-grid {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px 0;
-  }
-
-  .price-card {
-    width: 100%;
-    max-width: 400px;
-  }
+.video-thumb {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  background: #e9eff7;
 }
-
-/* 5. Форма за контакт */
-.form-container {
-  padding: 30px 20px !important;
+.portfolio-video, .static-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-
-/* Подесување на внатрешните видеа */
-.v-video .desktop-video,
-.v-video .mobile-video {
+.play-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.v-video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ова го прави видеото да го исполни целиот простор */
-  border-radius: 20px;
-}
-
-/* На десктоп, криј го мобилното видео */
-.mobile-video {
-  display: none;
-}
-.desktop-video {
-  display: block;
-}
-
-footer {
-  padding: 40px;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #444;
-  background: #000;
-  border-top: 1px solid #111;
-}
-
-/* PORTFOLIO GRID STYLE */
-.portfolio-grid-section {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-}
-
-.portfolio-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 15px;
-  transition: 0.4s;
-  text-align: center;
-}
-
-.portfolio-card:hover {
-  transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: #4facfe;
-  box-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
-}
-
-.video-thumb {
-  width: 100%;
-  height: 200px;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: #fff;
   border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 15px;
-  background: #111;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-
-.video-thumb video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.play-overlay i {
+  display: grid;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.7);
+  background: rgba(23,43,69,.65);
+  font-size: 1.5rem;
 }
-
-.video-thumb.empty i {
-  font-size: 3rem;
-  color: #333;
+.playing .play-overlay i {
+  opacity: 0;
 }
-
+.playing .play-overlay:hover i, .playing .play-overlay:focus-visible i {
+  opacity: 1;
+}
+.video-error {
+  color: #a32222;
+  font-size: .9rem;
+  margin-top: 8px;
+}
 .portfolio-card h3 {
   margin-bottom: 5px;
   font-size: 1.2rem;
 }
 .portfolio-card p {
-  color: #aaa;
-  font-size: 0.9rem;
+  font-size: .9rem;
 }
-
-/* --- DISCOUNT BADGE STYLE --- */
-.price-card {
-  position: relative; /* Ова овозможува беџот да се врзе за картичката */
-}
-
-.discount-tag {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: linear-gradient(
-    45deg,
-    #ff007a,
-    #ff5e00
-  ); /* Жива розево-портокалова боја */
-  color: #fff;
-  padding: 5px 12px;
-  border-radius: 50px;
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  box-shadow: 0 0 10px rgba(255, 0, 122, 0.5);
-  animation: badge-pulse 2s infinite ease-in-out;
-  z-index: 10;
-}
-
-/* Анимација за суптилно сјаење (Glow) */
-@keyframes badge-pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 10px rgba(255, 0, 122, 0.5);
-  }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 0, 122, 0.8);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 10px rgba(255, 0, 122, 0.5);
-  }
-}
-/* --- OLD PRICE STRIKETHROUGH STYLE --- */
-.old-price {
-  text-decoration: line-through;
-  text-decoration-color: #ff007a; /* Прецртано со бојата на попустот за подобар акцент */
-  color: rgba(255, 255, 255, 0.3); /* Избледена бела боја */
-  font-size: 1.6rem; /* Помала од главната цена */
-  font-weight: 300;
-  margin-right: 12px;
-  vertical-align: middle;
-}
-
-/* Мала корекција за главната цена за да бидат во иста линија */
-.price {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 15px 0;
-}
-
-/* Ограничувањето го ставаме САМО на позадината, а не на сите секции */
-.abstract-bg {
-  width: 100% !important;
-  max-width: 100vw !important;
-  overflow: hidden !important;
-}
-
-.shape {
-  max-width: 100vw !important;
-}
-
-/* --- СТИЛ ЗА ЈАЗИЧНО МЕНИ (DROPDOWN) --- */
-.lang-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.lang-dropbtn {
-  background: rgba(255, 255, 255, 0.05);
-  color: white;
-  padding: 6px 12px;
-  font-size: 0.8rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.lang-dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: #0a0a15;
-  min-width: 60px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
-  z-index: 2100;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-}
-
-.lang-dropdown-content a {
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
-  display: block;
-  font-size: 0.8rem;
+footer {
+  padding: 40px 20px;
   text-align: center;
-  transition: 0.3s;
+  font-size: .8rem;
+  background: #edf2f8;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
 }
-
-.lang-dropdown-content a:hover {
-  background-color: rgba(79, 172, 254, 0.2);
-}
-
-/* Прикажи го менито на hover */
-.lang-dropdown:hover .lang-dropdown-content {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .lang-switcher {
-    gap: 0 !important; /* Го тргаме празниот простор */
+/* Responsive layout. */
+@media (min-width: 769px) and (max-width: 1100px) {
+  nav {
+    padding-inline: 20px;
   }
-
-  .lang-dropbtn {
-    font-size: 0.75rem !important;
-    padding: 5px 10px !important;
+  .main-nav-links {
+    gap: 16px;
   }
-}
-
-/* --- ПОРТФОЛИО РЕСПОНЗИВНОСТ --- */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
-  padding: 20px;
-  max-width: 1400px;
-  margin: 0 auto;
-  .video-thumb {
-    height: 500px; /* Малку го зголемуваме просторот за видеото на мобилен */
-  }
-}
-
-/* ОВА ГИ РЕДИ ВЕРТИКАЛНО НА МОБИЛЕН */
-@media (max-width: 768px) {
   .portfolio-grid {
-    grid-template-columns: 1fr !important; /* Само една колона */
-    gap: 25px;
+    grid-template-columns: repeat(2,minmax(0,1fr));
   }
-
-  .video-thumb {
-    height: 250px; /* Малку го зголемуваме просторот за видеото на мобилен */
+}
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px;
   }
-
+  .logo {
+    display: none;
+  }
+  .main-nav-links {
+    flex: 1 1 auto;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .main-nav-links a {
+    font-size: .8rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .right-nav-group {
+    flex: 1 1 auto;
+    gap: 8px;
+  }
+  .nav-btn {
+    padding: 10px;
+    font-size: .8rem;
+  }
+  .lang-dropbtn {
+    min-height: 44px;
+  }
+  .hero {
+    padding: 48px 20px;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .features-grid, .portfolio-grid {
+    grid-template-columns: minmax(0,1fr);
+  }
+  .equipment-grid > .feature-box:nth-child(4) {
+    grid-row: 3;
+  }
+  .equipment-grid > .feature-box:nth-child(8) {
+    grid-row: 7;
+  }
+  .equipment-photo {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 3 / 2;
+  }
+  .v-section, .v-section.reverse {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .v-video {
+    flex: auto;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+  }
+  .pricing-grid {
+    padding: 20px 0;
+  }
+  .price-card {
+    width: 100%;
+    max-width: 400px;
+  }
+  .portfolio-grid {
+    gap: 28px;
+  }
   .portfolio-card h3 {
     font-size: 1.1rem;
   }
 }
-.video-container {
-  position: relative;
-  cursor: pointer;
-}
-
-.play-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
-  background: rgba(
-    79,
-    172,
-    254,
-    0.2
-  ); /* Твојата сина боја со транспарентност */
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s ease;
-  z-index: 10;
-}
-
-.play-overlay i {
-  color: #fff;
-  font-size: 1.5rem;
-  margin-left: 5px; /* За да биде оптички центрирано */
-  text-shadow: 0 0 10px rgba(79, 172, 254, 0.8);
-}
-
-.video-container:hover .play-overlay {
-  transform: translate(-50%, -50%) scale(1.1);
-  background: rgba(79, 172, 254, 0.4);
-  box-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
-}
-
-/* Скриј го копчето кога видеото игра */
-.video-container.playing .play-overlay {
-  opacity: 0;
-  visibility: hidden;
-}
-
-/* Класа за сликата "Наскоро" */
-.static-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Го исполнува целиот простор без деформација */
-  display: block;
-  transition: transform 0.5s ease; /* За мазен ефект при hover */
-}
-.play-overlay {
-  pointer-events: none; /* Ова овозможува кликот да помине „низ“ иконата директно до видеото */
-}
-
-/* Ако сакаш анимацијата сепак да работи откако ќе се вчита скриптата */
-.aos-init[data-aos] {
-  opacity: 0;
-}
-.aos-animate[data-aos] {
-  opacity: 1;
-}
-
-/* Светла палета за сите страници. */
-:root {
-  color-scheme: light;
-  --page-bg: #f7f9fc;
-  --surface: #ffffff;
-  --text: #172b45;
-  --muted: #52647a;
-  --accent: #185abd;
-  --border: #dce5f0;
-  --blue: #a8d5ff;
-  --pink: #e5c9ef;
-  --dark: var(--page-bg);
-  --yellow: #ffe6af;
-}
-
-body {
-  background: var(--page-bg);
-  color: var(--text);
-}
-
-nav {
-  background: rgba(255, 255, 255, 0.92);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 4px 24px rgba(23, 43, 69, 0.05);
-}
-
-.logo,
-.lang-btn,
-.lang-dropbtn,
-.lang-dropdown-content a {
-  color: var(--text);
-}
-
-.lang-btn {
-  opacity: 1;
-  color: var(--muted);
-}
-
-.lang-btn.active,
-.lang-btn:hover,
-.lang-dropdown-content a.active {
-  color: var(--accent);
-  text-shadow: none;
-}
-
-.lang-dropbtn {
-  background: #f0f5fc;
-  border-color: var(--border);
-}
-
-.lang-dropdown-content {
-  background: var(--surface);
-  border-color: var(--border);
-  box-shadow: 0 10px 30px rgba(23, 43, 69, 0.12);
-}
-
-.lang-dropdown-content a:hover {
-  background: #eaf2ff;
-}
-
-.nav-btn,
-.form-submit {
-  background: var(--accent);
-  color: #fff;
-}
-
-.nav-btn:hover,
-.form-submit:hover {
-  background: #124895;
-  color: #fff;
-  box-shadow: 0 8px 24px rgba(24, 90, 189, 0.2);
-}
-
-.abstract-bg {
-  background: linear-gradient(135deg, #edf6ff 0%, #f8f2fb 100%);
-}
-
-.shape {
-  opacity: 0.4;
-}
-
-.content,
-.hero h1 {
-  color: var(--text);
-  text-shadow: none;
-}
-
-.hero p,
-.v-info p,
-.feature-box p,
-.price-card ul,
-.extra-info,
-.form-container p,
-.social-label,
-.portfolio-card p {
-  color: var(--muted);
-  line-height: 1.7;
-}
-
-.features {
-  background: #eef5fc;
-  border-bottom-color: var(--border);
-}
-
-.portfolio-v3 {
-  background: var(--surface);
-}
-
-.pricing {
-  background: linear-gradient(135deg, #eef4fd, #f6f0fa);
-  border-top-color: var(--border);
-}
-
-.contact-section {
-  background: var(--page-bg);
-}
-
-.feature-box,
-.price-card,
-.form-container,
-.portfolio-grid-section .portfolio-card,
-.badge {
-  background: var(--surface);
-  border-color: var(--border);
-  box-shadow: 0 8px 30px rgba(23, 43, 69, 0.06);
-}
-
-.feature-box:hover,
-.price-card:hover,
-.portfolio-grid-section .portfolio-card:hover,
-.badge:hover {
-  background: var(--surface);
-  border-color: #9abbe9;
-  box-shadow: 0 16px 36px rgba(24, 90, 189, 0.12);
-}
-
-.feature-box i,
-.feature-box:hover i,
-.price-card ul li::before {
-  color: var(--accent);
-  text-shadow: none;
-}
-
-.v-info h2,
-.form-container h2 {
-  background: none;
-  color: var(--text);
-  -webkit-text-fill-color: currentColor;
-}
-
-.v-video,
-.v-video:hover {
-  box-shadow: 0 12px 32px rgba(23, 43, 69, 0.14);
-}
-
-.price {
-  color: var(--text);
-}
-
-.old-price,
-.more-info-btn {
-  color: var(--muted);
-}
-
-.more-info-btn,
-.social-contact-wrapper {
-  border-top-color: var(--border);
-}
-
-.more-info-btn:hover {
-  color: var(--accent);
-  text-shadow: none;
-}
-
-.input-group input,
-.input-group select,
-.input-group textarea,
-select option {
-  background: #f7f9fc;
-  color: var(--text);
-  border-color: #bbcadd;
-}
-
-.input-group input::placeholder,
-.input-group textarea::placeholder {
-  color: var(--muted);
-  opacity: 1;
-}
-
-.input-group input:focus,
-.input-group select:focus,
-.input-group textarea:focus {
-  background: var(--surface);
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(24, 90, 189, 0.12);
-}
-
-a:focus-visible,
-button:focus-visible,
-.more-info-btn:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 4px;
-}
-
-.portfolio-grid-section .video-thumb {
-  background: #e9eff7;
-}
-
-.video-thumb.empty i {
-  color: var(--muted);
-}
-
-footer {
-  background: #edf2f8;
-  color: var(--muted);
-  border-top-color: var(--border);
-}
-
-/* Read projects left to right, with each related group starting a new row. */
-.portfolio-page .portfolio-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-@media (min-width: 769px) and (max-width: 1100px) {
-  .portfolio-page .portfolio-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
+.tracking-pixel {
+  display: none;
+}
+.intro-section {
+  min-height: 36vh;
+}
+.about-layout {
+  max-width: 900px;
+  gap: 40px;
+}
+.about-copy {
+  max-width: 800px;
+  margin-left: 10px;
+  text-align: left;
+}
+.about-heading {
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+.about-paragraph {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+.about-details {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 80px 20px;
+}
+.mission-section {
+  padding: 80px 20px;
+  width: 100%;
+}
+.mission-copy {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.mission-heading {
+  margin-bottom: 25px;
+}
+.mission-text {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+.about-contact-links {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.phone-color {
+  background: #007aff;
+}
+.email-color {
+  background: #333;
+}
+.block-link {
+  display: block;
+}
+.portfolio-contact-links {
+  margin: 80px 0 40px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.price-note {
+  font-size: 1rem;
+}
+.partnership-summary {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
 
-.portfolio-page .portfolio-group {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: inherit;
-  gap: inherit;
-  min-width: 0;
+.faq-grid {
+  max-width: 900px;
+}
+.text-left {
+  text-align: left;
+}
+.accent-heading {
+  color: var(--accent);
+}
+
+/* Progressive enhancement: content remains readable if scripts fail. */
+html:not(.animations-enabled) [data-aos] {
+  opacity: 1;
+  transform: none;
+}
+html:not(.js-enabled) .lang-dropdown:focus-within .lang-dropdown-content {
+  display: block;
+}
+
+html:not(.js-enabled) .play-overlay {
+  display: none;
 }

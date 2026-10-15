@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+      content="width=device-width, initial-scale=1.0"
     />
     <title>Sky Studio M | Photo & Video Production | Drone Filming</title>
 
@@ -37,11 +37,11 @@
 
     <meta
       property="og:title"
-      content="Sky Studio M | Professional Photo & Video Production"
+      content="Sky Studio M | Photo & Video Production | Drone Filming"
     />
     <meta
       property="og:description"
-      content="Premium 4K RAW/D-Log drone footage. EASA certified pilot for real estate and events."
+      content="Professional photo and video production, Professional drone filming in Skopje and Macedonia. Sony A7 V shooting, real estate footage, and B2B cooperation."
     />
     <meta
       property="og:image"
@@ -64,24 +64,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=20261015-cleanup" />
 
-    <style>
-      /* Кога AOS ќе се вчита, тој ќе ги преземе анимациите назад */
-      .aos-init[data-aos] {
-        opacity: 0;
-      }
-      .aos-animate[data-aos] {
-        opacity: 1;
-      }
-    </style>
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <nav>
       <a href="en.html" class="logo">SKY STUDIO M</a>
       <div class="main-nav-links">
-        <a href="en.html" class="lang-btn active">Home</a>
+        <a href="en.html" class="lang-btn active" aria-current="page">Home</a>
         <a href="abouten.html" class="lang-btn">About Us</a>
         <a href="portfolioen.html" class="lang-btn">Video</a>
         <a href="faqen.html" class="lang-btn">Q&A</a>
@@ -89,10 +81,10 @@
       <div class="right-nav-group">
         <div class="lang-switcher">
           <div class="lang-dropdown">
-            <button class="lang-dropbtn">
-              EN <i class="fas fa-chevron-down"></i>
+            <button type="button" class="lang-dropbtn" aria-expanded="false" aria-controls="language-options" aria-label="Choose language">
+              EN <i class="fas fa-chevron-down" aria-hidden="true"></i>
             </button>
-            <div class="lang-dropdown-content">
+            <div class="lang-dropdown-content" id="language-options">
               <a href="index.html">MK</a>
               <a href="en.html" class="active">EN</a>
             </div>
@@ -102,10 +94,11 @@
       </div>
     </nav>
 
-    <section class="abstract-bg" style="height: 40vh">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
+    <main id="main-content">
+    <section class="intro-section abstract-bg">
+      <div class="shape shape-1" aria-hidden="true"></div>
+      <div class="shape shape-2" aria-hidden="true"></div>
+      <div class="shape shape-3" aria-hidden="true"></div>
       <div class="hero">
         <h1 data-aos="fade-down">SKY STUDIO M</h1>
         <p data-aos="fade-up">
@@ -116,11 +109,11 @@
     </section>
 
     <section class="features">
-      <div class="features-grid">
+      <div class="features-grid equipment-grid">
         <div class="feature-box" data-aos="fade-up">
           <div class="feature-double-img">
-            <i class="fas fa-camera"></i>
-            <i class="fas fa-video"></i>
+            <i class="fas fa-camera" aria-hidden="true"></i>
+            <i class="fas fa-video" aria-hidden="true"></i>
           </div>
           <h3>Professional Equipment</h3>
           <br />
@@ -201,7 +194,7 @@
           data-aos="fade-up"
         />
         <div class="feature-box" data-aos="fade-up">
-          <i class="fas fa-film"></i>
+          <i class="fas fa-film" aria-hidden="true"></i>
           <h3>Cinematic Post-production</h3>
           <br />
           <p>
@@ -223,13 +216,12 @@
           </p>
         </div>
         <div class="v-video">
-          <video
-            autoplay
+          <video controls
             muted
             loop
             playsinline
             class="protected-video"
-            preload="metadata"
+            preload="none"
             fetchpriority="low"
           >
             <source
@@ -249,13 +241,12 @@
           </p>
         </div>
         <div class="v-video">
-          <video
-            autoplay
+          <video controls poster="images/posters/leon-web.jpg"
             muted
             loop
             playsinline
             class="protected-video"
-            preload="metadata"
+            preload="none"
           >
             <source
               src="https://cdn.skystudiom.mk/leon-web.mp4"
@@ -275,13 +266,12 @@
           </p>
         </div>
         <div class="v-video">
-          <video
-            autoplay
+          <video controls
             muted
             loop
             playsinline
             class="protected-video"
-            preload="metadata"
+            preload="none"
           >
             <source
               src="https://cdn.skystudiom.mk/skopje-timelapse.mp4"
@@ -299,13 +289,12 @@
           </p>
         </div>
         <div class="v-video">
-          <video
-            autoplay
+          <video controls poster="images/posters/ecommerce-park-web.jpg"
             muted
             loop
             playsinline
             class="protected-video"
-            preload="metadata"
+            preload="none"
           >
             <source
               src="https://cdn.skystudiom.mk/ecommerce-park-web.mp4"
@@ -323,13 +312,12 @@
           </p>
         </div>
         <div class="v-video">
-          <video
-            autoplay
+          <video controls poster="images/posters/Events_Recap-web.jpg"
             muted
             loop
             playsinline
             class="protected-video"
-            preload="metadata"
+            preload="none"
           >
             <source
               src="https://cdn.skystudiom.mk/Events_Recap-web.mp4"
@@ -350,9 +338,9 @@
             <li>Includes music and <br />Advanced DaVinci Color Grading</li>
             <li>20 professional photos</li>
           </ul>
-          <div class="more-info-btn" onclick="toggleInfo(this)">
-            More Information <i class="fas fa-chevron-down"></i>
-          </div>
+          <button type="button" class="more-info-btn" aria-expanded="false">
+            More Information <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
           <div class="extra-info">
             <p>
               <br />Hotels, Real Estate Agencies, Airbnb properties,
@@ -370,10 +358,9 @@
 
         <div class="price-card" data-aos="fade-up">
           <h3>B2B / FULL PRODUCTION</h3>
-          <div class="price" style="font-size: 1rem"></div>
+
           <p
-            style="font-size: 0.85rem; color: var(--muted); margin-bottom: 20px"
-          >
+           class="partnership-summary">
             Technical partnership for marketing agencies, video productions, and
             photo studios.
           </p>
@@ -384,9 +371,9 @@
             <li>Subcontractor: Reliable partner for your next project</li>
             <li>Compliance: Full legality (EASA / CAA)</li>
           </ul>
-          <div class="more-info-btn" onclick="toggleInfo(this)">
-            Collaboration Info <i class="fas fa-chevron-down"></i>
-          </div>
+          <button type="button" class="more-info-btn" aria-expanded="false">
+            Collaboration Info <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
           <div class="extra-info">
             <p>
               <br />We offer a complete visual solution – from the
@@ -412,26 +399,30 @@
           method="POST"
         >
           <div class="input-group">
-            <input type="text" name="name" placeholder="Full Name" required />
+            <label for="contact-name">Full name</label>
+            <input type="text" id="contact-name" autocomplete="name" name="name" placeholder="Full Name" required />
           </div>
           <div class="input-group">
+            <label for="contact-phone">Phone number</label>
             <input
               type="tel"
-              name="phone"
+              id="contact-phone" autocomplete="tel" name="phone"
               placeholder="Phone Number (e.g., +389 XX XXX XXX)"
               required
             />
           </div>
           <div class="input-group">
+            <label for="contact-email">Email address</label>
             <input
               type="email"
-              name="email"
+              id="contact-email" autocomplete="email" name="email"
               placeholder="Email Address"
               required
             />
           </div>
           <div class="input-group">
-            <select name="service" required>
+            <label for="contact-service">Service</label>
+            <select id="contact-service" name="service" required>
               <option value="" disabled selected>Select a package</option>
               <option value="social">CINEMATIC PACKAGE</option>
               <option value="cinematic">B2B / FULL PRODUCTION</option>
@@ -439,8 +430,9 @@
             </select>
           </div>
           <div class="input-group">
+            <label for="contact-message">Project details</label>
             <textarea
-              name="message"
+              id="contact-message" name="message"
               rows="4"
               placeholder="Location details and preferred date..."
             ></textarea>
@@ -448,17 +440,8 @@
           <button type="submit" class="form-submit">Send Request</button>
         </form>
         <div
-          id="status"
-          style="
-            display: none;
-            padding: 20px;
-            color: #25d366;
-            text-align: center;
-            border: 1px solid #25d366;
-            border-radius: 12px;
-            margin-top: 20px;
-          "
-        >
+          id="status" hidden role="status" aria-live="polite" tabindex="-1"
+         class="form-feedback">
           ✔ Thank you! Your request has been successfully sent. We will contact
           you soon.
         </div>
@@ -466,79 +449,41 @@
           <p class="social-label">Contact</p>
           <div class="contact-links">
             <a href="tel:+38971254472" class="contact-btn phone"
-              ><i class="fas fa-phone-alt"></i
+               aria-label="Call us"><i class="fas fa-phone-alt" aria-hidden="true"></i
             ></a>
             <a
               href="https://wa.me/38971254472"
               class="contact-btn whatsapp"
               target="_blank"
-              ><i class="fab fa-whatsapp"></i
+               aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i
             ></a>
             <a
               href="viber://chat?number=38972239642"
               class="contact-btn viber"
               target="_blank"
-              ><i class="fab fa-viber"></i
+               aria-label="Viber"><i class="fab fa-viber" aria-hidden="true"></i
             ></a>
             <a
               href="https://instagram.com/goranmanevski"
               class="contact-btn instagram"
               target="_blank"
-              ><i class="fab fa-instagram"></i
+               aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i
             ></a>
             <a href="mailto:info@skystudiom.mk" class="contact-btn email"
-              ><i class="fas fa-envelope"></i
+               aria-label="Email us"><i class="fas fa-envelope" aria-hidden="true"></i
             ></a>
           </div>
         </div>
       </div>
     </section>
 
+    </main>
     <footer>
       <p>&copy; 2026 Sky Studio M. All rights reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        AOS.init({ duration: 400, once: true, offset: 50 });
-      });
-      function toggleInfo(btn) {
-        const info = btn.nextElementSibling;
-        const icon = btn.querySelector("i");
-        info.style.maxHeight = info.style.maxHeight
-          ? null
-          : info.scrollHeight + "px";
-        icon.classList.toggle("fa-chevron-up");
-        icon.classList.toggle("fa-chevron-down");
-      }
-      const form = document.getElementById("my-form");
-      if (form) {
-        form.addEventListener("submit", async (e) => {
-          e.preventDefault();
-          const status = document.getElementById("status");
-          const btn = e.target.querySelector(".form-submit");
-          btn.innerHTML = "Sending...";
-          btn.disabled = true;
-          try {
-            const res = await fetch(e.target.action, {
-              method: "POST",
-              body: new FormData(e.target),
-              headers: { Accept: "application/json" },
-            });
-            if (res.ok) {
-              form.style.display = "none";
-              status.style.display = "block";
-            } else {
-              throw new Error("Error sending");
-            }
-          } catch (err) {
-            btn.innerHTML = "Send Request";
-            btn.disabled = false;
-            alert("There was a problem sending. Please try again.");
-          }
-        });
-      }
-    </script>
+
+    <script src="site.js?v=20261015-cleanup" defer></script>
   </body>
 </html>
