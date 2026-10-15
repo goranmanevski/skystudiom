@@ -1417,3 +1417,12 @@ footer {
   color: var(--muted);
   border-top-color: var(--border);
 }
+
+/* Keep related portfolio projects together, using the parent grid's columns. */
+.portfolio-page .portfolio-group {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: inherit;
+  gap: inherit;
+  min-width: 0;
+}
