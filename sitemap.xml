@@ -1,91 +1,693 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://skystudiom.mk/index.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/index.html" />
+    <loc>https://skystudiom.mk/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/en.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/en.html" />
-  </url>
-  <url>
-    <loc>https://skystudiom.mk/portfolio.html</loc>
-    <priority>0.9</priority>
-    <video:video>
-      <video:thumbnail_loc>https://skystudiom.mk/images/posters/matkaskopje.jpg</video:thumbnail_loc>
-      <video:title>Кањон Матка - Sky Studio M Cinematic</video:title>
-      <video:description>Природа и професионален Color Grading на кањонот Матка.</video:description>
-      <video:content_loc>https://cdn.skystudiom.mk/matkaskopje.mp4</video:content_loc>
-      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
-    </video:video>
-    <video:video>
-      <video:thumbnail_loc>https://skystudiom.mk/images/posters/ohrid-dron-cinematic-macedonia.jpg</video:thumbnail_loc>
-      <video:title>Охридско Езеро - Бисерот на Македонија</video:title>
-      <video:description>Кинематографски аероснимки од Охридското Езеро во 4K.</video:description>
-      <video:content_loc>https://cdn.skystudiom.mk/ohrid-dron-cinematic-macedonia.mp4</video:content_loc>
-      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
-    </video:video>
-    <video:video>
-      <video:thumbnail_loc>https://skystudiom.mk/images/posters/st-nicholas-church-mavrovo-aerial-view.jpg</video:thumbnail_loc>
-      <video:title>Маврово - Потопената црква Св. Никола</video:title>
-      <video:description>Уникатни кадри од аероснимање на потопената црква.</video:description>
-      <video:content_loc>https://cdn.skystudiom.mk/st-nicholas-church-mavrovo-aerial-view.mp4</video:content_loc>
-      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
-    </video:video>
-    <video:video>
-      <video:thumbnail_loc>https://skystudiom.mk/images/posters/bigorski-monastery-drone-video-macedonia.jpg</video:thumbnail_loc>
-      <video:title>Бигорски Манастир - Духовност и архитектура</video:title>
-      <video:description>Професионално снимање со дрон на Бигорскиот манастир.</video:description>
-      <video:content_loc>https://cdn.skystudiom.mk/bigorski-monastery-drone-video-macedonia.mp4</video:content_loc>
-      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
-    </video:video>
-    <video:video>
-      <video:thumbnail_loc>https://skystudiom.mk/images/posters/skopje-footage-saraj-park.jpg</video:thumbnail_loc>
-      <video:title>Скопје - Парк Сарај</video:title>
-      <video:description>Зеленило и рекреација во Скопје снимено од воздух.</video:description>
-      <video:content_loc>https://cdn.skystudiom.mk/skopje-footage-saraj-park.mp4</video:content_loc>
-      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
-    </video:video>
-    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/portfolio.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/portfolioen.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/portfolioen.html" />
-  </url>
-  <url>
-    <loc>https://skystudiom.mk/about.html</loc>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/about.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/abouten.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/abouten.html" />
-  </url>
-  <url>
-    <loc>https://skystudiom.mk/faq.html</loc>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/faq.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/faqen.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/faqen.html" />
   </url>
   <url>
     <loc>https://skystudiom.mk/en.html</loc>
-    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/index.html" />
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/en.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/en.html" />
   </url>
   <url>
-    <loc>https://skystudiom.mk/portfolioen.html</loc>
-    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/portfolio.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/portfolioen.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/portfolioen.html" />
-  </url>
-  <url>
-    <loc>https://skystudiom.mk/abouten.html</loc>
+    <loc>https://skystudiom.mk/about.html</loc>
+    <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/about.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/abouten.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/abouten.html" />
   </url>
   <url>
-    <loc>https://skystudiom.mk/faqen.html</loc>
+    <loc>https://skystudiom.mk/abouten.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/abouten.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/abouten.html" />
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/portfolio.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/portfolio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/portfolioen.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/portfolioen.html" />
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/portfolioen.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/portfolio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/portfolioen.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/portfolioen.html" />
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/faq.html</loc>
+    <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/faq.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/faqen.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/faqen.html" />
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/faqen.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/faq.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/faqen.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/faqen.html" />
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/panigale-v4-lamborghini-edition.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/panigale-v4-lamborghini-edition.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/panigale-v4-lamborghini-edition-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/panigale-v4-lamborghini-edition-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://cdn.skystudiom.mk/sliki/Panigale_1.6.1.jpg</video:thumbnail_loc>
+      <video:title>Ducati Panigale V4 Lamborghini</video:title>
+      <video:description>Ducati Macedonia — дизајн и детали во фокус.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Panigale_v4_Lamborghini_Edition.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/ducati-we-ride-as-one.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/ducati-we-ride-as-one.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/ducati-we-ride-as-one-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/ducati-we-ride-as-one-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Ducati_We_ride_as_one-web.jpg</video:thumbnail_loc>
+      <video:title>We Ride As One</video:title>
+      <video:description>Ducati Macedonia — заедничко возење и мотоциклистичка страст.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Ducati_We_ride_as_one-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/wdw2026.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/wdw2026.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/wdw2026-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/wdw2026-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/WDW2026-web.jpg</video:thumbnail_loc>
+      <video:title>World Ducati Week 2026</video:title>
+      <video:description>Ducati Macedonia — моменти од мотоциклистичкиот настан во Италија.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/WDW2026-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/leon.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/leon.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/leon-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/leon-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/leon-web.jpg</video:thumbnail_loc>
+      <video:title>Real Estate | Стан</video:title>
+      <video:description>Видео презентација на стан, снимена со гимбал за стабилни кадри и течни премини низ просторот.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/leon-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/lifetime-event.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/lifetime-event.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/lifetime-event-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/lifetime-event-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Lifetime-event-web.jpg</video:thumbnail_loc>
+      <video:title>Lifetime Reformer | Настан</video:title>
+      <video:description>Атмосфера и моменти од настан во студиото.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Lifetime-event-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/lifetime-dona.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/lifetime-dona.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/lifetime-dona-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/lifetime-dona-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Lifetime_Dona-web.jpg</video:thumbnail_loc>
+      <video:title>Lifetime Reformer | Со Дона</video:title>
+      <video:description>Движење, фокус и еден ден во реформер студиото.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Lifetime_Dona-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/lifetime-showroom.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/lifetime-showroom.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/lifetime-showroom-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/lifetime-showroom-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Lifetime-showroom-web.jpg</video:thumbnail_loc>
+      <video:title>Lifetime Reformer | Студио</video:title>
+      <video:description>Просторот и деталите на студиото во кратка видео приказна.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Lifetime-showroom-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/carconnect-ferrari.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/carconnect-ferrari.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/carconnect-ferrari-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/carconnect-ferrari-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/CarConnect_Ferrari-web.jpg</video:thumbnail_loc>
+      <video:title>Ferrari | Car Connect</video:title>
+      <video:description>Автомобилски дизајн и детали низ динамични кадри.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/CarConnect_Ferrari-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/carconnect-porsche.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/carconnect-porsche.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/carconnect-porsche-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/carconnect-porsche-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/CarConnect_Porsche-web.jpg</video:thumbnail_loc>
+      <video:title>Porsche | Car Connect</video:title>
+      <video:description>Препознатливи линии и детали во автомобилско промотивно видео.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/CarConnect_Porsche-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/389-fight-wear-kickboxing-macedonia-liscence-final.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/389-fight-wear-kickboxing-macedonia-liscence-final.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/389-fight-wear-kickboxing-macedonia-liscence-final-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/389-fight-wear-kickboxing-macedonia-liscence-final-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://cdn.skystudiom.mk/sliki/389_1.12.1.jpg</video:thumbnail_loc>
+      <video:title>Калин Бобоски | 389 Fight Gear</video:title>
+      <video:description>Промотивно видео со младиот освојувач на Светскиот куп во кикбокс во Италија.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/389_Fight_Wear_Kickboxing_Macedonia_Liscence_Final.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/389-sparing.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/389-sparing.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/389-sparing-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/389-sparing-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/389_Sparing-web.jpg</video:thumbnail_loc>
+      <video:title>389 Fight Gear | Спаринг</video:title>
+      <video:description>Енергијата, техниката и ритамот на кикбокс тренингот.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/389_Sparing-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/ircreations.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/ircreations.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/ircreations-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/ircreations-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://cdn.skystudiom.mk/sliki/Alikas_1.26.1.jpg</video:thumbnail_loc>
+      <video:title>IR Creations</video:title>
+      <video:description>Визуелно претставување на брендот во Скопје.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/IRCreations.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/ecommerce-park.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/ecommerce-park.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/ecommerce-park-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/ecommerce-park-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/ecommerce-park-web.jpg</video:thumbnail_loc>
+      <video:title>E-Commerce Park</video:title>
+      <video:description>Кратко промотивно видео за социјални медиуми.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/ecommerce-park-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/smart-service-iphone.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/smart-service-iphone.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/smart-service-iphone-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/smart-service-iphone-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Smart_Service_iphone-web.jpg</video:thumbnail_loc>
+      <video:title>Smart Service | Замена на екран</video:title>
+      <video:description>Процесот на замена на iPhone екран, прикажан одблиску.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Smart_Service_iphone-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/panthea.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/panthea.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/panthea-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/panthea-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Panthea-web.jpg</video:thumbnail_loc>
+      <video:title>Panthea Center</video:title>
+      <video:description>Видео преглед на атмосферата и моментите од настанот.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Panthea-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/storia.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/storia.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/storia-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/storia-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Storia-web.jpg</video:thumbnail_loc>
+      <video:title>Storia Caffe</video:title>
+      <video:description>Амбиент и моменти од настан во Storia Caffe.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Storia-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/events-recap.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/events-recap.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/events-recap-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/events-recap-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Events_Recap-web.jpg</video:thumbnail_loc>
+      <video:title>Прослави и настани</video:title>
+      <video:description>Атмосфера, емоции и моменти што остануваат во сеќавање.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Events_Recap-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/davidoff.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/davidoff.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/davidoff-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/davidoff-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Davidoff-web.jpg</video:thumbnail_loc>
+      <video:title>Davidoff at BikerFest</video:title>
+      <video:description>Атмосферата и највпечатливите моменти од BikerFest.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Davidoff-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/matkaskopje.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/matkaskopje.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/matkaskopje-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/matkaskopje-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/matkaskopje.jpg</video:thumbnail_loc>
+      <video:title>Кањон Матка</video:title>
+      <video:description>Карпи, вода и природа од воздушна перспектива.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/matkaskopje.mp4</video:content_loc>
+      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/ohrid-dron-cinematic-macedonia.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/ohrid-dron-cinematic-macedonia.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/ohrid-dron-cinematic-macedonia-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/ohrid-dron-cinematic-macedonia-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/ohrid-dron-cinematic-macedonia.jpg</video:thumbnail_loc>
+      <video:title>Охридско Езеро</video:title>
+      <video:description>Езерото и крајбрежјето низ кинематографски кадри со дрон.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/ohrid-dron-cinematic-macedonia.mp4</video:content_loc>
+      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/lake-bled.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/lake-bled.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/lake-bled-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/lake-bled-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Lake_Bled-web.jpg</video:thumbnail_loc>
+      <video:title>Езеро Блед | Словенија</video:title>
+      <video:description>Воздушни кадри од езерото и околниот пејзаж.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Lake_Bled-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/st-nicholas-church-mavrovo-aerial-view.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/st-nicholas-church-mavrovo-aerial-view.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/st-nicholas-church-mavrovo-aerial-view-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/st-nicholas-church-mavrovo-aerial-view-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/st-nicholas-church-mavrovo-aerial-view.jpg</video:thumbnail_loc>
+      <video:title>Маврово | Св. Никола</video:title>
+      <video:description>Потопената црква и мавровскиот пејзаж, снимени со дрон.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/st-nicholas-church-mavrovo-aerial-view.mp4</video:content_loc>
+      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/bigorski-monastery-drone-video-macedonia.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/bigorski-monastery-drone-video-macedonia.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/bigorski-monastery-drone-video-macedonia-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/bigorski-monastery-drone-video-macedonia-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/bigorski-monastery-drone-video-macedonia.jpg</video:thumbnail_loc>
+      <video:title>Бигорски манастир</video:title>
+      <video:description>Архитектурата на манастирот и природата што го опкружува.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/bigorski-monastery-drone-video-macedonia.mp4</video:content_loc>
+      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/skopje-footage-saraj-park.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/skopje-footage-saraj-park.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/skopje-footage-saraj-park-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/skopje-footage-saraj-park-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/skopje-footage-saraj-park.jpg</video:thumbnail_loc>
+      <video:title>Парк Сарај</video:title>
+      <video:description>Зеленило и простор за рекреација од воздушна перспектива.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/skopje-footage-saraj-park.mp4</video:content_loc>
+      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/panigale-v4-lamborghini-edition-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/panigale-v4-lamborghini-edition.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/panigale-v4-lamborghini-edition-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/panigale-v4-lamborghini-edition-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://cdn.skystudiom.mk/sliki/Panigale_1.6.1.jpg</video:thumbnail_loc>
+      <video:title>Ducati Panigale V4 Lamborghini</video:title>
+      <video:description>Ducati Macedonia — a closer look at the design and details.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Panigale_v4_Lamborghini_Edition.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/ducati-we-ride-as-one-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/ducati-we-ride-as-one.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/ducati-we-ride-as-one-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/ducati-we-ride-as-one-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Ducati_We_ride_as_one-web.jpg</video:thumbnail_loc>
+      <video:title>We Ride As One</video:title>
+      <video:description>Ducati Macedonia — a shared ride and a passion for motorcycles.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Ducati_We_ride_as_one-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/wdw2026-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/wdw2026.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/wdw2026-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/wdw2026-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/WDW2026-web.jpg</video:thumbnail_loc>
+      <video:title>World Ducati Week 2026</video:title>
+      <video:description>Ducati Macedonia — highlights from the motorcycle event in Italy.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/WDW2026-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/leon-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/leon.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/leon-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/leon-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/leon-web.jpg</video:thumbnail_loc>
+      <video:title>Real Estate | Apartment</video:title>
+      <video:description>An apartment video tour filmed with a gimbal for stable shots and smooth transitions through the space.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/leon-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/lifetime-event-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/lifetime-event.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/lifetime-event-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/lifetime-event-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Lifetime-event-web.jpg</video:thumbnail_loc>
+      <video:title>Lifetime Reformer | Event</video:title>
+      <video:description>The atmosphere and highlights of a studio event.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Lifetime-event-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/lifetime-dona-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/lifetime-dona.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/lifetime-dona-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/lifetime-dona-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Lifetime_Dona-web.jpg</video:thumbnail_loc>
+      <video:title>Lifetime Reformer | With Dona</video:title>
+      <video:description>Movement, focus and a day at the reformer studio.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Lifetime_Dona-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/lifetime-showroom-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/lifetime-showroom.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/lifetime-showroom-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/lifetime-showroom-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Lifetime-showroom-web.jpg</video:thumbnail_loc>
+      <video:title>Lifetime Reformer | Studio</video:title>
+      <video:description>The studio space and its details in a short visual story.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Lifetime-showroom-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/carconnect-ferrari-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/carconnect-ferrari.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/carconnect-ferrari-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/carconnect-ferrari-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/CarConnect_Ferrari-web.jpg</video:thumbnail_loc>
+      <video:title>Ferrari | Car Connect</video:title>
+      <video:description>Automotive design and details captured in dynamic shots.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/CarConnect_Ferrari-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/carconnect-porsche-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/carconnect-porsche.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/carconnect-porsche-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/carconnect-porsche-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/CarConnect_Porsche-web.jpg</video:thumbnail_loc>
+      <video:title>Porsche | Car Connect</video:title>
+      <video:description>Distinctive lines and details in an automotive promotional film.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/CarConnect_Porsche-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/389-fight-wear-kickboxing-macedonia-liscence-final-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/389-fight-wear-kickboxing-macedonia-liscence-final.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/389-fight-wear-kickboxing-macedonia-liscence-final-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/389-fight-wear-kickboxing-macedonia-liscence-final-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://cdn.skystudiom.mk/sliki/389_1.12.1.jpg</video:thumbnail_loc>
+      <video:title>Kalin Boboski | 389 Fight Gear</video:title>
+      <video:description>A promotional film featuring the young Kickboxing World Cup winner in Italy.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/389_Fight_Wear_Kickboxing_Macedonia_Liscence_Final.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/389-sparing-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/389-sparing.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/389-sparing-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/389-sparing-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/389_Sparing-web.jpg</video:thumbnail_loc>
+      <video:title>389 Fight Gear | Sparring</video:title>
+      <video:description>The energy, technique and rhythm of a kickboxing training session.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/389_Sparing-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/ircreations-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/ircreations.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/ircreations-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/ircreations-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://cdn.skystudiom.mk/sliki/Alikas_1.26.1.jpg</video:thumbnail_loc>
+      <video:title>IR Creations</video:title>
+      <video:description>A visual introduction to the brand in Skopje.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/IRCreations.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/ecommerce-park-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/ecommerce-park.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/ecommerce-park-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/ecommerce-park-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/ecommerce-park-web.jpg</video:thumbnail_loc>
+      <video:title>E-Commerce Park</video:title>
+      <video:description>A short promotional video for social media.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/ecommerce-park-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/smart-service-iphone-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/smart-service-iphone.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/smart-service-iphone-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/smart-service-iphone-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Smart_Service_iphone-web.jpg</video:thumbnail_loc>
+      <video:title>Smart Service | Screen Replacement</video:title>
+      <video:description>A closer look at the iPhone screen replacement process.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Smart_Service_iphone-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/panthea-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/panthea.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/panthea-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/panthea-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Panthea-web.jpg</video:thumbnail_loc>
+      <video:title>Panthea Center</video:title>
+      <video:description>An event recap capturing the atmosphere and key moments.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Panthea-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/storia-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/storia.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/storia-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/storia-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Storia-web.jpg</video:thumbnail_loc>
+      <video:title>Storia Caffe</video:title>
+      <video:description>The setting and highlights of an event at Storia Caffe.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Storia-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/events-recap-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/events-recap.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/events-recap-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/events-recap-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Events_Recap-web.jpg</video:thumbnail_loc>
+      <video:title>Celebrations &amp; Events</video:title>
+      <video:description>Atmosphere, emotion and moments to remember.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Events_Recap-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/davidoff-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/davidoff.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/davidoff-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/davidoff-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Davidoff-web.jpg</video:thumbnail_loc>
+      <video:title>Davidoff at BikerFest</video:title>
+      <video:description>The atmosphere and standout moments of BikerFest.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Davidoff-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/matkaskopje-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/matkaskopje.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/matkaskopje-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/matkaskopje-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/matkaskopje.jpg</video:thumbnail_loc>
+      <video:title>Matka Canyon</video:title>
+      <video:description>Cliffs, water and nature from an aerial perspective.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/matkaskopje.mp4</video:content_loc>
+      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/ohrid-dron-cinematic-macedonia-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/ohrid-dron-cinematic-macedonia.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/ohrid-dron-cinematic-macedonia-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/ohrid-dron-cinematic-macedonia-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/ohrid-dron-cinematic-macedonia.jpg</video:thumbnail_loc>
+      <video:title>Lake Ohrid</video:title>
+      <video:description>Cinematic drone views of the lake and its shoreline.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/ohrid-dron-cinematic-macedonia.mp4</video:content_loc>
+      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/lake-bled-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/lake-bled.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/lake-bled-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/lake-bled-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/Lake_Bled-web.jpg</video:thumbnail_loc>
+      <video:title>Lake Bled | Slovenia</video:title>
+      <video:description>Aerial views of the lake and its surrounding landscape.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/Lake_Bled-web.mp4</video:content_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/st-nicholas-church-mavrovo-aerial-view-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/st-nicholas-church-mavrovo-aerial-view.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/st-nicholas-church-mavrovo-aerial-view-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/st-nicholas-church-mavrovo-aerial-view-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/st-nicholas-church-mavrovo-aerial-view.jpg</video:thumbnail_loc>
+      <video:title>Mavrovo | St. Nicholas Church</video:title>
+      <video:description>Drone views of the submerged church and the Mavrovo landscape.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/st-nicholas-church-mavrovo-aerial-view.mp4</video:content_loc>
+      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/bigorski-monastery-drone-video-macedonia-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/bigorski-monastery-drone-video-macedonia.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/bigorski-monastery-drone-video-macedonia-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/bigorski-monastery-drone-video-macedonia-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/bigorski-monastery-drone-video-macedonia.jpg</video:thumbnail_loc>
+      <video:title>Bigorski Monastery</video:title>
+      <video:description>The monastery’s architecture and its natural surroundings.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/bigorski-monastery-drone-video-macedonia.mp4</video:content_loc>
+      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://skystudiom.mk/videos/skopje-footage-saraj-park-en.html</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mk" href="https://skystudiom.mk/videos/skopje-footage-saraj-park.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://skystudiom.mk/videos/skopje-footage-saraj-park-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skystudiom.mk/videos/skopje-footage-saraj-park-en.html" />
+    <video:video>
+      <video:thumbnail_loc>https://skystudiom.mk/images/posters/skopje-footage-saraj-park.jpg</video:thumbnail_loc>
+      <video:title>Saraj Park</video:title>
+      <video:description>Green spaces and recreation areas from an aerial perspective.</video:description>
+      <video:content_loc>https://cdn.skystudiom.mk/skopje-footage-saraj-park.mp4</video:content_loc>
+      <video:publication_date>2026-03-01T08:00:00+01:00</video:publication_date>
+    </video:video>
   </url>
 </urlset>
